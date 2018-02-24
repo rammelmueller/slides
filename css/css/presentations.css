@@ -1,0 +1,113 @@
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: normal;
+  color: #686667;
+  background-color: #F7F8F2;
+}
+
+#container {
+  width: 1170px;
+  background-color: #F7F8F2;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
+
+#header{
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.pres_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.pres_list .header{
+  font-size: 50px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.pres{
+  word-wrap: break-word;
+  width: 350px;
+  height: 350px;
+  background-color: #93A3B1;
+  /*margin: 20px 20px 20px 20px;*/
+  padding: 10px;
+  position: relative;
+}
+.pres a:hover {
+  color: #F1592A !important;
+}
+.pres .event_name{
+  line-height: 75%;
+  margin: 0;
+  font-size: 64px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pres .title{
+  margin: 10px 0 0 0;
+  font-size: 32px;
+  text-transform: lowercase;
+}
+.pres .duration{
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.talk{
+  background-color: #93A3B1;
+}
+.talk a{
+  color: #466E6D;
+  text-decoration: none;
+}
+.talk a:visited{
+  color: #466E6D;
+}
+.talk .duration{
+  color: #F7F8F2;
+}
+
+
+.italk{
+  background-color: #F1592A;
+  color: #466E6D;
+}
+.italk a{
+  color: #F7F8F2;
+  text-decoration: none;
+}
+.italk a:visited{
+  color: #F7F8F2;
+}
+.italk a:hover{
+  color: #466E6D !important;
+}
+.italk .duration{
+  color: #F7F8F2;
+}
+
+
+.poster{
+  background-color: #466E6D;
+  color: #F7F8F2;
+}
+.poster a{
+  color: #93A3B1;
+  text-decoration: none;
+}
+.poster a:visited{
+  color: #93A3B1;
+}
