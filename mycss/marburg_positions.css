@@ -1,0 +1,303 @@
+/* ------ TITLE ------ */
+#title{
+  margin-bottom: 100px;
+}
+#author{
+  font-size: 42px;
+}
+#event{
+  font-size: 32px;
+}
+#current_papers{
+  font-size: 24px;
+  color: #187795;
+  font-weight: bold;
+  margin: 70px 0 50px 0;
+}
+#logobar {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#logobar img{
+  margin: 0 10px 0 10px;
+  height: 80px;
+}
+
+
+/* Motivation */
+.reveal section .mb_sys{
+  margin-top: -100px !important;
+}
+.reveal section .mb_sys img{
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 800px;
+  margin: 0 0 0 -400px;
+}
+.reveal section .mb_sys .mb_text{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  top: 800px;
+}
+
+/* Model slide */
+#model_body{
+  margin-top: -50px;
+}
+#model_body .model_formula{
+  font-size: 40px !important;
+}
+#model_upper_formula{
+  margin: 0 0 0 -200px;
+}
+#model_lower_formula{
+  margin: 50px 0 0 -100px;
+  padding-left: 400px;
+}
+#model_graphs{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+#model_graphs .model_box img{
+  width: 500px !important;
+  margin: 0px 50px 0 50px;
+}
+#model_arrow {
+  width: 400px;
+  position: absolute;
+  top: 690px;
+  left: 500px;
+}
+#model_text{
+  width: 200px;
+  position: absolute;
+  font-size: 40px;
+  top: 610px;
+  left: 600px;
+  text-align: center;
+}
+
+
+/* MC */
+#mc_chain{
+  height: 350px;
+  margin: -30px 0 -30px 0;
+}
+
+/* sign slide */
+#sign_formula{
+  position: absolute !important;
+  top:  750px !important;
+  left: 320px !important;
+}
+#sign_circle{
+  position: absolute !important;
+  top:  615px !important;
+  left: 510px !important;
+  height: 280px;
+}
+#sign_conditions_text{
+  color: #a42604;
+  position: absolute !important;
+  top:  630px !important;
+  left: 940px !important;
+}
+#sign_conditions{
+  text-align: center !important;
+  color: #a42604;
+  font-size: 40px;
+  position: absolute !important;
+  top:  740px !important;
+  left: 1030px !important;
+}
+#sign_conditions p{
+  display: inline;
+}
+#refs_sign{
+  position: absolute;
+  text-align: center;
+  top: 600px;
+  left: 0;
+  width: 100%;
+  font-size: 24px;
+}
+
+/* CL.*/
+#langevin_formula {
+  margin: 40px 0 40px 0 !important;
+}
+#refs_cl{
+  position: absolute;
+  top: 900px;
+  left: 900px;
+  text-align: center;
+  width: 400px;
+}
+
+
+/* results */
+#definitions{
+  position: absolute;
+  text-align: left;
+  width: 100px;
+  top: 760px;
+  left: 1100px;
+  font-size: 32px;
+}
+
+
+/* 1D balanceds comparison */
+#balanced_compare_refs{
+  position: absolute;
+  top: 900px;
+  left: 900px;
+}
+#hist_rep{
+  position: absolute;
+  top: 200px;
+  left: 850px;
+  background-color: #ffffff;
+}
+#hist_rep img{
+  height: 350px;
+}
+#hist_att{
+  position: absolute;
+  top: 450px;
+  left: 50px;
+  background-color: #ffffff;
+}
+#hist_att img{
+  height: 350px;
+}
+#hist_label_rep{
+  width: 400px;
+  text-align: center;
+  padding-left: 50px;
+  margin-top: -50px;
+}
+#hist_label_att{
+  width: 400px;
+  text-align: center;
+  padding-left: 50px;
+}
+
+
+/* polarized 1D results */
+.reveal section .pol_lab{
+  position: absolute;
+  font-size: 24px;
+  left: 200px;
+}
+#pol_10{
+  top: 370px;
+  color: #808080;
+}
+#pol_08{
+  top: 440px;
+  color: #187795;
+}
+#pol_04{
+  top: 530px;
+  color: #a42604;
+}
+#pol_00{
+  top: 560px;
+  color: #0d153a;
+}
+#fflo_label{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 1050px;
+  text-align: center;
+}
+
+
+/* 3D EOS */
+#refs_ufg{
+  position: absolute;
+  top: 830px;
+  left: 0;
+  width: 100% !important;
+  text-align: center;
+}
+#refs_3D{
+  position: absolute;
+  top: 900px;
+  left: 900px;
+}
+
+.reveal section .h_lab{
+  position: absolute;
+  font-size: 28px;
+  left: 180px;
+}
+#h_00{
+  top: 800px;
+  color: #187795;
+}
+#h_04{
+  top: 760px;
+  color: #5f9049;
+}
+#h_08{
+  top: 700px;
+  color: #9ca903;
+}
+#h_12{
+  top: 620px;
+  color: #d7b501;
+}
+#h_16{
+  top: 500px;
+  color: #eca300;
+}
+#h_20{
+  top: 300px;
+  color: #db7502;
+}
+
+/* UFG, balanced*/
+#label_tc{
+  font-size: 36px;
+  position: absolute;
+  color: #898989;
+  top: 270px;
+  left: 800px;
+}
+#UFG_finite_size{
+  position: absolute;
+  width: 300px;
+  top: 550px;
+  left: 1045px;
+  text-align: center;
+}
+#UFG_low_temperature{
+  font-size: 36px;
+  width: 600px;
+  position: absolute;
+  top: 900px;
+  left: 100px;
+}
+#UFG_agreement{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 50px;
+  text-align: center;
+}
+
+
+#refs_3D_mf{
+  position: absolute;
+  top: 900px;
+  left: 650px;
+}
