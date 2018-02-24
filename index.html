@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
   <head>
     <meta charset="utf-8">
@@ -46,34 +45,13 @@
         pdf : true,
         fragments: true,
         pdfMaxPagesPerSlide: 1,
-
-
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
           config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
         },
-
-
         // CLIENT
-        // multiplex: {
-        //   secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
-        //   id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-        //   url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        // },
-        // dependencies: [
-        //   { src: 'plugin/markdown/marked.js' },
-        //   { src: 'plugin/markdown/markdown.js' },
-        //   { src: 'plugin/math/math.js', async: true },
-        //   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        //   { src: 'node_modules/reveal.js-menu/menu.js' },
-        //
-        //   { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-        //   { src: 'plugin/multiplex/client.js', async: true },
-        // ],
-
-        // MASTER
         multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+          secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
           id: 'efb6ee74fb9c8429', // Obtained from socket.io server
           url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
         },
@@ -85,9 +63,23 @@
           { src: 'node_modules/reveal.js-menu/menu.js' },
 
           { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true }
+          { src: 'plugin/multiplex/client.js', async: true },
         ],
-
+        // MASTER
+        // multiplex: {
+        //   secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+        //   id: 'efb6ee74fb9c8429', // Obtained from socket.io server
+        //   url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+        // },
+        // dependencies: [
+        //   { src: 'plugin/markdown/marked.js' },
+        //   { src: 'plugin/markdown/markdown.js' },
+        //   { src: 'plugin/math/math.js', async: true },
+        //   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        //   { src: 'node_modules/reveal.js-menu/menu.js' },
+        //   { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        //   { src: 'plugin/multiplex/master.js', async: true }
+        // ],
         menu: {
           side: 'left',
           openButton: false,
@@ -96,7 +88,6 @@
           themes: false
         }
       });
-
     </script>
   </body>
 </html>
