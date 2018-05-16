@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Complex Langevin for ultracold Fermi gases</title>
+    <title>The Quiz</title>
 
     <!-- Preset styles -->
     <link rel="stylesheet" href="css/reveal.css">
@@ -12,427 +12,66 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="mycss/marburg_styles.css">
-    <link rel="stylesheet" href="mycss/marburg_positions.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
-    <!-- Allow jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="mycss/quiz.css">
 
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
 
-
-        <!-- Title -->
-        <section data-menu-title='Marburg Winter School 2018'>
-          <div class='flexer'>
-            <h2 id='title'>The <span class='emph'>complex Langevin method</span> <br>for ultracold fermions</h2>
-            <div id='author'>
-              Lukas Rammelmüller, TU Darmstadt
-            </div>
-            <div id="event">
-              Marburg, FOR 1807 Winter School 2018
-            </div>
-            <div id='current_papers'>
-              [LR, Loheac, Drut, Braun <span class='emph_it'>in preparation</span>] <br>
-              [LR, Porter, Drut, Braun <span class='emph_it'>Phys. Rev. D</span> 96, 094506, 2017]<br>
-              [LR, Porter, Drut <span class='emph_it'>Phys. Rev. A</span> 93, 033639, 2016]
-            </div>
-            <div id='logobar'>
-              <img src='img/hgs_hire_inverted.svg'>
-              <img src='img/csc_inverted.png'>
-              <img src='img/HICforFAIR.png'>
-              <img src='img/tud_logo.png'>
-            </div>
-          </div>
+        <section data-menu-title='The big Schmidleithner quiz 2018'>
+          <h2 id='title'>The big Schmidleithner quiz</h2>
         </section>
 
 
-        <!-- Motivation !-->
-        <section data-menu-title='Fermi gases: motivation I'>
-          <div class='rig_header'>
-            <!-- Fermi gases -->
-          </div>
-          <div class="rig_body mb_sys">
-
-            <!-- Balanced systems -->
-            <img class='current-visible' src='img/mb_balanced.png'>
-            <img class='fragment current-visible' data-fragment-index='1' src='img/mb_balanced_bcs.svg'>
-            <img class='fragment current-visible' data-fragment-index='2' src='img/mb_balanced_bec.svg'>
-            <div class="mb_text">
-              (electrons in metals, nuclear physics, <br>
-              neutron stars, controllable experiments, ...)
-            </div>
-          </div>
-        </section>
-
-        <!-- Spin polarization -->
-        <section data-menu-title='Fermi gases: motivation II'>
-          <div class='rig_header'>
-          </div>
-          <div class="rig_body mb_sys">
-            <img src='img/mb_polarized.png'>
-            <div class="mb_text">
-              <span class='emph_bold'>spin polarized systems</span> <br>
-              (inhomogenoeus phases?)
-            </div>
-          </div>
-        </section>
-
-        <!-- Mass imbalance -->
-        <section data-menu-title='Fermi gases: motivation III'>
-          <div class='rig_header'>
-          </div>
-          <div class="rig_body mb_sys">
-            <img src='img/mb_mib.png'>
-            <div class="mb_text">
-              <span class='emph_bold'>mass imbalanced systems</span> <br>
-              (inhomogenoeus phases?)
-            </div>
-          </div>
-        </section>
-
-
-        <!-- Model !-->
-        <section data-menu-title='model: contact interaction'>
-          <div class='rig_header'>
-            model: <span class='emph'>contact interaction</span>
-          </div>
-          <div id='model_body' class='rig_body'>
-            <div>
-              <div id='model_upper_formula' class='model_formula'>
-                $\hat H = -\sum_{s=\uparrow,\downarrow}{\int{d^dx\ {\hat{\psi}_{s}^{\dagger}(\vec x)}\left(\frac{\hbar^2\vec \nabla^2}{2 m_s}\right)\hat{\psi}_{s}(\vec x)}}$
-              </div>
-              <div id='model_lower_formula' class="model_formula">
-                $\\ +\ g\int{d^dx\ {\hat{\psi}_{\uparrow}^{\dagger}(\vec x)}\,\hat{\psi}_{\uparrow}(\vec x)\,{\hat{\psi}_{\downarrow}^{\dagger}(\vec x)}\,\hat{\psi}_{\downarrow}(\vec x)} $
-              </div>
-            </div>
-            <div id="model_graphs" class='fragment'>
-              <div id="model_arrow"><img src="img/arrow.png"></div>
-              <div id='model_text'>$k_F^{-1} \gg r_0$</div>
-              <div class="model_box"><img src="img/p_finite.svg"></div>
-              <div class="model_box"><img src="img/p_delta.svg"></div>
-            </div>
-          </div>
-        </section>
-
-
-        <!-- Our method !-->
-        <section data-menu-title='Partition function'>
-          <div class="rig_header">
-              what do we need to compute?<br>
-          </div>
-          <div class="rig_body">
-            <p>
-              $\mathcal{Z} = \text{Tr}[{\mathrm e^{-\beta\hat{H}}}] = \text{Tr}[{\mathrm e^{-\beta(\hat{T}\ +\ \hat{V})}}]$<br>
-              $\langle \mathcal{O} \rangle = \frac{1}{\mathcal{Z}}\text{Tr}[{\hat{\mathcal{O}}\,\mathrm e^{-\beta\hat{H}}}]$
+        <section data-menu-title='Frage I'>
+          <div class="flexer">
+            <p class='question'>
+              Vor wie vielen Fahren haben Mastodone gelebt?
             </p>
-            <p class='fragment' data-fragment-index='1'>
-              discretize space & time,  decouple the interaction <br>
-              with a <span class='emph'>Hubbard Stratonovich transformation</span>
+            <p id='mastodon'><img src="img/mastodon.png"></p>
+          </div>
+        </section>
+        <section data-menu-title='Antwort I'>
+          <video data-autoplay>
+            <source data-src="img/mastodon.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+
+
+        <section data-menu-title='Frage'>
+          <div class="flexer">
+            <p class='question'>
+              Woher stammt dieser Text?
             </p>
-            <p class='fragment' data-fragment-index='2' id='method_path_integral'>
-              Rewrite the problem as a path-integral: <br>
-              $\mathcal{Z} = \int{\mathcal{D}\phi\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}} \equiv \int{\mathcal{D}\phi\ \mathrm e^{-S[\phi]}}$
+            <p class='quote'>
+              Sie kann einen Mammutbaum mit einem Schlag umhacken. Deinem Brustbein wuerde es ähnlich gehen.
             </p>
           </div>
         </section>
+        <section data-menu-title='Antwort'>
+          <img src="img/lava_axt.jpg" width='500px'>
+        </section>
 
 
-        <section data-menu-title='QMC'>
-          <div class="rig_header">
-            <span>calculating observables</span>
-          </div>
-          <div class='rig_body'>
-            <p>$\langle\mathcal{O}\rangle = \int{\mathcal{D}\phi\ P[\phi]\,\mathcal{O}[\phi]}$</p>
-            <p>
-              produce a set of <span class='emph emph_bold'>random auxiliary-field configuations</span> $\{\phi_i\}$, <br>
-              compute observables & average for expecation values
+        <section data-menu-title='Frage'>
+          <div class="flexer">
+            <p class='question'>
+              Wie teuer ist der Overload Tank bei C&C Generals?
             </p>
-            <p class='fragment'>
-              probability measure: <br>
-              $P[\phi]\ \propto\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow} =
-              \begin{cases}
-                \text{attractive, balanced case}\ \rightarrow \text{OK} \\
-                \text{otherwise}\ \rightarrow \text{sign problem}
-              \end{cases} $
-            </p>
-          <div>
-        </section>
-
-        <!-- <section data-menu-title='Markov chain'>
-          <div class="rig_header">
-            <span>more efficient sampling: Markov chain</span>
-          </div>
-          <div class='rig_body'>
-            <p>$\phi_0 \rightarrow \phi_1 \rightarrow \phi_2 \rightarrow \phi_3 \rightarrow \cdots$</p>
-            <p>
-              <img id='mc_chain' src="img/markov_hmc.svg" alt="">
-            </p>
-            <p>
-              Markov chain produced with <span class='emph emph_bold'>Metropolis algorithm</span>
-            </p>
-          <div>
-        </section> -->
-
-        <!-- Sign problem !-->
-        <!-- <section data-menu-title='sign problem' data-background="img/tile_light.png" data-background-size="100px" data-background-repeat="repeat" >
-          <div class='flexer'>
-              <h2>the <span class="emph">sign problem</span></h2>
-            <div class='fragment'>
-              <div id='sign_formula'>
-                $\mathcal{Z} = \int{\mathcal{D}\phi\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}}$
-              </div>
-              <div id="sign_circle">
-                <img src='img/redcircle_line.png'>
-              </div>
-              <div id="sign_conditions_text">
-                <small>probability measure <span class='emph_bold'>not <br>positive (semi-)definite</span> if <br>any of these conditions applies:<br></small><br>
-              </div>
-              <div id="sign_conditions">
-                <p>$N_{\uparrow} \neq N_{\downarrow}$</p><br>
-                <p>$m_\uparrow \neq m_\downarrow$</p> <br>
-                <p>$g > 0$</p><br>
-              </div>
-            </div>
-          </div>
-          <div id='refs_sign' class='refs'>
-            [Troyer, Wiese '05]
-          </div>
-        </section> -->
-
-        <!-- Complex Langevin !-->
-        <section data-menu-title='Complex Langevin'>
-          <div class="rig_header">
-              Complex Langevin (in a nutshell)
-          </div>
-          <div class="rig_body">
-            <p><span class='emph_blue'>stochastic quantization:</span> equilibrium distribution of a <br> $(d+1)$-dimensional random process is identified with <br>the probability measure of our $d$-dimensional path integral</p>
-            <div id='langevin_formula'>
-              <p>random walk governed by <span class='emph_blue'>Langevin equation (Brownian motion):</span></p>
-              <p class='emph_large'>$\frac{\partial\phi}{\partial t} = -\frac{\partial S[\phi]}{\partial\phi} + \eta(t)$</p>
-            </div>
-          </div>
-          <div id='refs_cl' class='refs'>
-            [Parisi, Wu '81], [Aarts '09; Seiler '17] <br>
-            [Loheac, Drut '17; LR, Porter, Drut, Braun '17]
           </div>
         </section>
-
-
-        <!-- +++++++++++++++++++++++++++ RESULTS ++++++++++++++++++++++++++ !-->
-
-
-        <!-- balanced results -->
-        <section data-menu-title='1D: comparison'>
-          <div class='res_header'>
-            first step: compare to other methods
-          </div>
-          <div class='res_body'>
-            <img src='plots/1D_balanced_compare.svg'>
-          </div>
-          <div class="res_footer">
-          </div>
-          <div>
-            <div id='hist_rep' class="fragment" data-fragment-index='1'>
-              <img src="plots/1D_hist_gamma30.svg">
-              <div id='hist_label_rep' class='emph_red emph_bold'>repulsive side: <br>Outliers skew <br>expectation values! <br><small>('fat tail' problem)</small></div>
-            </div>
-            <div id='hist_att' class="fragment" data-fragment-index='2'>
-              <div id='hist_label_att' class='emph_blue emph_bold'>attractive side: <br> no outliers, <br> no problems!</div>
-              <img src="plots/1D_hist_gamma_att.svg">
-            </div>
-          </div>
-          <div class="refs" id='subtitle_ref'>
-            [LR, Porter, Drut, Braun '17]
-          </div>
-          <div class="refs" id='balanced_compare_refs'>
-            [BA: Iida, Wadati '07; Tracy, Widom '16]<br>
-            [DFT-RG: Kemler, Pospiech, Braun '16]<br>
-            [HMC: LR, Porter, Loheac, Drut '15]
-          </div>
-          <div id="definitions">
-            $\gamma = g/n$
-          </div>
+        <section data-menu-title='Antwort'>
+          2000$
         </section>
 
-
-        <!-- spin imbalance -->
-        <section data-menu-title='1D: polarized EOS'>
-          <div class='res_header'>
-            polarized 1D fermions: equation of state
-          </div>
-          <div class='res_body'>
-            <img src='plots/1DGSP_EOS_attractive.svg'>
-          </div>
-          <div class="res_footer">
-
-          </div>
-          <div class="refs" id='subtitle_ref'>
-            [LR, Drut, Braun <span class='ref_prep'>in preparation</span>]
-          </div>
-          <div id="definitions">
-            $\gamma = g/n$ <br>
-            $p = \frac{N_\uparrow-N_\downarrow}{N_\uparrow+N_\downarrow}$
-          </div>
-          <div class='pol_lab' id='pol_10'>$p = 1.0$</div>
-          <div class='pol_lab' id='pol_08'>$p = 0.8$</div>
-          <div class='pol_lab' id='pol_04'>$p = 0.4$</div>
-          <div class='pol_lab' id='pol_00'>$p = 0.0$</div>
-        </section>
-
-        <section data-menu-title='1D: polarized correlators'>
-          <div class='res_header'>
-            polarized 1D fermions: pair correlation
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/1DGSP_q_plot_balanced.svg'>
-            <img class='fragment partial_plot' data-fragment-index='1' src='plots/1DGSP_q_plot.svg'>
-            <img class='fragment partial_plot' data-fragment-index='2' src='plots/1DGSP_q_plot_inset.svg'>
-            <div class="fragment" data-fragment-index='2' id='fflo_label'>
-              <span class='emph'>signature of FFLO type pairing</span>
-            </div>
-          </div>
-          <div class="res_footer">
-              $n_{pair}(x,x')\ =\ \langle \hat{\psi}_{\uparrow}^{\dagger}( x)\,\hat{\psi}_{\downarrow}^{\dagger}(x)\, \hat{\psi}_{\downarrow}(x')\,\hat{\psi}_{\uparrow}(x') \rangle$
-          </div>
-          <div class="refs" id='subtitle_ref'>
-            [LR, Drut, Braun <span class='ref_prep'>in preparation</span>]
-          </div>
-          <div id="definitions">
-            $\gamma = g/n$ <br>
-            $p = \frac{N_\uparrow-N_\downarrow}{N_\uparrow+N_\downarrow}$
-          </div>
-        </section>
-
-
-        <!-- 3D section !-->
-        <section data-menu-title='3D: EOS'>
-          <div class='res_header'>
-            UFG at finite T: equation of state
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'>in preparation</span>]
-            </div>
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_EOS.svg'>
-
-            <img class='partial_plot fragment' data-fragment-index='1' src='plots/UFG_EOS_PT.svg'>
-            <div id='label_tc' class="fragment" data-fragment-index='1'>
-              $T_C \sim 0.17\,T_F$
-            </div>
-
-            <div id='UFG_finite_size'>
-              <span class='emph fragment' data-fragment-index='2'>CL results:<br>finite lattice!<br><small>($V = 9^3$)</small></span>
-            </div>
-            <div id='UFG_low_temperature'>
-              <span class='fragment' data-fragment-index='2'>low temperatures: $\lambda_T$ increases<br> ($\lambda_T \ll V^{1/3}$ must be fulfilled)</small></span>
-            </div>
-
-            <div id='UFG_agreement'>
-              <span class='emph emph_bold fragment' data-fragment-index='3'>good agreement with experiment and other methods!</span>
-            </div>
-
-          </div>
-          <div class="res_footer">
-            <div class="refs current_visible" id='refs_3D'>
-              [experiment/BDMC: van Houcke et al. '12]<br>
-              [DHMC: Drut, Lähde, Wlazlowski, Magierski '12]
-            </div>
-          </div>
-        </section>
-
-
-        <section data-menu-title='3D: EOS'>
-          <div class='res_header'>
-            UFG at finite T: phase diagram (mean field)
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/meanfield.svg'>
-            <img class='partial_plot fragment' data-fragment-index='1' src='plots/meanfield_pol.svg'>
-          </div>
-          <div class="res_footer">
-            <div id="definitions">
-              $h = \frac{\mu_\uparrow-\mu_\downarrow}{2}$
-            </div>
-            <div class="refs" id='refs_3D_mf'>
-              [mean-field phase diagram: e.g. Chevy, Mora '10; Braun et al. '13]<br>
-              [beyond mean-field:: e.g. Boettcher et al. '14; Roscher, Braun, Drut '15]
-            </div>
-          </div>
-        </section>
-
-
-        <section data-menu-title='3D: EOS'>
-          <div class='res_header'>
-            UFG at finite T: equation of state
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'>in preparation</span>]
-            </div>
-          </div>
-          <div class='res_body'>
-            <img src='plots/UFG_EOS_polarized.svg'>
-            <div class='h_lab' id='h_00'>$\beta h = 0.0$</div>
-            <div class='h_lab' id='h_04'>$\beta h = 0.4$</div>
-            <div class='h_lab' id='h_08'>$\beta h = 0.8$</div>
-            <div class='h_lab' id='h_12'>$\beta h = 1.2$</div>
-            <div class='h_lab' id='h_16'>$\beta h = 1.6$</div>
-            <div class='h_lab' id='h_20'>$\beta h = 2.0$</div>
-            <div id="definitions">
-              $h = \frac{\mu_\uparrow-\mu_\downarrow}{2}$
-            </div>
-          </div>
-          <div class="res_footer">
-            <div id="virial_expansion_3d">
-              virial expansion: $\ln \mathcal{Z} = \mathcal{Q}_1\sum_{n}{z^nb_{n}}$
-            </div>
-          </div>
-        </section>
-
-        <!-- +++++++++++++++++++++++ RECAP & OUTLOOK ++++++++++++++++++++++ !-->
-
-        <section data-menu-title='Recap' data-background-color="#404040">
-          <div class="flexer message">
-            <div class="flex_header">
-              Recap & Outlook
-            </div>
-            <div class="flex_body">
-              <p>
-                imbalanced Fermi gases are hard to treat: <br>
-                accessible with the <span class='emph_blue emph_bold'>complex Langevin </span> method
-              </p>
-              <p>
-                CL compares well with other methods wherever possible
-              </p>
-              <p>
-                works in the ground state & at finite temperature
-                <br><span class='emph_bold emph_blue'>in any spatial dimension</span>
-              </p>
-              <p>
-                <span class='emph emph_bold'>Up next:</span> investigation of pair correlations in $d>1$, <br>
-                mass imbalance at finite temperature, phase diagram in 2D/3D, ...
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ++++++++++++++++++++++++++++ END +++++++++++++++++++++++++++++ !-->
 
       </div>
     </div>
 
 
-    <script src="lhead.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
 
@@ -451,25 +90,7 @@
         },
 
         
-        
-        
-        
-        
-        
-        
         dependencies: [
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
-          { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-          { src: 'plugin/multiplex/master.js', async: true },
           { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
           { src: 'plugin/multiplex/master.js', async: true },
           { src: 'plugin/markdown/marked.js' },
@@ -491,66 +112,6 @@
 
       Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
-    </script>
-  
-    <script>
-      Reveal.configure({
-        multiplex: {
-          secret: '15194934298277517436', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-          id: 'efb6ee74fb9c8429', // Obtained from socket.io server
-          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-        }
-      })
     </script>
   
     <script>
