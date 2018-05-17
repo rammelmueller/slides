@@ -315,12 +315,26 @@
         </section>
 
         <section id='cat4_q2'>
-
+          <p class='q_text'>Von welchen Spielen stammen diese Screenshots?</p>
+          <div id='q_sc' style=''>
+            <img src="img/sc_1.gif">
+            <img src="img/sc_2.jpg">
+            <img src="img/sc_3.png">
+            <img src="img/sc_4.jpg">
+            <img src="img/sc_5.png">
+          </div>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
         <section id='cat4_a2' data-state="asked">
+          <div id='q_sc' style=''>
+            <img src="img/sc_1.gif">
+            <img src="img/sc_2.jpg">
+            <img src="img/sc_3.png">
+            <img src="img/sc_4.jpg">
+            <img src="img/sc_5.png">
+          </div>
           <div class="qlink">
             <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
             <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
@@ -344,12 +358,13 @@
 
         <!-- Kategorie V -->
         <section id='cat5_q1'>
+          <p class='q_text'>Wie ist Andy Dwyers Deckname?</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
-        <section id='cat5_a1' data-state="asked" width="800px">
-          <!-- <p style='font-size: 400px; color: white;'>48</p> -->
+        <section id='cat5_a1' data-state="asked" data-background-image='img/macklin.jpg'>
+          <p style='font-size: 150px; color: white;'>Burt Macklin, FBI</p>
           <div class="qlink">
             <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
             <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
@@ -364,7 +379,7 @@
         </section>
         <section id='cat5_a2' data-state="asked" data-background-image='img/tamland.jpg'>
           <video data-autoplay>
-            <source data-src="img/mentally_retarded.mkv" type="video/mp4" />
+            <source data-src="img/mentally_retarded.mkv" type="video/mp4" width="500px"/>
           </video>
           <div class="qlink">
             <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>

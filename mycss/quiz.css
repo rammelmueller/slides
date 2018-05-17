@@ -173,3 +173,7 @@ section .alink img{
 #q_grid #cat_5 span{
   color: #77B02E;
 }
+
+#q_sc img{
+  width: 400px;
+}
