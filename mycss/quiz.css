@@ -69,10 +69,19 @@ section .alink img{
 }
 
 #q_grid .cat_head{
-  vertical-align: middle;
   width: 250px;
-  height: 150px;
+  height: 100px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
 }
+#q_grid .cat_head span{
+  display: inline-block;
+  /* font-family: "Bookman Old Style"; */
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
 #q_grid .question{
   padding: 50px 0 50px 0;
   width: 250px;
@@ -86,15 +95,34 @@ section .alink img{
 #q_grid #cat_1 .question{
   background-color: #E67B37;
 }
+#q_grid #cat_1 span{
+  color: #E67B37;
+}
+
 #q_grid #cat_2 .question{
   background-color: #3BADE3;
 }
+#q_grid #cat_2 span{
+  color: #3BADE3;
+}
+
 #q_grid #cat_3 .question{
   background-color: #ED3A69;
 }
+#q_grid #cat_3 span{
+  color: #ED3A69;
+}
+
 #q_grid #cat_4 .question{
   background-color: #23446E;
 }
+#q_grid #cat_4 span{
+  color: #23446E;
+}
+
 #q_grid #cat_5 .question{
   background-color: #77B02E;
+}
+#q_grid #cat_5 span{
+  color: #77B02E;
 }
