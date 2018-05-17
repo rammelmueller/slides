@@ -79,7 +79,7 @@ section .alink img{
 
 #q_grid .cat_head{
   width: 250px;
-  height: 100px;
+  height: 200px;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
