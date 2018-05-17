@@ -1,7 +1,8 @@
-/* .reveal section{
+.reveal section{
   width : 1364px !important;
-  height: 1024px !important;
-} */
+  height: 724px !important;
+  padding-top: 300px;
+}
 
 .reveal section .flexer{
   height: 100%;
@@ -16,7 +17,7 @@
     box-shadow: none;
 }
 
-section .question{
+section .q_text{
   font-weight: bold !important;
   margin-bottom: 100px;
 }
@@ -27,10 +28,73 @@ section .quote{
   margin: 0 auto;
   text-align: center;
 }
-/* 
 
-#mastodon{
+section .alink{
   position: absolute;
-  top: 400px;
-  left: 400px;
-} */
+  bottom: 200px;
+  right: 0;
+}
+section .qlink{
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+
+section .qlink img{
+  width: 100px;
+}
+section .alink img{
+  width: 100px;
+}
+
+#q_grid{
+  width: 1262px;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: left;
+  margin: 0 auto;
+}
+
+#q_grid a{
+  color: #fff;
+  font-weight: bold;
+}
+
+#q_grid .cat_col{
+  width: 250px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: top;
+  margin: 0 2px 0 2px;
+}
+
+#q_grid .cat_head{
+  vertical-align: middle;
+  width: 250px;
+  height: 150px;
+}
+#q_grid .question{
+  padding: 50px 0 50px 0;
+  width: 250px;
+  height: 50px;
+  margin: 2px 0 2px 0;
+}
+#q_grid .asked{
+  background-color: #c7c7c7 !important;
+}
+
+#q_grid #cat_1 .question{
+  background-color: #E67B37;
+}
+#q_grid #cat_2 .question{
+  background-color: #3BADE3;
+}
+#q_grid #cat_3 .question{
+  background-color: #ED3A69;
+}
+#q_grid #cat_4 .question{
+  background-color: #23446E;
+}
+#q_grid #cat_5 .question{
+  background-color: #77B02E;
+}
