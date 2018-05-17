@@ -14,13 +14,45 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="mycss/quiz.css">
 
+    <script type="text/javascript">
+      var score = 0;
+      var q = 0;
+
+      function add_score(pts){
+        score = score + pts;
+        if (score < 0) {
+          score = 0
+        }
+        q = q + 1;
+      };
+
+      function check_bonus(){
+        if (score >= 300) {
+          document.getElementById('bonus_q1_box').classList.add('enough');
+        }
+        if (score >= 600) {
+          document.getElementById('bonus_q2_box').classList.add('enough');
+        }
+        if (score >= 900) {
+          document.getElementById('bonus_q3_box').classList.add('enough');
+        }
+        if (score >= 1200) {
+          document.getElementById('bonus_q4_box').classList.add('enough');
+        }
+        if (score >= 1500) {
+          document.getElementById('bonus_q5_box').classList.add('enough');
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
 
-        <section id='questions'>
-
+        <section id='questions' data-state="grid-page">
+          <div id="points">
+            Punkte: <span id='counter'>0</span>
+          </div>
           <div id="q_grid">
             <div id="cat_1" class='cat_col'>
               <div class="cat_head">
@@ -93,6 +125,29 @@
               </div>
             </div>
           </div>
+
+          <div id="bonus_container">
+            <!-- <div class="cat_head">
+              <span>supergeheime Bonus Kategorie</span>
+            </div> -->
+            <div id="bonus_box">
+              <div id="bonus_q1_box" class='question'>
+                <a href="#/bonus_q1">?</a>
+              </div>
+              <div id="bonus_q2_box" class='question'>
+                <a href="#/bonus_q2">?</a>
+              </div>
+              <div id="bonus_q3_box" class='question'>
+                <a href="#/bonus_q3">?</a>
+              </div>
+              <div id="bonus_q4_box" class='question'>
+                <a href="#/bonus_q4">?</a>
+              </div>
+              <div id="bonus_q5_box" class='question'>
+                <a href="#/bonus_q5">?</a>
+              </div>
+            </div>
+          </div>
         </section>
 
 
@@ -109,7 +164,8 @@
             <source data-src="img/mastodon.mp4" type="video/mp4" />
           </video>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -122,7 +178,8 @@
         <section id='cat1_a2' data-state="asked">
           <p>Antwort 2</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -135,7 +192,8 @@
         <section id='cat1_a3' data-state="asked">
           <p>Antwort 3</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -143,7 +201,7 @@
         <!-- Kategorie II -->
 
         <section id='cat2_q1'>
-          <p class='q_text'>Wo fischt sichs am besten?</p>
+          <p class='q_text'>Wo fischt man am besten?</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
@@ -151,7 +209,8 @@
         <section id='cat2_a1' data-state="asked">
           <p>Herbei</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -164,7 +223,8 @@
         <section id='cat2_a2' data-state="asked">
           <p>Antwort 2</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -177,7 +237,8 @@
         <section id='cat2_a3' data-state="asked">
           <p>Antwort 3</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -193,7 +254,8 @@
         <section id='cat3_a1' data-state="asked">
           <p class='q_text'>Antwort 1</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -206,7 +268,8 @@
         <section id='cat3_a2' data-state="asked">
           <p>Antwort 2</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -219,7 +282,8 @@
         <section id='cat3_a3' data-state="asked">
           <p>Antwort 3</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -227,15 +291,17 @@
         <!-- Kategorie IV: Gaming -->
 
         <section id='cat4_q1'>
-          <p class='q_text'>Frage 1</p>
+          <p class='q_text'>Super Smash Bros: wie ist die Kombination um mit Samus den Flammenwerfer auszulösen?</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
         <section id='cat4_a1' data-state="asked">
-          <p>Antwort 1</p>
+          <p>Rechts + A (in der Luft)</p>
+          <img src="img/samus.png" width="500px">
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -251,20 +317,22 @@
         <section id='cat4_a2' data-state="asked">
           <img src="img/lava_axt.jpg" width='500px'>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
         <section id='cat4_q3'>
-          <p class='q_text'>Wie teuer ist der Overload Tank bei C&C Generals?</p>
+          <p class='q_text'>Wie teuer ist der Overlord Tank <br> bei C&C Generals?</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
-        <section id='cat4_a3' data-state="asked">
-          <p>2000 $</p>
+        <section id='cat4_a3' data-state="asked" data-background-image='img/overlord.jpg' data-background-position='center'>
+          <p style='color: white; font-size: 400px; font-weight: bold;'>2000 $</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -279,7 +347,8 @@
         <section id='cat5_a1' data-state="asked">
           <p>Antwort 1</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -292,7 +361,8 @@
         <section id='cat5_a2' data-state="asked">
           <p>Antwort 2</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -305,7 +375,81 @@
         <section id='cat5_a3' data-state="asked">
           <p>Antwort 3</p>
           <div class="qlink">
-            <a href="#/questions"><img src='img/questions.png'></a>
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
+          </div>
+        </section>
+
+
+
+        <!-- Bonus -->
+        <section id='bonus_q1'>
+          <p class='q_text'>Frage 1</p>
+          <div class="alink">
+            <a href="#" class='navigate-right'><img src='img/answer.png'></a>
+          </div>
+        </section>
+        <section id='bonus_a1' data-state="asked">
+          <p>Antwort 1</p>
+          <div class="qlink">
+            <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
+          </div>
+        </section>
+
+        <section id='bonus_q2'>
+          <p class='q_text'>Frage 2</p>
+          <div class="alink">
+            <a href="#" class='navigate-right'><img src='img/answer.png'></a>
+          </div>
+        </section>
+        <section id='bonus_a2' data-state="asked">
+          <p>Antwort 2</p>
+          <div class="qlink">
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
+          </div>
+        </section>
+
+        <section id='bonus_q3'>
+          <p class='q_text'>Frage 3</p>
+          <div class="alink">
+            <a href="#" class='navigate-right'><img src='img/answer.png'></a>
+          </div>
+        </section>
+        <section id='bonus_a3' data-state="asked">
+          <p>Antwort 3</p>
+          <div class="qlink">
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
+          </div>
+        </section>
+
+        <section id='bonus_q4'>
+          <p class='q_text'>Frage 4</p>
+          <div class="alink">
+            <a href="#" class='navigate-right'><img src='img/answer.png'></a>
+          </div>
+        </section>
+        <section id='bonus_a2' data-state="asked">
+          <p>Antwort 4</p>
+          <div class="qlink">
+            <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
+          </div>
+        </section>
+
+        <section id='bonus_q5'>
+          <p class='q_text'>Frage 5</p>
+          <div class="alink">
+            <a href="#" class='navigate-right'><img src='img/answer.png'></a>
+          </div>
+        </section>
+        <section id='bonus_a3' data-state="asked">
+          <p>Antwort 5</p>
+          <div class="qlink">
+            <a href="#/questions" onclick="add_score(300);"><img src='img/correct.svg'></a>
+            <a href="#/questions" onclick="add_score(-300);"><img src='img/wrong.svg'></a>
           </div>
         </section>
 
@@ -340,6 +484,11 @@
       Reveal.addEventListener('asked', function(event) {
         var id = event.target.baseURI.split('/').slice(-1)[0]
       	document.getElementById(id.concat('_box')).classList.add('asked');
+      });
+
+      Reveal.addEventListener('grid-page', function(event) {
+      	document.getElementById('counter').innerHTML = score;
+        check_bonus();
       });
 
     </script>
