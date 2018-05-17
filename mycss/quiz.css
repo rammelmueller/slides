@@ -32,13 +32,13 @@ section .quote{
 
 section .alink{
   position: absolute;
-  bottom: 200px;
-  right: 0;
+  bottom: -200px;
+  right: -200px;
 }
 section .qlink{
   position: absolute;
-  bottom: 0px;
-  right: 0;
+  bottom: -200px;
+  right: -200px;
 }
 
 section .qlink img{
