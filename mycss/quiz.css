@@ -177,3 +177,22 @@ section .alink img{
 #q_sc img{
   width: 400px;
 }
+
+
+#bonus_overlay{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 1175px;
+  padding-top: 200px;
+  height: 600px;
+  background-color: #FFBE0B;
+  border-radius: 50px;
+  margin: 0 auto;
+  display : none;
+}
+#bonus_overlay a{
+  color: white;
+  font-size: 150px;
+  font-weight: bold;
+}

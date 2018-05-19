@@ -17,6 +17,7 @@
     <script type="text/javascript">
       var score = 0;
       var q = 0;
+      var limit = 300;
 
       function add_score(pts){
         score = score + pts;
@@ -27,22 +28,22 @@
       };
 
       function check_bonus(){
-        if (score >= 300) {
-          document.getElementById('bonus_q1_box').classList.add('enough');
-        }
-        if (score >= 600) {
-          document.getElementById('bonus_q2_box').classList.add('enough');
-        }
-        if (score >= 900) {
-          document.getElementById('bonus_q3_box').classList.add('enough');
-        }
-        if (score >= 1200) {
-          document.getElementById('bonus_q4_box').classList.add('enough');
-        }
-        if (score >= 1500) {
-          document.getElementById('bonus_q5_box').classList.add('enough');
-        }
-      }
+        console.log(limit);
+        if (score >= limit) {
+          limit = limit + 300;
+          show_bonus();
+        };
+      };
+
+      function hide_bonus(){
+          document.getElementById('bonus_overlay').style.display = 'none';
+
+      };
+
+      function show_bonus(){
+          document.getElementById('bonus_overlay').style.display = 'block';
+      };
+
     </script>
   </head>
   <body>
@@ -126,10 +127,7 @@
             </div>
           </div>
 
-          <div id="bonus_container">
-            <!-- <div class="cat_head">
-              <span>supergeheime Bonus Kategorie</span>
-            </div> -->
+          <!-- <div id="bonus_container">
             <div id="bonus_box">
               <div id="bonus_q1_box" class='question'>
                 <a href="#/bonus_q1">?</a>
@@ -147,6 +145,9 @@
                 <a href="#/bonus_q5">?</a>
               </div>
             </div>
+          </div> -->
+          <div id="bonus_overlay">
+            <a href="#/questions" onclick="hide_bonus();">supergeheime Bonusrunde</a>
           </div>
         </section>
 
@@ -250,13 +251,12 @@
         <!-- Kategorie III -->
 
         <section id='cat3_q1'>
-          <p class='q_text'>Frage 1</p>
+          <p class='q_text'>Wer vom Team Ebola war mit von der Partie auf der LAN 4 fun?</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
-        <section id='cat3_a1' data-state="asked">
-          <p class='q_text'>Antwort 1</p>
+        <section id='cat3_a1' data-state="asked" data-background-image='img/lan.jpg'>
           <div class="qlink">
             <a href="#/questions" onclick="add_score(100);"><img src='img/correct.svg'></a>
             <a href="#/questions" onclick="add_score(-100);"><img src='img/wrong.svg'></a>
@@ -335,7 +335,7 @@
             <img src="img/sc_4.jpg">
             <img src="img/sc_5.png">
           </div>
-          <p>Flo fragen..</p>
+          <p>Power Rangers, Panzer Dragoon Orta, Fzero, Street racer, Lagoon</p>
           <div class="qlink">
             <a href="#/questions" onclick="add_score(200);"><img src='img/correct.svg'></a>
             <a href="#/questions" onclick="add_score(-200);"><img src='img/wrong.svg'></a>
@@ -405,7 +405,7 @@
 
 
         <!-- Bonus -->
-        <section id='bonus_q1'>
+        <!-- <section id='bonus_q1'>
           <p class='q_text'>Frage 1</p>
           <div class="alink">
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
@@ -453,7 +453,7 @@
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
-        <section id='bonus_a2' data-state="asked">
+        <section id='bonus_a4' data-state="asked">
           <p>Antwort 4</p>
           <div class="qlink">
             <a href="#/questions"><img src='img/correct.svg'></a>
@@ -467,13 +467,13 @@
             <a href="#" class='navigate-right'><img src='img/answer.png'></a>
           </div>
         </section>
-        <section id='bonus_a3' data-state="asked">
+        <section id='bonus_a5' data-state="asked">
           <p>Antwort 5</p>
           <div class="qlink">
             <a href="#/questions"><img src='img/correct.svg'></a>
             <a href="#/questions"><img src='img/wrong.svg'></a>
           </div>
-        </section>
+        </section> -->
 
       </div>
     </div>
