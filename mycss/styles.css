@@ -1,0 +1,940 @@
+/*
+    hirschegg2k18.css - LR, December 2017
+
+    CSS stylesheet for reveal.js framework presentation of Hirschegg 2018.
+
+        #d34f21,    (orange, emph)
+    [primary color theme:
+        #5d9fb0,
+        #187795,    (emph blue, CL color)
+        #c5d4d7,
+        #a42604     (red)
+    ]
+
+
+*/
+
+/* ------ GENERAL SETTINGS ------ */
+.reveal section{
+  width : 1364px !important;
+  height: 1024px !important;
+  /*width: 100%;
+  height: 100%;*/
+  margin-top: -22px;
+
+  /* border-style: dashed; */
+  /* border-width: 2px; */
+}
+
+
+.emph {
+  color: #d34f21;
+}
+.emph_alt {
+  color: #187795;
+}
+.bold{
+  font-weight: bold !important;
+}
+.emph_it{
+  font-style: italic !important;
+}
+.emph_large{
+  font-size: 60px !important;
+}
+
+.light {
+  color: #ffffff !important;
+}
+.light .emph{
+  color: #FE9920;
+  font-weight: bold !important;
+}
+.light .emph_alt, .emph_red{
+  color: #a42604;
+  font-weight: bold !important;
+}
+
+section .notes{
+  font-size: 36px;
+}
+
+section .label{
+  font-size: 36px;
+  position: absolute;
+}
+section .label_s{
+  font-size: 28px;
+  position: absolute;
+}
+section .label_l{
+  font-size: 52px;
+  position: absolute;
+}
+section .central{
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+
+.ctr_header{
+  width: 100%;
+  text-align: center !important;
+  margin-left: -8% !important;
+}
+.ctr{
+  width: 100%;
+  text-align: center !important;
+}
+.clr {
+  clear: both !important;
+}
+
+.reveal section p {
+  display: block;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.reveal li{
+  margin-bottom: 20px;
+}
+.reveal ul li{
+  list-style-type: square;
+}
+.reveal ol li{
+  list-style-type: lower-roman;
+}
+.reveal section img {
+    border: 0px;
+    box-shadow: none;
+}
+
+/* References */
+.reveal section .refs{
+  font-size: 20px !important;
+  color: #5d9fb0 !important;
+  font-weight: bold;
+  text-align: left;
+}
+.reveal section .refs .ref_prep{
+  font-style: italic !important;
+}
+#subtitle_ref{
+  position: absolute;
+  top: 220px;
+  left: 150px;
+}
+
+/* Flexible slides, centered vertically */
+.reveal section .flexer{
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.reveal section .flex_header{
+  margin-bottom: 50px;
+  width: 100%;
+}
+.reveal section .flex_body{
+  width: 100%;
+}
+
+/*Rig id slides */
+.reveal section .rig_header{
+  font-size: 64px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  padding: 8% 0% 0% 8%;
+  height: 12% !important;
+  z-index: 100;
+}
+.reveal section .rig_body{
+  text-align: center;
+  width: 100%;
+  height: 75%;
+  padding: 5% 0 0 0%;
+}
+.reveal section .right_col {
+  float: left;
+  width: 40%;
+  display: block;
+  height:inherit;
+  text-align: left;
+  padding-left: 5% 5% 0 5% !important;
+  font-size: 32px;
+}
+.reveal section .left_col {
+  float: left;
+  width: 50%;
+  height:inherit;
+}
+
+
+/* ------ RESULTS ------- */
+.reveal section .res_header{
+  font-size: 64px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  padding: 8% 0% 0% 8%;
+  height: 12% !important;
+}
+.reveal section .res_body{
+  text-align: center;
+  width: 100%;
+  height: 57%;
+  padding: 3% 0 0 0%;
+}
+.reveal section .res_footer{
+  width: 100%;
+  height: 20% !important;
+}
+
+.reveal section .partial_plot{
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width: 750px;
+  margin-left: -375px;
+}
+
+.reveal section .cplot{
+  position: absolute;
+  left: 50%;
+  width: 750px;
+  margin-left: -375px;
+}
+
+/* ------ TITLE ------ */
+#title{
+  margin-bottom: 100px;
+}
+#author{
+  margin-bottom: 70px;
+}
+#current_papers{
+  font-size: 24px;
+  color: #187795;
+  font-weight: bold;
+}
+#logobar {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#logobar img{
+  margin: 0 10px 0 10px;
+  height: 80px;
+}
+
+/* Outline. */
+#outline_text{
+  font-size: 54px;
+}
+
+#refs_fermions{
+  position: absolute;
+  text-align: center;
+  top: 800px;
+  left: 0;
+  width: 100%;
+}
+
+
+/* MB systems pictures */
+.reveal section .mb_sys{
+  margin-top: -100px !important;
+}
+.reveal section .mb_sys_dim{
+  margin-top: -50px !important;
+}
+.reveal section .mb_sys_dim img{
+  width: 700px;
+}
+.reveal section .mb_balanced{
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+.reveal section .mb_label{
+  font-size: 60px;
+  position: absolute;
+  top: 900px;
+  left: 800px;
+  color: #898989;
+  font-weight: bold;
+}
+
+/* Model slide */
+#model_body{
+  margin-top: -50px;
+}
+#model_body .model_formula{
+  font-size: 40px !important;
+}
+#model_upper_formula{
+  margin: 0 0 0 -200px;
+}
+#model_lower_formula{
+  margin: 50px 0 0 -100px;
+  padding-left: 400px;
+}
+#model_graphs{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+#model_graphs .model_box img{
+  width: 500px !important;
+  margin: 0px 50px 0 50px;
+}
+#model_arrow {
+  width: 400px;
+  position: absolute;
+  top: 690px;
+  left: 500px;
+}
+#model_text{
+  width: 200px;
+  position: absolute;
+  font-size: 40px;
+  top: 610px;
+  left: 600px;
+  text-align: center;
+}
+
+/* Methods */
+#methods_label{1
+  position: absolute;
+  font-size: 24px;
+  top: 850px;
+  left: 1000px;
+}
+
+/* MC section */
+#method_path_integral{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#mc_dice img{
+  margin-top: 0;
+  height: 400px;
+}
+.reveal section .dice_quote_mc{
+  width: 100%;
+  text-align: center;
+  font-size: 90px !important;
+  font-weight: bold !important;
+  margin-left: -8%;
+}
+.reveal section .dice_quote_mc .low{
+  display: block;
+  margin-left: 0 !important;
+}
+#algorithm{
+  height: 72%;
+  margin-top: 5%;
+}
+#algorithm_obs {
+  font-size: 50px;
+  margin: -40px 0 80px -80px !important;
+}
+#algorithm_avg{
+  margin-top: 80px !important;
+}
+
+#hmc_right_col {
+  float: left;
+  width: 30%;
+  display: block;
+  height:inherit;
+  text-align: left;
+  padding-left: 5% 5% 0 5% !important;
+  font-size: 32px;
+}
+#hmc_left_col {
+  float: left;
+  width: 800px;
+  height:inherit;
+}
+
+#hmc_markov_label{
+  position: absolute;
+  top: 900px;
+  left: 50px;
+}
+#hmc_markov_label p {
+  margin: 0 !important;
+  font-size: 28px;
+  width: 700px;
+  text-align: center;
+
+}
+
+/* uncertainties slide */
+#uncertainty_header {
+    color: #187795;
+}
+#uncertainty_formula {
+  margin: -40px 0 0 0 !important;
+}
+#mc_illustration {
+  margin-top: 100px;
+  font-family: humor sans;
+}
+#mc_illustration #mc_example_text{
+  text-align: left;
+  padding-left: 10%;
+  margin-bottom: -30px;
+  font-size: 50px;
+  font-family: humor sans;
+}
+#mc_illustration .mc_example{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+#mc_illustration .mc_bottom{
+  float: left;
+  width: 350px;
+  font-size: 50px;
+  margin: 0 30px 0 30px;
+}
+#mc_illustration .mc_bottom .mc_small_die{
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: -15px;
+}
+
+/* sign slide */
+#sign_subtitle{
+  margin-top: -20px;
+}
+#sign_formula{
+  position: absolute !important;
+  top:  750px !important;
+  left: 320px !important;
+}
+#sign_circle{
+  position: absolute !important;
+  top:  615px !important;
+  left: 510px !important;
+  height: 280px;
+}
+#sign_conditions_text{
+  color: #a42604;
+  position: absolute !important;
+  top:  630px !important;
+  left: 940px !important;
+}
+#sign_conditions{
+  text-align: center !important;
+  color: #a42604;
+  font-size: 40px;
+  position: absolute !important;
+  top:  740px !important;
+  left: 1030px !important;
+}
+#sign_conditions p{
+  display: inline;
+}
+#refs_sign{
+  position: absolute;
+  text-align: center;
+  top: 620px;
+  left: 200px;
+  font-size: 24px;
+}
+
+/* CL dice */
+#ihmc_text p{
+  text-align: center;
+  margin-bottom: 50px !important;
+}
+#ihmc_refs{
+  position: absolute;
+  top: 900px;
+  left: 100px;
+}
+#ihmc_refs_pol{
+  position: absolute;
+  top: 890px;
+  left: 810px;
+  width: 300px;
+  text-align: center;
+}
+
+/*#big_dice{
+  display: flex;
+  flex-direction: row;
+  f
+}*/
+#big_dice img{
+  height: 450px;
+}
+
+/* CL overview.*/
+#langevin_formula {
+  margin: 80px 0 80px 0 !important;
+}
+#cl_action{
+  font-size: 36px;
+  margin-top: 20px;
+}
+#refs_cl{
+  position: absolute;
+  top: 900px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+#cl_left_col{
+  float: left;
+  width: 55%;
+  height:inherit;
+}
+#cl_right_col{
+  float: left;
+  width: 40$;
+}
+#cl_right_col p{
+  text-align: center;
+  font-size: 28px;
+  width: 100%;
+}
+#cl_left_col img{
+  margin-top: -100px;
+  height: 600px;
+}
+#cl_problem{
+  position: absolute;
+  top: 800px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+#cl_header{
+  font-size: 40px !important;
+  margin-bottom: 70px !important;
+  margin-top: -50px !important;
+}
+#cl_second{
+  margin-bottom: 100px;
+}
+.reveal section .dim_sys{
+  position: absolute;
+  width: 450px;
+}
+.reveal section .dim_label{
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+}
+#d3{
+  top: 300px;
+  left: 120px;
+}
+#d2{
+  top: 350px;
+  left: 800px;
+}
+#d1{
+  top: 620px;
+  left: 480px;
+}
+#d3_label{
+  top: 300px;
+  left: 120px;
+}
+#d2_label{
+  top: 350px;
+  left: 800px;
+}
+#d1_label{
+  top: 950px;
+  left: 650px;
+}
+
+.reveal section .dims_label{
+  position: absolute;
+  font-size: 42px;
+}
+#D1_benchmark_label{
+  width: 600px;
+  top: 350px;
+  left: 700px;
+}
+#D1_physics_label{
+  width: 100%;
+  top: 850px;
+  left: 0;
+  text-align: center;
+}
+#refs_1D_exp{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 920px;
+  left:0;
+}
+
+/* --- results ---*/
+#definitions{
+  position: absolute;
+  text-align: left;
+  width: 100px;
+  top: 760px;
+  left: 1100px;
+  font-size: 32px;
+}
+
+/* Balanced comparison */
+#balanced_compare_refs{
+  position: absolute;
+  top: 900px;
+  left: 800px;
+}
+#hist_rep{
+  position: absolute;
+  top: 200px;
+  left: 850px;
+  background-color: #ffffff;
+}
+#hist_rep img{
+  height: 350px;
+}
+#hist_att{
+  position: absolute;
+  top: 450px;
+  left: 50px;
+  background-color: #ffffff;
+}
+#hist_att img{
+  height: 350px;
+}
+#hist_label_rep{
+  width: 400px;
+  text-align: center;
+  padding-left: 50px;
+  margin-top: -50px;
+}
+#hist_label_att{
+  width: 400px;
+  text-align: center;
+  padding-left: 50px;
+}
+
+
+
+/* polarized EOS */
+#pairing{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#pairing .surface{
+  margin-top: -50px;
+  width: 500px;
+  padding: 50px;
+  float: left;
+}
+#pairing_refs{
+  position: absolute;
+  top: 950px;
+  left: 900px;
+}
+.reveal section .pol_lab{
+  position: absolute;
+  font-size: 24px;
+  left: 200px;
+}
+#pol_10{
+  top: 370px;
+  color: #808080;
+}
+#pol_08{
+  top: 440px;
+  color: #187795;
+}
+#pol_04{
+  top: 530px;
+  color: #a42604;
+}
+#pol_00{
+  top: 560px;
+  color: #0d153a;
+}
+
+#fflo_label{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 1050px;
+  text-align: center;
+}
+
+
+/* mass imbalance */
+#ihmc_compare{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 50px;
+  text-align: center;
+}
+#ihmc_exp{
+  position: absolute;
+  width: 300px;
+  top: 500px;
+  left: 1050px;
+  text-align: center;
+}
+#grimm_ref{
+  position: absolute;
+  top: 950px;
+  left: 100px;
+}
+#mib_legend{
+  font-size: 24px;
+  position: absolute;
+  top: 700px;
+  left: 200px;
+  text-align: left;
+}
+
+/*2D section*/
+#label_2D_phenomena{
+  position: absolute;
+  top: 350px;
+  left: 800px;
+  width: 500px;
+  text-align: center;
+}
+
+.reveal section .res_body .res_2D{
+  width: 650px;
+  position: absolute;
+}
+#res_2D_weak{
+  top: 300px;
+  left: 50px;
+}
+#res_2D_strong{
+  top: 450px;
+  left: 680px;
+}
+#refs_2D{
+  position: absolute;
+  top: 950px;
+  left: 900px;
+}
+.reveal section .label_2D{
+  position: absolute;
+  width: 600px;
+  font-size: 36px;
+}
+#label_bec{
+  top: 350px;
+  left: 730px;
+}
+#label_bcs{
+  top: 800px;
+  left: 100px;
+}
+#legend_2d{
+  font-size: 24px;
+  position: absolute;
+  width: 450px;
+  top: 750px;
+  left: 200px;
+}
+#legend_header{
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+#legend_2d div{
+  text-align: left;
+  float: left;
+  width: 150px;
+}
+
+#refs_2D_ft{
+  position: absolute;
+  top: 900px;
+  left: 800px;
+}
+#virial_expansion{
+  position: absolute;
+  left: 150px;
+  top: 870px;
+  width: 300px;
+  text-align: center;
+}
+#virial_expansion_3d{
+  position: absolute;
+  left: 0;
+  top: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.reveal section .two_plot{
+  margin-top: 100px;
+  width: 600px;
+}
+
+.reveal section .beb_lab{
+  position: absolute;
+  font-size: 28px;
+  left: 1100px;
+}
+#beb_01{
+  top: 750px;
+  color: #187795;
+}
+#beb_05{
+  top: 700px;
+  color: #5f9049;
+}
+#beb_10{
+  top: 650px;
+  color: #9ca903;
+}
+#beb_20{
+  top: 600px;
+  color: #d7b501;
+}
+#beb_30{
+  top: 550px;
+  color: #eca300;
+}
+
+#lab_2d_classical{
+  width: 200px;
+  font-size: 24px;
+  top: 850px;
+  left: 250px;
+}
+#lab_2d_quantum{
+  width: 200px;
+  font-size: 24px;
+  top: 850px;
+  left: 900px;
+}
+
+
+/* 3D section */
+#label_3D_challening{
+  width: 400px;
+  position: absolute;
+  top: 420px;
+  left: 100px;
+}
+#ufg_def{
+  width: 800px;
+  position: absolute;
+  top: 850px;
+  left: 50%;
+  margin-left: -400px;
+}
+
+#UFG_low_temperature{
+  font-size: 36px;
+  width: 600px;
+  position: absolute;
+  top: 900px;
+  left: 100px;
+}
+#refs_3D{
+  position: absolute;
+  top: 900px;
+  left: 900px;
+}
+#refs_3D_mf{
+  position: absolute;
+  top: 900px;
+  left: 750px;
+}
+
+.reveal section .h_lab{
+  position: absolute;
+  font-size: 28px;
+  left: 180px;
+}
+#h_00{
+  top: 800px;
+  color: #187795;
+}
+#h_04{
+  top: 760px;
+  color: #5f9049;
+}
+#h_08{
+  top: 700px;
+  color: #9ca903;
+}
+#h_12{
+  top: 620px;
+  color: #d7b501;
+}
+#h_16{
+  top: 500px;
+  color: #eca300;
+}
+#h_20{
+  top: 300px;
+  color: #db7502;
+}
+
+/* UFG, balanced*/
+#UFG_agreement{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 50px;
+  text-align: center;
+}
+#UFG_finite_size{
+  position: absolute;
+  width: 300px;
+  top: 550px;
+  left: 1045px;
+  text-align: center;
+}
+#UFG_agreement_ve{
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 1045px;
+  text-align: center;
+}
+
+#label_tc{
+  font-size: 36px;
+  position: absolute;
+  color: #898989;
+  top: 270px;
+  left: 800px;
+}
+
+
+/* Recap */
+#recap{
+  font-size: 54px;
+}
+#recap_header{
+  padding-top: 70px;
+  margin-bottom: -30px !important;
+}
+#recap p {
+  margin: 70px 0 70px 0 !important;
+}

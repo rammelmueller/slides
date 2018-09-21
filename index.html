@@ -17,7 +17,7 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : '../../../../css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : '../../css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
@@ -744,7 +744,7 @@
     </div>
 
     <script src="js/reveal.js"></script>
-    <script src="lib/js/head.min.js"></script>
+    <script src="lhead.min.js"></script>
     <script>
 
       Reveal.initialize({
