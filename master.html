@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="css/theme/white.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mycss/styles.css">
 
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : '../../../../css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
@@ -51,10 +51,10 @@
               [LR, Porter, Drut, Braun <span class='emph_it'>Phys. Rev. D</span> 96, 094506, 2017]<br>
             </div>
             <div id='logobar'>
-              <img src='../_support/hgs_hire_inverted.svg'>
-              <img src='../_support/csc_inverted.png'>
-              <img src='../_support/HICforFAIR.png'>
-              <img src='../_support/tud_logo.png'>
+              <img src='img/hgs_hire_inverted.svg'>
+              <img src='img/csc_inverted.png'>
+              <img src='img/HICforFAIR.png'>
+              <img src='img/tud_logo.png'>
             </div>
           </div>
         </section>
@@ -744,7 +744,7 @@
     </div>
 
     <script src="js/reveal.js"></script>
-    <script src="lhead.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
     <script>
 
       Reveal.initialize({
@@ -758,7 +758,7 @@
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.olatest/config-files.html
+          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
         },
 
         
