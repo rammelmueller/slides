@@ -158,7 +158,7 @@
               <p><span class='emph'>method:</span> <br>why is it challening and what to do about it?</p>
               <p>
                 <span class='emph'>key questions:</span><br>
-                can we get EOS for polarized systems?<br>
+                can we get the EOS for polarized systems?<br>
                 how does $T_C$ change with polarization?<br>
               </p>
             </div>
@@ -377,8 +377,8 @@
               <div id='hist_label_att' class='emph_alt bold'>attractive side: <br> no outliers, <br> no problems!</div>
               <img src="plots/1D_hist_gamma_att.svg">
             </div>
+            <div class="refs subtitle_ref">
           </div>
-          <div class="refs" id='subtitle_ref'>
             [LR, Porter, Drut, Braun '17]
           </div>
           <div class="refs" id='balanced_compare_refs'>
@@ -401,8 +401,8 @@
             <img src='plots/1DGSP_EOS_attractive.svg'>
           </div>
           <div class="res_footer">
+            <div class="refs subtitle_ref">
           </div>
-          <div class="refs" id='subtitle_ref'>
             [LR, Drut, Braun <span class='ref_prep'>in preparation</span>]
           </div>
           <div id="definitions">
@@ -427,65 +427,107 @@
 
 
         <!--
-          Also Interlude:
-            - virial expansion explanation
+          Plan for 3D results:
 
-          Results to consider:
            - density EOS (balanced + polarized)
-           - detail: denisty EOS and virial expansion (maybe include 4th order?)
+           - virial expansion explanation + detail: denisty EOS and virial expansion (maybe include 4th order?)
            - magnetization + polarization
-           - energy EOS + comparison
-           - pressure
+           - Maxwell relations
+           - Pressure EOS
+           - energy EOS + comparison + Bertsch story
 
            - compressibility for the balanced gas + comparison
            - compressibility for polarized systems (+ try to estimate T_C in the phase diagram?)
 
            - spin susceptibility compared to Pauli susceptibility for all beta*h and beta*mu
-           - Maxwell relations?
            - spin susceptibility vs. T/T_F + compare to other methods + Pseudogap discussion?
 
         -->
 
-
-        <!-- TODO -->
         <section data-menu-title='3D UFG: density EOS'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
             UFG: density equation of state
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
-            </div>
           </div>
           <div class='res_body'>
             <img class='partial_plot' src='plots/UFG_density_balanced.svg'>
+            <img class='partial_plot fragment' src='plots/UFG_density_balanced_pt.svg' data-fragment-index=1>
+
+            <div style="top: 400px; left: 50px; width: 300px;" class='label fragment' data-fragment-index=1>
+              <span class='emph bold'>good agreement with experiment and other methods!</span>
+            </div>
+
+            <div class="label fragment" data-fragment-index='1' style="top: 730px; left: 750px; color: #898989">
+              $T_C \sim 0.17\,T_F$
+            </div>
+
+            <div>
+              <span class='emph fragment label_s' data-fragment-index=1 style="width: 300px; top: 600px; left: 50px; font-family: 'Overpass'">
+                CL results:<br>finite lattice $V = 11^3$
+              </span>
+            </div>
+
+            <div class="fragment roadsign" data-fragment-index=2 style="top:850px; left: 200px; background-image: url('img/roadsign_alt.svg'); ">
+              classical regime
+            </div>
+            <div class="fragment label_s" data-fragment-index=2 style="top:950px; left: 200px; width: 300px">
+                $k_B T$ dominates
+            </div>
+
+            <div class="fragment roadsign" data-fragment-index=2 style="top:850px; left: 900px; background-image: url('img/roadsign.svg'); ">
+              quantum regime
+            </div>
+            <div class="fragment label_s" data-fragment-index=2 style="top:950px; left: 900px; width: 300px">
+              $E_F$ dominates
+            </div>
+
+            <div class='fragment label_s' data-fragment-index=2 style='width: 300px; top: 600px; left: 1050px;'>
+              <span>low temperatures: <br>$\lambda_T$ increases<br> ($\lambda_T \ll V^{1/3}$ must be fulfilled)</small></span>
+            </div>
+
           </div>
           <div class="res_footer">
-            <div class="refs current_visible" id='refs_3D'>
+            <div class="refs" style='top: 250px; left: 900px; position: absolute;'>
               [experiment/BDMC: van Houcke et al. '12]<br>
               [DHMC: Drut, Lähde, Wlazlowski, Magierski '12]
             </div>
           </div>
           <aside class="notes">
-
+            agreement with methods <br>
+            lattice is finite <br>
+            classical/quantum crossover (different scales dominate) <br>
+            virial expansion <br>
+            lattice effects at larger density <br>
           </aside>
         </section>
 
-        <!-- TODO -->
+
         <section data-menu-title='3D UFG: denisty EOS (polarized)'>
           <div class='res_header'>
             UFG: density EOS at finite polarization
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
-          </div>
+            <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
           </div>
           <div class='res_body'>
             <img class='partial_plot' src='plots/UFG_density_polarized.svg'>
+
+            <div class="label" style='top: 750px; left: 1100px'>
+              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
+            </div>
+
+            <div style="top: 900px;" class='label central' data-fragment-index=>
+              <span class='emph bold'>excellent agreement with virial expansion for all polarizations</span>
+            </div>
+
           </div>
           <div class="res_footer">
           </div>
           <aside class="notes">
-
+            definition of h <br>
+            agreement with VE still good <br>
+            not really other things to compare <br>
           </aside>
         </section>
+
 
         <!-- TODO -->
         <section data-menu-title='virial expansion'>
@@ -493,11 +535,27 @@
             interlude: the virial expansion
           </div>
           <div class='res_body'>
+            <p style="">dilute gases: few-body correlations dominate</p>
+            <p style="">idea: describe the system as expansion in few-body clusters</p>
+            <p><br><br>$\ln \mathcal{Z} = \mathcal{Q}_1\sum_{n}{z^nb_{n}}$</p>
+            <img src="img/virial_clusters.svg" width=1000px style="position: absolute; top: 750px; left: 50%; margin-left: -550px">
+
+            <span class='ve_label' style='left: 280px;'>$+$</span>
+            <span class='ve_label' style='left: 530px;'>$+$</span>
+            <span class='ve_label' style='left: 830px;'>$+$</span>
+            <span class='ve_label' style='left: 1130px;'>$+\ \ \cdots$</span>
           </div>
           <div class="res_footer">
+            <div class="refs" style="">
+
+            </div>
           </div>
           <aside class="notes">
-
+            crossection proportional to lambda_t^2 -> lower at high temperatures <br>
+            works well with dilute gases due to less interaction <br>
+            fourth order for the balanced case <br>
+            third order for polarized <br>
+            worse at polarization: large fugacity of one particle <br>
           </aside>
         </section>
 
@@ -505,9 +563,9 @@
         <!-- TODO -->
         <section data-menu-title='3D UFG: denisty EOS (virial regime)'>
           <div class='res_header'>
-            UFG: density EOS (virial regime)
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+            density EOS (virial regime)
+            <div class="refs subtitle_ref">
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
             </div>
           </div>
           <div class='res_body'>
@@ -521,13 +579,14 @@
         </section>
 
 
+
         <!-- TODO -->
         <section data-menu-title='3D UFG: magnetization'>
           <div class='res_header'>
             UFG: magnetization equation of state
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
-          </div>
+            <div class="refs subtitle_ref">
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
+            </div>
           </div>
           <div class='res_body'>
             <img class='partial_plot' src='plots/UFG_magnetization.svg'>
@@ -541,16 +600,38 @@
 
 
         <!-- TODO -->
+        <section data-menu-title='3D UFG: crosscheck'>
+          <div class='res_header'>
+            Maxwell relations: consistency check
+            <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
+          </div>
+          <div class='res_body'>
+            <div class="">
+              $\left(\frac{\partial n }{\partial \beta h}\right)_{\beta\mu} \overset{!}{=} \left(\frac{\partial m }{\partial \beta \mu}\right)_{\beta h}$
+            </div>
+            <img data-fragment-index=1 class='cplot' style="width: 1200px; margin-left: -600px; top: 400px" src='plots/UFG_maxwell.svg'>
+          </div>
+          <div class="res_footer">
+          </div>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+
+        <!-- START OF DERIVED QUANTITIES -->
+
+
+        <!-- TODO -->
         <section data-menu-title='3D UFG: pressure'>
           <div class='res_header'>
-            UFG: pressure & energy EOS
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+            <div class="refs subtitle_ref">
+            UFG: pressure equation of state
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
-            <img class='cplot' style='left: 100px; margin: 0; width: 600px;' src='plots/UFG_pressures.svg'>
-            <img class='cplot' style='left: 700px; margin: 0; width: 600px;' src='plots/UFG_energy.svg'>
+            <img class='partial_plot' src='plots/UFG_pressures.svg'>
           </div>
           <div class="res_footer">
           </div>
@@ -561,29 +642,30 @@
 
 
         <!-- TODO -->
-        <!-- <section data-menu-title='3D UFG: energy'>
+        <section data-menu-title='3D UFG: energy'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: energy equation of state
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
+            <img class='partial_plot' src='plots/UFG_energy.svg'>
           </div>
           <div class="res_footer">
           </div>
           <aside class="notes">
 
           </aside>
-        </section> -->
+        </section>
 
 
         <!-- TODO -->
         <section data-menu-title='3D UFG: compressibility (balanced case)'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: compressibility
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
@@ -603,9 +685,9 @@
         <!-- TODO -->
         <section data-menu-title='3D UFG: compressibility (polarized)'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: compressibility
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
@@ -622,9 +704,9 @@
         <!-- TODO -->
         <section data-menu-title='3D UFG: phase diagram'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: phase diagram
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
@@ -638,29 +720,11 @@
         </section>
 
         <!-- TODO -->
-        <section data-menu-title='3D UFG: specific heat'>
-          <div class='res_header'>
-            UFG: specific heat
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> in preparation</span>]
-          </div>
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_specific_heat.svg'>
-          </div>
-          <div class="res_footer">
-          </div>
-          <aside class="notes">
-
-          </aside>
-        </section>
-
-        <!-- TODO -->
         <section data-menu-title='3D UFG: magnetic susceptibility'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: spin susceptibility
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
@@ -673,29 +737,12 @@
           </aside>
         </section>
 
-        <!-- TODO -->
-        <section data-menu-title='3D UFG: crosscheck'>
-          <div class='res_header'>
-            UFG: Maxwell relations
-            <div class="refs" id='subtitle_ref'>
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> arXiv '18</span>]
-          </div>
-          </div>
-          <div class='res_body'>
-            <img class='cplot' style="width: 1200px; margin-left: -600px" src='plots/UFG_maxwell.svg'>
-          </div>
-          <div class="res_footer">
-          </div>
-          <aside class="notes">
-
-          </aside>
-        </section>
 
         <!-- TODO -->
         <section data-menu-title='3D UFG: magnetic susceptibility'>
           <div class='res_header'>
+            <div class="refs subtitle_ref">
             UFG: magnetic susceptibility - revisited
-            <div class="refs" id='subtitle_ref'>
               [LR, Loheac, Drut, Braun <span class='ref_prep'> in preparation</span>]
           </div>
           </div>
@@ -744,7 +791,24 @@
 
         <!-- +++++++++++++++++++++++++++ APPENDIX ++++++++++++++++++++++++++++ !-->
 
-
+        <section data-menu-title='3D UFG: specific heat'>
+          <div class='res_header'>
+            <div class="refs subtitle_ref">
+            UFG: specific heat
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> in preparation</span>]
+          </div>
+          </div>
+          <div class='res_body'>
+              $\frac{C_V}{N} = \left(\frac{\partial E}{\partial T}\right)_{N,V} = \frac{3}{2}\left(\frac{T}{T_F}\right)^{-1} \left(\frac{p}{p_0} - \frac{\kappa_0}{\kappa}\right)$
+            <img class='cplot' style="top: 400px;" src='plots/UFG_specific_heat.svg'>
+          </div>
+          <div class="res_footer">
+          </div>
+          <aside class="notes">
+            Dulong-Petits law for ideal Boltzmann gas (spin degeneracy)<br>
+            though to extract since it is a combination of derived quantities <br>
+          </aside>
+        </section>
 
 
         <!-- +++++++++++++++++++++++++++ END ++++++++++++++++++++++++++++ !-->
