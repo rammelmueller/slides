@@ -79,7 +79,6 @@
           </div>
         </section>
 
-        <!-- TODO: crossover somehow? -->
         <section data-menu-title='Intro: balanced Fermi gas'>
           <div class='rig_header'>
             balanced Fermi gas
@@ -98,6 +97,9 @@
         <section data-menu-title='Intro: UFG'>
           <div class='rig_header'>
             the unitary Fermi gas
+            <div class="subtitle_ref refs">
+              [reviews: Zwerger '12; Mukaiyama,Ueda '13]
+            </div>
           </div>
           <p>$a_S \gg n^{-1/3} \gg r_0$</p>
           <img style='position:absolute;top:380px; left:5%;' src="img/bcs_bec.svg" width=90% alt="">
@@ -108,6 +110,7 @@
             <p>density & temperature are only dimensionful scales in the system</p>
             <p><span class='emph'>universal</span> scaling: $\ \ E = E_0\ f_E(\beta\mu), P = P_0\ f_P(\beta\mu) \cdots$</p>
           </div>
+          <!-- <img src="img/pd_crossover.png" class="partial_plot fragment" style="top: 300px; width: 700px;" data-fragment-index=1> -->
           <aside class='notes'>
             unitary regime: dilute but strongly interacting<br>
             Feshbach resonance to tune to UFG<br>
@@ -119,10 +122,20 @@
 
         <section data-menu-title='Intro: UFG (experiment)'>
           <div class='rig_header'>
-            the unitary Fermi gas - experiments
+            the unitary Fermi gas: <span class='emph bold'>many </span>experiments
           </div>
-          <img src="img/density_EOS_MIT.png" style="position: absolute;top:250px; left: 200px; width:450px">
-          <img src="img/response_MIT.png" style="position: absolute;top:250px; left:800px; width:450px">
+
+          <img src="img/density_EOS_MIT.png" style="position: absolute;top:250px; left: 150px; width:350px">
+          <img src="img/response_MIT.png" style="position: absolute;top:250px; left:550px; width:350px">
+          <img src="img/viscosity_DUKE.png" style="position: absolute;top:250px; left:950px; width:350px">
+
+          <img src="img/virial_DUKE.png" style="position: absolute;top:600px; left: 150px; width:350px">
+          <img src="img/condensate_TOKYO.png" style="position: absolute;top:600px; left:550px; width:350px">
+          <img src="img/spins_MIT.png" style="position: absolute;top:600px; left:950px; width:350px">
+
+          <div class="refs" style="top: 980px; left: 150px; position: absolute">
+            [Thomas,Kinast,Turpalov '05; Horikoshi et al. '10; Cao et al. '11; Sommer et al. '11; van Houcke et al., '12; Ku et al. '12;]
+          </div>
           <aside class='notes'>
             a lot has been done for the UFG, but: polarization -> tricky!
           </aside>
@@ -136,16 +149,28 @@
               <img width='1024px' src='img/mb_polarized.png'>
           </div>
           <aside class="notes">
-            very low temperatures -> FFLO
+            very low temperatures -> FFLO <br>
+            what happens to pairing if not every particle has a partner? <br>
           </aside>
+          <div class="footer_refs refs">
+            [reviews: Chevy '10; Gubbels,Stoof '13]
+          </div>
         </section>
 
-        <section data-menu-title='Intro: spin polarization (PD)'>
+        <section data-menu-title='3D phase diagram: sketch'>
           <div class='rig_header'>
-            spin polarization - phase diagram
+            temperature vs. polarization phase diagram
+          </div>
+          <div class='res_body'>
+            <img class='cplot' src='plots/meanfield.svg'>
+          </div>
+          <div class="res_footer">
+              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
-
+            fRG: not ab initio <br>
+            good at resolving phase structure <br>
+            second oder/first ofer/tricritical point
           </aside>
         </section>
 
@@ -210,6 +235,9 @@
               rewrite the problem as a path-integral: <br>
               $\mathcal{Z} = \int{\mathcal{D}\phi\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}} \equiv \int{\mathcal{D}\phi\ \mathrm e^{-S[\phi]}}$
             </div>
+          </div>
+          <div class="footer_refs refs">
+            [lattice methods: Lee '09; Drut,Nicholson '13]
           </div>
         </section>
 
@@ -292,7 +320,7 @@
 
         <section data-menu-title='Complex Langevin: overview'>
           <div class="rig_header">
-            <span class='emph_blue'>Complex Langevin (CL)</span>
+            <span class='emph_blue'>stochastic quantization</span>
           </div>
           <div class="rig_body">
             <p><span class='emph_blue'>stochastic quantization:</span> equilibrium distribution of a <br> $(d+1)$-dimensional random process is identified with <br>the probability measure of our $d$-dimensional path integral</p>
@@ -302,7 +330,7 @@
             </div>
           </div>
           <div id='refs_cl' class='refs'>
-            [Parisi, Wu '81]<br>[Aarts '09; Seiler '17] <br>
+            [Parisi, Wu '81; Damgaard,Huffel '87]<br>[Aarts '09; Seiler '17] <br>
             [Loheac, Drut '17; LR, Porter, Drut, Braun '17]
           </div>
         </section>
@@ -335,94 +363,122 @@
 
         <!-- ++++++++++++ RESULTS ++++++++++++ !-->
 
-        <!-- TODO -->
         <section data-menu-title='1D'>
           <div class='rig_header'>
             one-dimensional systems
           </div>
           <div class="rig_body mb_sys_dim">
-            <img src='img/mb_1d.svg'>
-            <div id='D1_benchmark_label' class='dims_label'>
+            <img class="label" src='img/mb_1d.svg' style="width: 600px; top: 400px; left: 100px">
+            <div class='label' style="width: 600px; top: 400px; left: 600px; font-size: 42px">
               computationally cheap &<br>
               exact solutions available<br>
               $=$<br>
               excellent benchmark systems<br>
             </div>
-            <div id='D1_physics_label' class='dim_label'>
-              <span class='emph'>accessible in experiment</span>
+            <div class='label emph bold central' style="top: 850px">
+              <span class='emph'>also accessible in experiment</span>
             </div>
-            <div id='refs_1D_exp' class='refs'>
-              [Wenz et al. '13; Zürn et al. '13; Murmann et al. '15]
+            <div class='label refs' style='top: 900px; width: 100%; text-align: center'>
+              [e.g. Liao et al. '10; Wenz et al. '13; Zürn et al. '13; Murmann et al. '15]
             </div>
           </div>
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='1D: balanced comparison'>
           <div class='res_header'>
             first step: compare to other methods
+            <div class="refs subtitle_ref">
+                [LR, Porter, Drut, Braun '17]
+            </div>
           </div>
           <div class='res_body'>
             <img src='plots/1D_balanced_compare.svg'>
-          </div>
-          <div class="res_footer">
-          </div>
-          <div>
+
             <div id='hist_rep' class="fragment" data-fragment-index='1'>
               <img src="plots/1D_hist_gamma_rep.svg">
               <div id='hist_label_rep' class='emph_red bold'>repulsive side: <br>outliers skew <br>expectation values! <br><small>('fat tail' problem)</small></div>
             </div>
+
             <div id='hist_att' class="fragment" data-fragment-index='2'>
               <div id='hist_label_att' class='emph_alt bold'>attractive side: <br> no outliers, <br> no problems!</div>
               <img src="plots/1D_hist_gamma_att.svg">
             </div>
-            <div class="refs subtitle_ref">
+
+            <div class='label' style='width: 200px; top: 760px; left: 1100px'>
+              $\gamma = g/n$
+            </div>
           </div>
-            [LR, Porter, Drut, Braun '17]
+          <div class="res_footer">
+            <div class="refs" id='balanced_compare_refs'>
+              [BA: Iida, Wadati '07; Tracy, Widom '16]<br>
+              [DFT-RG: Kemler, Pospiech, Braun '17; Kemler '17]<br>
+              [HMC: LR, Porter, Loheac, Drut '15]
+            </div>
           </div>
-          <div class="refs" id='balanced_compare_refs'>
-            [BA: Iida, Wadati '07; Tracy, Widom '16]<br>
-            [DFT-RG: Kemler, Pospiech, Braun '17; Kemler '17]<br>
-            [HMC: LR, Porter, Loheac, Drut '15]
-          </div>
-          <div id="definitions">
-            $\gamma = g/n$
-          </div>
+          <aside class="notes">
+            10 already enough for TL, it seems <br>
+          </aside>
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='1D: polarized EOS'>
           <div class='res_header'>
             polarized 1D fermions: equation of state
+            <div class="refs subtitle_ref">
+              [LR, Drut, Braun <span class='ref_prep'>in preparation</span>]
+            </div>
           </div>
           <div class='res_body'>
-            <img src='plots/1DGSP_EOS_attractive.svg'>
+            <img class='partial_plot' src='plots/1D_EOS.svg'>
+            <div class="label fragment emph bold" data-fragment-index=1 style='left: 50px; width: 250px; top: 500px'>
+              excellent agreement at low densities (zero-range limit)
+            </div>
           </div>
           <div class="res_footer">
-            <div class="refs subtitle_ref">
+            <div class="refs" id='balanced_compare_refs'>
+              [BA: Iida, Wadati '07; Tracy, Widom '16]<br>
+            </div>
           </div>
-            [LR, Drut, Braun <span class='ref_prep'>in preparation</span>]
-          </div>
-          <div id="definitions">
+          <div class='label' style='width: 200px; top: 760px; left: 1100px'>
             $\gamma = g/n$ <br>
             $p = \frac{N_\uparrow-N_\downarrow}{N_\uparrow+N_\downarrow}$
           </div>
-          <div class='pol_lab' id='pol_10'>$p = 1.0$</div>
-          <div class='pol_lab' id='pol_08'>$p = 0.8$</div>
-          <div class='pol_lab' id='pol_04'>$p = 0.4$</div>
-          <div class='pol_lab' id='pol_00'>$p = 0.0$</div>
         </section>
 
 
-        <section data-menu-title='Switch: 1D to 3D'>
+        <section data-menu-title='3D stystems'>
           <div class='rig_header'>
-            from one to three dimensions
+            three dimensional systems at $T > 0$
           </div>
           <div class="rig_body">
-            pictures 1D/3D systems + some text at the 3D side
+            <img class="label" src='img/mb_3d.svg' style="width: 600px; top: 400px; left: 100px">
+            <div class='label' style="width: 600px; top: 400px; left: 700px; font-size: 42px">
+              $\mathcal{Z} =  \text{Tr}\left[e^{-\beta(\hat{H} - \mu_\uparrow \hat{N}_\uparrow - \mu_\downarrow \hat{N}_\downarrow)} \right]$
+              <br> $ = \text{Tr} \left[e^{-\beta(\hat{H} - \mu \hat{N} - h \hat{M} )}\right]$
+              <br>
+              <br>
+              $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
+              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
+            </div>
+            <p class='label central emph bold' style='top: 850px'>computationally challenging (but feasible)</p>
           </div>
+        </section>
+
+
+        <section data-menu-title='3D phase diagram: sketch'>
+          <div class='rig_header'>
+            temperature vs. polarization phase diagram
+          </div>
+          <div class='res_body'>
+            <img class='cplot' src='plots/meanfield_pol_nopoints.svg'>
+          </div>
+          <div class="res_footer">
+              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
+          </div>
+          <aside class="notes">
+
+          </aside>
         </section>
 
 
@@ -447,7 +503,7 @@
         <section data-menu-title='3D UFG: density EOS'>
           <div class='res_header'>
             <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
-            UFG: density equation of state
+            density equation of state
           </div>
           <div class='res_body'>
             <img class='partial_plot' src='plots/UFG_density_balanced.svg'>
@@ -504,7 +560,7 @@
 
         <section data-menu-title='3D UFG: denisty EOS (polarized)'>
           <div class='res_header'>
-            UFG: density EOS at finite polarization
+            density EOS at finite polarization
             <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
           </div>
           <div class='res_body'>
@@ -529,7 +585,6 @@
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='virial expansion'>
           <div class='res_header'>
             interlude: the virial expansion
@@ -560,7 +615,6 @@
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='3D UFG: denisty EOS (virial regime)'>
           <div class='res_header'>
             density EOS (virial regime)
@@ -570,6 +624,8 @@
           </div>
           <div class='res_body'>
             <img class='cplot' style="top: 240px;" src='plots/UFG_VE_detail.svg'>
+            <p class='label emph' style='top: 480px; left: 50px; width: 250px'>VE approachces the CL results order-by-order</p>
+            <p class='label' style='top: 750px; left: 1050px; width: 300px'>VE deviates earlier for polarized systems</p>
           </div>
           <div class="res_footer">
           </div>
@@ -579,17 +635,18 @@
         </section>
 
 
-
-        <!-- TODO -->
         <section data-menu-title='3D UFG: magnetization'>
           <div class='res_header'>
-            UFG: magnetization equation of state
+            magnetization & polarization
             <div class="refs subtitle_ref">
               [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
             </div>
           </div>
           <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_magnetization.svg'>
+            <p class='label' style='top: 300px; left: 50px; width: 640px'>$m = n_\uparrow - n_\downarrow = \frac{\partial\ln\mathcal{Z}}{\partial \beta h}$</p>
+            <p class='label' style='top: 300px; left: 700px; width: 640px'>$p = \frac{n_\uparrow - n_\downarrow}{n_\uparrow + n_\downarrow} = \frac{m}{n}$</p>
+            <img class='partial_plot' src='plots/UFG_magnetization.svg' style="top: 400px; left: 50px; margin:0; width: 640px">
+            <img class='partial_plot' src='plots/UFG_polarization.svg' style="top: 400px; left: 700px; margin:0; width: 640px">
           </div>
           <div class="res_footer">
           </div>
@@ -599,7 +656,6 @@
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='3D UFG: crosscheck'>
           <div class='res_header'>
             Maxwell relations: consistency check
@@ -622,58 +678,22 @@
         <!-- START OF DERIVED QUANTITIES -->
 
 
-        <!-- TODO -->
         <section data-menu-title='3D UFG: pressure'>
           <div class='res_header'>
+            pressure equation of state
             <div class="refs subtitle_ref">
-            UFG: pressure equation of state
               [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
-          </div>
+            </div>
           </div>
           <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_pressures.svg'>
+            <div class="label central" style='top: 300px;'>
+              $P(\beta \mu) = \int_{-\infty}^{\beta\mu}{n(x)\ dx}$
+            </div>
+            <img class='partial_plot' src='plots/UFG_pressures.svg' style="top: 400px;">
           </div>
           <div class="res_footer">
-          </div>
-          <aside class="notes">
-
-          </aside>
-        </section>
-
-
-        <!-- TODO -->
-        <section data-menu-title='3D UFG: energy'>
-          <div class='res_header'>
-            <div class="refs subtitle_ref">
-            UFG: energy equation of state
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
-          </div>
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_energy.svg'>
-          </div>
-          <div class="res_footer">
-          </div>
-          <aside class="notes">
-
-          </aside>
-        </section>
-
-
-        <!-- TODO -->
-        <section data-menu-title='3D UFG: compressibility (balanced case)'>
-          <div class='res_header'>
-            <div class="refs subtitle_ref">
-            UFG: compressibility
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
-          </div>
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_compressibility_balanced.svg'>
-          </div>
-          <div class="res_footer">
-            <div class="refs" id='refs_3D'>
-              [experiment: Ku etal. '12]
+            <div class="refs footer_refs">
+              [experiment: Ku et al. '12]
             </div>
           </div>
           <aside class="notes">
@@ -682,55 +702,152 @@
         </section>
 
 
-        <!-- TODO -->
+        <section data-menu-title='3D UFG: energy'>
+          <div class='res_header'>
+            energy equation of state
+            <div class="refs subtitle_ref">
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
+          </div>
+          </div>
+          <div class='res_body'>
+            <div class="label central" style='top: 300px;'>
+              $E = \frac{3}{2}PV$
+            </div>
+            <img class='partial_plot' src='plots/UFG_energy.svg' style="top: 400px;">
+            <img class='partial_plot fragment' data-fragment-index=1 src='plots/UFG_energy_bertsch.svg' style="top: 400px;">
+
+            <div class="label fragment" style="top: 950px; left: 100px" data-fragment-index=1>
+              $E(T=0) = \xi E_0$
+            </div>
+
+            <div class="label emph fragment" data-fragment-index=2 style="top: 500px; width: 300px; left: 1050px">
+              improvement at low $T$:<br> larger lattices, <br>improved operators
+            </div>
+          </div>
+          <div class="res_footer">
+            <div class="refs footer_refs">
+              [universality: Ho '04] <br>
+              [experiment: Ku et al. '12; Nascimbène et al. '12]<br>
+              [DHMC: Drut et al. '12] <br>
+            </div>
+            <div class="fragment refs" style="left: 70px; top: 800px; position: absolute" data-fragment-index=1>
+              [$\xi$, theory: Carlson et al. '11] <br>
+              [$\xi$, experiment: Ku et al. '12]
+            </div>
+          </div>
+          <aside class="notes">
+            kink only faint - better for PT: response
+          </aside>
+        </section>
+
+
+        <section data-menu-title='3D UFG: compressibility (balanced case)'>
+          <div class='res_header'>
+            compressibility
+            <div class="refs subtitle_ref">
+              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
+          </div>
+          </div>
+          <div class='res_body'>
+            <p>$\kappa = \left(\frac{1}{n}\frac{\partial n}{\partial P}\right)_{T,V,h} =  \left(\frac{1}{n^2}\frac{\partial n}{\partial\mu}\right)_{T,V,h}$</p>
+            <img class='partial_plot' src='plots/UFG_compressibility_balanced.svg'  style="top: 420px;">
+            <img class='partial_plot fragment' src='plots/UFG_compressibility_balanced_PT.svg'  style="top: 420px;" data-fragment-index=1>
+            <p class='label fragment' data-fragment-index=1 style='color: #898989; top: 900px; left: 300px'>$T_C = 0.167 T_F$</p>
+            <p class='label fragment' data-fragment-index=1 style='top: 500px; left: 20px; width: 320px;'>
+              "divergence" of $\kappa$ <br><span class='emph'>indicates superfluid phase transition</span>
+            </p>
+            <p class='label fragment' data-fragment-index=1 style='top: 400px; left: 1050px; width: 300px;'>
+              features of curve <br> recovered with CL, <br> quantitative disagreement <br> at low temperatures
+            </p>
+          </div>
+          <div class="res_footer">
+            <div class="refs footer_refs">
+              [experiment: Ku et al. '12]<br>
+              [Luttinger-Ward: Enns,Haussmann '12]<br>
+              [T-matrix: Pantel et al. '14]
+            </div>
+          </div>
+          <aside class="notes">
+            good agreement <br>
+            hard to access: derived quantity, data must be smooth
+          </aside>
+        </section>
+
         <section data-menu-title='3D UFG: compressibility (polarized)'>
           <div class='res_header'>
+            compressibility for polarized systems
             <div class="refs subtitle_ref">
-            UFG: compressibility
               [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
             <img class='cplot' style='top: 230px;' src='plots/UFG_compressibility_polarized.svg'>
+            <p class='label fragment' style="top: 400px; left: 50px; width: 300px;" data-fragment-index=1>
+              <span class='emph'>weak dependence of the critical temperature on polarization indicated</span>
+            </p>
+            <p class='label fragment' style="top: 600px; left: 1050px; width: 300px;" data-fragment-index=1>
+              challenging to extract precise $T_C$
+            </p>
           </div>
           <div class="res_footer">
           </div>
           <aside class="notes">
-
+            hard to infer precise TC <br>
           </aside>
         </section>
 
-
-        <!-- TODO -->
         <section data-menu-title='3D UFG: phase diagram'>
           <div class='res_header'>
-            <div class="refs subtitle_ref">
-            UFG: phase diagram
-              [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
-          </div>
+            UFG phase diagram
           </div>
           <div class='res_body'>
             <img class='cplot' src='plots/meanfield_pol.svg'>
           </div>
           <div class="res_footer">
+              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
 
           </aside>
         </section>
 
-        <!-- TODO -->
         <section data-menu-title='3D UFG: magnetic susceptibility'>
           <div class='res_header'>
+            spin susceptibility
             <div class="refs subtitle_ref">
-            UFG: spin susceptibility
               [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
           </div>
           <div class='res_body'>
-            <img class='c_plot' style="width: 1000px; margin-left: 0px;" src='plots/UFG_chi.svg'>
+            <p class='label central'>$\chi_S = \left(\frac{\partial m}{\partial h}\right)$</p>
+            <img class='partial_plot' style="width: 1100px; margin: 0; top: 400px; position: absolute; left: 100px" src='plots/UFG_chi.svg'>
+            <div class="label central" style="top: 850px">
+              <p class='fragment' data-fragment-index=1>Pauli susceptibility field independent at low field and $T$ <br>
+              <p class='fragment emph bold' data-fragment-index=1>UFG: dependence on $\beta h$ very similar to FG, but rescaled</p>
+          </div>
           </div>
           <div class="res_footer">
+          </div>
+          <aside class="notes">
+            pauli susceptibility: weakly temperature dependent (square)<br>
+            UFG resembles that <br>
+            perfect fit to VE <br>
+            derivation more challenging -> less points <br>
+            normalized by density <br>
+            next up: pseudogap?
+          </aside>
+        </section>
+
+        <section data-menu-title='3D UFG: phase diagram'>
+          <div class='res_header'>
+            UFG phase diagram - revisited
+          </div>
+          <div class='res_body'>
+            <img class='partial_plot' src='plots/meanfield.svg'>
+            <img class='partial_plot fragment' src='plots/meanfield_pg.svg' data-fragment-index=1>
+          </div>
+          <div class="res_footer">
+              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
 
@@ -738,21 +855,37 @@
         </section>
 
 
-        <!-- TODO -->
         <section data-menu-title='3D UFG: magnetic susceptibility'>
           <div class='res_header'>
+            magnetic susceptibility - revisited
             <div class="refs subtitle_ref">
-            UFG: magnetic susceptibility - revisited
               [LR, Loheac, Drut, Braun <span class='ref_prep'> in preparation</span>]
           </div>
           </div>
           <div class='res_body'>
             <img class='partial_plot' src='plots/UFG_susceptibility.svg'>
+            <p class='label fragment' style='width: 300px; left: 1050px; top: 500px' data-fragment-index=1>
+              large $T$: Curie's law $\chi_S \propto T^{-1}$
+            </p>
+            <p class='label fragment' style='width: 300px; left: 1050px; top: 700px' data-fragment-index=1>
+              agreement of theory + experiment
+            </p>
+            <p class='label fragment' style='width: 500px; left: 50px; top: 820px' data-fragment-index=2>
+              Pseudogap:<br>  suppression of $\chi_S$ at $T^* > T_C$<br> <span class='refs'>[recent review: Jensen et al. '18]</span>
+            </p>
+            <p class='label fragment emph bold' style='width: 250px; left: 50px; top: 400px' data-fragment-index=2>
+              low $T$: discrepancy between experiment and theory
+            </p>
+            <p class='label fragment emph bold' style='width: 700px; left: 600px; top: 900px' data-fragment-index=3>
+              CL: pseudogap possible <br> $T^*$ and $T_C$ seem to be very close
+            </p>
           </div>
-          <div class="res_footer">
-          </div>
+            <div class="refs footer_refs">
+            </div>
           <aside class="notes">
-
+            experiment: aimed to investigate dynamic properties <br>
+            AFQMC: shperical cutoff vs. none <br>
+            very comforting: different ways of computing the chi <br>
           </aside>
         </section>
 
@@ -762,7 +895,7 @@
         <section data-menu-title='Recap' class='light' data-background-color="#404040">
           <div class="flexer">
             <div class="flex_header" id='recap_header'>
-              <h1 class='light'>Recap</h1>
+              <h1 class='light'>recap</h1>
             </div>
             <div id='recap' class="flex_body">
               <p>spin polarized Fermi gases are hard to treat: <br>accessible with the <span class='emph'>complex Langevin </span> method</p>
@@ -793,8 +926,8 @@
 
         <section data-menu-title='3D UFG: specific heat'>
           <div class='res_header'>
+            specific heat
             <div class="refs subtitle_ref">
-            UFG: specific heat
               [LR, Loheac, Drut, Braun <span class='ref_prep'> in preparation</span>]
           </div>
           </div>

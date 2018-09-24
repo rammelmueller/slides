@@ -40,8 +40,8 @@
   height: 100%;*/
   margin-top: -22px;
 
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed; */
+  /* border-width: 2px; */
 }
 
 
@@ -532,15 +532,6 @@ section .footer_refs{
   margin-bottom: 100px;
 }
 
-.reveal section .dims_label{
-  position: absolute;
-  font-size: 42px;
-}
-#D1_benchmark_label{
-  width: 600px;
-  top: 350px;
-  left: 700px;
-}
 #D1_physics_label{
   width: 100%;
   top: 850px;
