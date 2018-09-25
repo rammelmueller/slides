@@ -40,74 +40,8 @@
   height: 100%;*/
   margin-top: -22px;
 
-  /* border-style: dashed; */
-  /* border-width: 2px; */
-}
-
-
-.emph {
-  color: #d34f21;
-}
-.emph_alt {
-  color: #187795;
-}
-.bold{
-  font-weight: bold !important;
-}
-.emph_it{
-  font-style: italic !important;
-}
-.emph_large{
-  font-size: 60px !important;
-}
-
-.light {
-  color: #ffffff !important;
-}
-.light .emph{
-  color: #FE9920;
-  font-weight: bold !important;
-}
-.light .emph_alt, .emph_red{
-  color: #a42604;
-  font-weight: bold !important;
-}
-
-section .notes{
-  font-size: 36px;
-}
-
-section .label{
-  font-size: 36px;
-  position: absolute;
-}
-section .label_s{
-  font-size: 28px;
-  position: absolute;
-}
-section .label_l{
-  font-size: 52px;
-  position: absolute;
-}
-section .central{
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
-
-
-
-.ctr_header{
-  width: 100%;
-  text-align: center !important;
-  margin-left: -8% !important;
-}
-.ctr{
-  width: 100%;
-  text-align: center !important;
-}
-.clr {
-  clear: both !important;
+  border-style: dashed;
+  border-width: 2px;
 }
 
 .reveal section p {
@@ -129,6 +63,66 @@ section .central{
     border: 0px;
     box-shadow: none;
 }
+
+
+
+.emph {
+  color: #d34f21;
+}
+.emph_alt {
+  color: #187795;
+}
+.bold{
+  font-weight: bold !important;
+}
+.it{
+  font-style: italic !important;
+}
+.large{
+  font-size: 52px !important;
+}
+.medium{
+  font-size: 36px !important;
+}
+.small{
+  font-size: 28px !important;
+}
+
+.light {
+  color: #ffffff !important;
+}
+.light .emph{
+  color: #FE9920;
+  font-weight: bold !important;
+}
+.light .emph_alt, .emph_red{
+  color: #a42604;
+}
+
+section .notes{
+  font-size: 36px;
+}
+
+
+section .label_s{
+  font-size: 28px;
+  position: absolute;
+}
+section .label{
+  font-size: 36px;
+  position: absolute;
+}
+section .label_l{
+  font-size: 52px;
+  position: absolute;
+}
+section .central{
+  position: absolute;
+  text-align: center !important;
+  width: 100%;
+  left: 0;
+}
+
 
 /* References */
 .reveal section .refs{
@@ -166,6 +160,13 @@ section .footer_refs{
 .reveal section .flex_body{
   width: 100%;
 }
+
+.ctr_header{
+  width: 100%;
+  text-align: center !important;
+  margin-left: -8% !important;
+}
+
 
 /*Rig id slides */
 .reveal section .rig_header{
@@ -234,6 +235,7 @@ section .footer_refs{
   margin-left: -375px;
 }
 
+
 /* ------ TITLE ------ */
 #title{
   margin-bottom: 100px;
@@ -256,19 +258,6 @@ section .footer_refs{
 #logobar img{
   margin: 0 10px 0 10px;
   height: 80px;
-}
-
-/* Outline. */
-#outline_text{
-  font-size: 54px;
-}
-
-#refs_fermions{
-  position: absolute;
-  text-align: center;
-  top: 800px;
-  left: 0;
-  width: 100%;
 }
 
 
@@ -334,110 +323,6 @@ section .footer_refs{
   text-align: center;
 }
 
-/* Methods */
-#methods_label{1
-  position: absolute;
-  font-size: 24px;
-  top: 850px;
-  left: 1000px;
-}
-
-/* MC section */
-#method_path_integral{
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-#mc_dice img{
-  margin-top: 0;
-  height: 400px;
-}
-.reveal section .dice_quote_mc{
-  width: 100%;
-  text-align: center;
-  font-size: 90px !important;
-  font-weight: bold !important;
-  margin-left: -8%;
-}
-.reveal section .dice_quote_mc .low{
-  display: block;
-  margin-left: 0 !important;
-}
-#algorithm{
-  height: 72%;
-  margin-top: 5%;
-}
-#algorithm_obs {
-  font-size: 50px;
-  margin: -40px 0 80px -80px !important;
-}
-#algorithm_avg{
-  margin-top: 80px !important;
-}
-
-#hmc_right_col {
-  float: left;
-  width: 30%;
-  display: block;
-  height:inherit;
-  text-align: left;
-  padding-left: 5% 5% 0 5% !important;
-  font-size: 32px;
-}
-#hmc_left_col {
-  float: left;
-  width: 800px;
-  height:inherit;
-}
-
-#hmc_markov_label{
-  position: absolute;
-  top: 900px;
-  left: 50px;
-}
-#hmc_markov_label p {
-  margin: 0 !important;
-  font-size: 28px;
-  width: 700px;
-  text-align: center;
-
-}
-
-/* uncertainties slide */
-#uncertainty_header {
-    color: #187795;
-}
-#uncertainty_formula {
-  margin: -40px 0 0 0 !important;
-}
-#mc_illustration {
-  margin-top: 100px;
-  font-family: humor sans;
-}
-#mc_illustration #mc_example_text{
-  text-align: left;
-  padding-left: 10%;
-  margin-bottom: -30px;
-  font-size: 50px;
-  font-family: humor sans;
-}
-#mc_illustration .mc_example{
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
-}
-#mc_illustration .mc_bottom{
-  float: left;
-  width: 350px;
-  font-size: 50px;
-  margin: 0 30px 0 30px;
-}
-#mc_illustration .mc_bottom .mc_small_die{
-  width: 45px;
-  height: 45px;
-  display: inline-block;
-  margin: 0;
-  margin-bottom: -15px;
-}
 
 /* sign slide */
 #sign_subtitle{
@@ -468,85 +353,8 @@ section .footer_refs{
   top:  740px !important;
   left: 1030px !important;
 }
-#sign_conditions p{
-  display: inline;
-}
-#refs_sign{
-  position: absolute;
-  text-align: center;
-  top: 620px;
-  left: 200px;
-  font-size: 24px;
-}
 
-#big_dice img{
-  height: 450px;
-}
 
-/* CL overview.*/
-#langevin_formula {
-  margin: 80px 0 80px 0 !important;
-}
-#cl_action{
-  font-size: 36px;
-  margin-top: 20px;
-}
-#refs_cl{
-  position: absolute;
-  top: 900px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-#cl_left_col{
-  float: left;
-  width: 55%;
-  height:inherit;
-}
-#cl_right_col{
-  float: left;
-  width: 40$;
-}
-#cl_right_col p{
-  text-align: center;
-  font-size: 28px;
-  width: 100%;
-}
-#cl_left_col img{
-  margin-top: -100px;
-  height: 600px;
-}
-#cl_problem{
-  position: absolute;
-  top: 800px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-}
-#cl_header{
-  font-size: 40px !important;
-  margin-bottom: 70px !important;
-  margin-top: -50px !important;
-}
-#cl_second{
-  margin-bottom: 100px;
-}
-
-#D1_physics_label{
-  width: 100%;
-  top: 850px;
-  left: 0;
-  text-align: center;
-}
-#refs_1D_exp{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 920px;
-  left:0;
-}
-
-/* --- results ---*/
 
 /* Balanced comparison */
 #balanced_compare_refs{
@@ -585,6 +393,7 @@ section .footer_refs{
 }
 
 
+/* SPECIALS */
 
 section .roadsign{
   font-size: 32px;
@@ -600,17 +409,11 @@ section .roadsign{
 section .ve_label{
   position: absolute;
   top: 830px;
-  font-size: 50px;
+  font-size: 52px;
 }
 
-/* Recap */
-#recap{
-  font-size: 54px;
-}
-#recap_header{
-  padding-top: 70px;
-  margin-bottom: -30px !important;
-}
-#recap p {
-  margin: 70px 0 70px 0 !important;
+section .pd_defs{
+  position: absolute;
+  left: 1100px;
+  top: 700px;
 }
