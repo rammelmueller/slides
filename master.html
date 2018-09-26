@@ -65,7 +65,7 @@
               <h3>ultracold Fermi gases: <br> <span class='emph'>why are they interesting?</span></h3>
             </div>
             <div class='flex_body'>
-              (electrons in metals, nuclear physics, neutron stars, <br>superfluidity, controllable experiments, ...)
+              (nuclear physics, neutron stars, electrons in metals, <br>superfluidity, controllable experiments, ...)
             </div>
             <div class='refs central' style="position: absolute; top: 800px">
               Reviews: <br>
@@ -74,6 +74,12 @@
               [Bloch, Dalibard, Zwerger '08]
             </div>
           </div>
+          <aside class="notes">
+            nuclei, neturon starts <br>
+            condensed matter: electron gas <br>
+            phase transition <br>
+            experiments measure that
+          </aside>
         </section>
 
         <section data-menu-title='Intro: balanced Fermi gas'>
@@ -89,6 +95,14 @@
             <img class='mb_balanced fragment fade-in' data-fragment-index='2' width='1024px' src='img/mb_balanced_bec.svg'>
             <div class="mb_label fragment" data-fragment-index='2'>BEC pairing</div>
           </div>
+          <aside class="notes">
+            FG: hyperfine states <br>
+            feshbach resonance: tune interaction -> inverse problem to nuclear physics
+            <br><br>
+            BCS: weak attraction, large pairs
+            <br><br>
+            BEC: tight pairs, weakly repulsive bosons, interacting
+          </aside>
         </section>
 
         <section data-menu-title='Intro: UFG'>
@@ -110,10 +124,11 @@
           <!-- <img src="img/pd_crossover.png" class="partial_plot fragment" style="top: 300px; width: 700px;" data-fragment-index=1> -->
           <aside class='notes'>
             unitary regime: dilute but strongly interacting<br>
-            Feshbach resonance to tune to UFG<br>
             pairs of size of kF-1<br>
-            features: high $T_C$, pseudogap?<br>
-            next: scaling functions -> can be measured
+            features: high $T_C$ (highest)<br>
+            scales: like free gas <br>
+            scaling functions encode dependence (independent on actual atomic potential) <br>
+            can be measured in experiment
           </aside>
         </section>
 
@@ -122,19 +137,37 @@
             the unitary Fermi gas: <span class='emph bold'>many </span>experiments
           </div>
 
-          <img src="img/density_EOS_MIT.png" style="position: absolute;top:250px; left: 150px; width:350px">
-          <img src="img/response_MIT.png" style="position: absolute;top:250px; left:550px; width:350px">
-          <img src="img/viscosity_DUKE.png" style="position: absolute;top:250px; left:950px; width:350px">
-
-          <img src="img/virial_DUKE.png" style="position: absolute;top:600px; left: 150px; width:350px">
-          <img src="img/condensate_TOKYO.png" style="position: absolute;top:600px; left:550px; width:350px">
-          <img src="img/spins_MIT.png" style="position: absolute;top:600px; left:950px; width:350px">
-
-          <div class="refs" style="top: 980px; left: 150px; position: absolute">
-            [Thomas,Kinast,Turpalov '05; Horikoshi et al. '10; Cao et al. '11; Sommer et al. '11; van Houcke et al., '12; Ku et al. '12;]
+          <div style="position: absolute;top:250px; left: 150px; width:350px;">
+            <img src="img/density_EOS_MIT.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[van Houcke et al. '12]</span>
           </div>
+          <div style="position: absolute;top:250px; left: 550px; width:350px;">
+            <img src="img/response_MIT.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[Ku et al. '12]</span>
+          </div>
+          <div style="position: absolute;top:250px; left: 950px; width:350px;">
+            <img src="img/viscosity_DUKE.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[Cao et al. '11]</span>
+          </div>
+
+          <div style="position: absolute;top:650px; left: 150px; width:350px;">
+            <img src="img/virial_DUKE.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[Thomas, Kinast, Turpalov '05]</span>
+          </div>
+          <div style="position: absolute;top:650px; left: 550px; width:350px;">
+            <img src="img/condensate_TOKYO.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[Horikoshi et al. '10]</span>
+          </div>
+          <div style="position: absolute;top:650px; left: 950px; width:350px;">
+            <img src="img/spins_MIT.png" style="margin-bottom: -20px">
+            <span class="refs" style="text-align: center; width: 100%;">[Sommer et al. '11]</span>
+          </div>
+
           <aside class='notes'>
-            a lot has been done for the UFG, but: polarization -> tricky!
+            first UFG: Thomas group at Duke in 2002 <br>
+            follow up: many experiments <br>
+            here: thermodynamic measuerements <br>
+            NOT EXHAUSTIVE
           </aside>
         </section>
 
@@ -146,34 +179,15 @@
               <img width='1024px' src='img/mb_polarized.png'>
           </div>
           <aside class="notes">
-            very low temperatures -> FFLO <br>
             what happens to pairing if not every particle has a partner? <br>
+            rich phenomenology <br>
+            very low temperatures -> FFLO <br>
           </aside>
           <div class="footer_refs refs">
             [reviews: Chevy '10; Gubbels,Stoof '13]
           </div>
         </section>
 
-        <section data-menu-title='3D phase diagram: sketch'>
-          <div class='rig_header'>
-            temperature vs. polarization phase diagram
-          </div>
-          <div class='res_body'>
-            <img class='cplot' src='plots/pd_fRG.svg'>
-            <div class="label pd_defs">
-              $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
-              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
-            </div>
-          </div>
-          <div class="res_footer">
-              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
-          </div>
-          <aside class="notes">
-            fRG: not ab initio <br>
-            good at resolving phase structure <br>
-            second oder/first ofer/tricritical point
-          </aside>
-        </section>
 
         <section data-menu-title='Plan + key questions' class='light' data-background-color="#404040">
           <div class='flexer'>
@@ -181,7 +195,9 @@
               <h2 class='light'>The plan: <br>ab initio thermodynamics of the UFG</h2>
             </div>
             <div class="flex_body large">
-              <p><span class='emph'>method:</span> <br>why is it challening and what to do about it?</p>
+              <p>
+                <span class='emph'>method:</span> <br>why is it challening and what to do about it?
+              </p>
               <p>
                 <span class='emph'>key questions:</span><br>
                 can we get the EOS for polarized systems?<br>
@@ -254,7 +270,7 @@
 
         <section data-menu-title='MC algorithm'>
           <div class="rig_header">
-            <span class='emph'>Monte Carlo (MC)</span>
+            <span class='emph'>Monte Carlo</span> in a nutshell
           </div>
           <div class='rig_body'>
 
@@ -277,10 +293,18 @@
               <li>save result & repeat</li>
               <li class='fragment' data-fragment-index='2' id='algorithm_avg'>stop after <span class='emph emph_it'>enough samples</span> and compute the average</li>
             </ol>
-            <p class='label fragment' style="left: 50px; width: 600px; text-align: center; top: 930px" data-fragment-index=2>
-              statistical uncertainty $\propto 1/\sqrt{N}$
+            <p class='label fragment' style="left: 50px; width: 1000px; text-align: center; top: 930px" data-fragment-index=2>
+              <span class='emph_alt bold'>statistical uncertainty</span> $\propto 1/\sqrt{\text{# of (uncorrelated) samples}}$
             </p>
           <div>
+          <aside class="notes">
+            1) observable as weighted integral <br>
+            2) strategy is easy <br>
+            3) basic, but can be done better: Markov chain <br>
+            4) stop at some point -> average and done! <br>
+            5) nice thing: also tells you error (how well did we do?) <br>
+            6) problem sometimes -> sign problem
+          </aside>
         </section>
 
 
@@ -310,6 +334,11 @@
           <div class='refs' style="top: 620px; left: 200px; position: absolute">
             [Troyer, Wiese '05]
           </div>
+          <aside class="notes">
+            scaling is not practical: not enough computers <br>
+            happens to us in interesting cases<br>
+            NP hard problem -> no general solution possible <br>
+          </aside>
         </section>
 
         <section data-menu-title='Complex Langevin: idea'>
@@ -331,7 +360,7 @@
           <div class="rig_body">
             <p><span class='emph_alt'>stochastic quantization:</span> equilibrium distribution of a <br> $(d+1)$-dimensional random process is identified with <br>the probability measure of our $d$-dimensional path integral</p>
 
-            <p><br>andom walk governed by <span class='emph_alt'>Langevin equation (Brownian motion):<br><br> </span></p>
+            <p>random walk governed by <span class='emph_alt'>Langevin equation (Brownian motion):<br><br> </span></p>
 
             <p class='fade-out fragment label_l central' data-fragment-index=2 style="top: 700px">
               $\frac{\partial\phi}{\partial t} = -\frac{\delta S[\phi]}{\delta\phi}\,+\,$ <span>$\eta_t$</span>
@@ -357,6 +386,12 @@
             [Parisi, Wu '81; Damgaard,Huffel '87]<br>[Aarts '09; Seiler '17] <br>
             [Loheac, Drut '17; LR, Porter, Drut, Braun '17]
           </div>
+
+          <aside class="notes">
+            idea -> SQ <br>
+            same stochastic differential equation as for brownian motion <br>
+            ficticous time + noise are introduced <br>
+          </aside>
         </section>
 
 
@@ -385,6 +420,7 @@
 
             <div class="fragment label_l bold emph_red" style="top: 600px; left: 900px" data-fragment-index=2>
               introduce <br>a "regulator"
+              <br> <span class='refs'>[Loheac, Drut '17]</span>
             </div>
 
 
@@ -393,29 +429,18 @@
               <div class'large'>$S[\phi]\ \equiv \ln{\left(\det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}\right)}$</div>
               <span class='refs'>[Aarts, Seiler, Sexty, Stamatescu '16; '17]</span>
             </div>
-
           <div>
-        </section>
 
+          <aside class="notes">
+            computer: discrete form is needed to produce Markov chain <br>
+            proof only works for real phi, we have complex phi <br>
+            here we only have conditions (boundary terms etc..) <br>
+            high energy people (Aarts etc.. ) did a lot <br>
+            to avoid large values of phi we have the regulator<br>
+            effect: stabilizes the CL trajectories<br>
+          </aside>
 
-        <section data-menu-title='Regulator'>
-          <div class="rig_header">
-            <span class=''>effect of the regulator</span>
-            <div class='refs subtitle_ref'>[Loheac,Drut '17]</div>
-          </div>
-          <div class='rig_body' id='algorithm'>
-            <img src="plots/xi_eos.png" class="partial_plot" style="top: 400px; width: 800px; margin-left:-400px">
-            <div class='label central' style="top: 300px">
-               unregulated runs tend to fail:
-              <span class='emph bold'>$\xi$ stabilizes CL trajectories</span>
-            </div>
-            <div class="label_s central" style="top: 950px">
-              similar approach in QCD: "dynamic stabilization"
-              <span class='refs'>[Attanasio,Jäger '18]</span>
-            </div>
-          <div>
-        </section>
-
+      </section>
 
         <!-- ++++++++++++ RESULTS ++++++++++++ !-->
 
@@ -432,7 +457,7 @@
               excellent benchmark systems<br>
             </div>
             <div class='label emph bold central' style="top: 850px">
-              <span class='emph'>also accessible in experiment</span>
+              also accessible in experiment
             </div>
             <div class='label refs' style='top: 900px; width: 100%; text-align: center'>
               [e.g. Liao et al. '10; Wenz et al. '13; Zürn et al. '13; Murmann et al. '15]
@@ -540,24 +565,21 @@
 
         <section data-menu-title='3D phase diagram: sketch'>
           <div class='rig_header'>
-            temperature vs. polarization phase diagram
+            temperature vs. polarization "phase diagram"
           </div>
           <div class='res_body'>
-            <img class='cplot' src='plots/pd_fRG_lines.svg'>
-
+            <img class='cplot' src='plots/pd_bare.svg'>
+            <img class='cplot fragment' src='plots/pd_lines.svg' data-fragment-index=1>
             <div class="label pd_defs">
               $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
               $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
             </div>
           </div>
           <div class="res_footer">
-              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
-
           </aside>
         </section>
-
 
         <!--
           Plan for 3D results:
@@ -634,34 +656,6 @@
           </aside>
         </section>
 
-
-        <section data-menu-title='3D UFG: denisty EOS (polarized)'>
-          <div class='res_header'>
-            density EOS at finite polarization
-            <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
-          </div>
-          <div class='res_body'>
-            <img class='partial_plot' src='plots/UFG_density_polarized.svg'>
-
-            <div class="label" style='top: 750px; left: 1100px'>
-              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
-            </div>
-
-            <div style="top: 900px;" class='label central' data-fragment-index=>
-              <span class='emph bold'>excellent agreement with virial expansion for all polarizations</span>
-            </div>
-
-          </div>
-          <div class="res_footer">
-          </div>
-          <aside class="notes">
-            definition of h <br>d='recap'
-            agreement with VE still good <br>
-            not really other things to compare <br>
-          </aside>
-        </section>
-
-
         <section data-menu-title='virial expansion'>
           <div class='res_header'>
             interlude: the virial expansion
@@ -709,6 +703,33 @@
           </div>
           <aside class="notes">
 
+          </aside>
+        </section>
+
+
+        <section data-menu-title='3D UFG: denisty EOS (polarized)'>
+          <div class='res_header'>
+            density EOS at finite polarization
+            <div class="refs subtitle_ref">[LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]</div>
+          </div>
+          <div class='res_body'>
+            <img class='partial_plot' src='plots/UFG_density_polarized.svg'>
+
+            <div class="label" style='top: 750px; left: 1100px'>
+              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
+            </div>
+
+            <div style="top: 900px;" class='label central' data-fragment-index=>
+              <span class='emph bold'>excellent agreement with virial expansion for all polarizations</span>
+            </div>
+
+          </div>
+          <div class="res_footer">
+          </div>
+          <aside class="notes">
+            definition of h <br>d='recap'
+            agreement with VE still good <br>
+            not really other things to compare <br>
           </aside>
         </section>
 
@@ -823,7 +844,7 @@
 
         <section data-menu-title='3D UFG: compressibility (balanced case)'>
           <div class='res_header'>
-            compressibility
+            compressibility (unpolarized)
             <div class="refs subtitle_ref">
               [LR, Loheac, Drut, Braun <span class='ref_prep'> '18</span>]
           </div>
@@ -832,7 +853,7 @@
             <p>$\kappa = \frac{1}{n}\left(\frac{\partial n}{\partial P}\right)_{T,V,h} = \frac{1}{n^2}\left(\frac{\partial n}{\partial\mu}\right)_{T,V,h}$</p>
             <img class='partial_plot' src='plots/UFG_compressibility_balanced.svg'  style="top: 420px;">
             <img class='partial_plot fragment' src='plots/UFG_compressibility_balanced_PT.svg'  style="top: 420px;" data-fragment-index=1>
-            <p class='label fragment' data-fragment-index=1 style='color: #898989; top: 900px; left: 300px'>$T_C = 0.167 T_F$</p>
+            <p class='label fragment' data-fragment-index=1 style='color: #898989; top: 900px; left: 300px'>$T_C = 0.17 T_F$</p>
             <p class='label fragment' data-fragment-index=1 style='top: 500px; left: 20px; width: 280px;'>
               sudden <br> increase of $\kappa$ <br><span class='emph'>indicates superfluid phase transition</span>
             </p>
@@ -878,10 +899,10 @@
 
         <section data-menu-title='3D UFG: phase diagram'>
           <div class='res_header'>
-            UFG phase diagram
+            UFG phase diagram (sketch)
           </div>
           <div class='res_body'>
-            <img class='cplot' src='plots/pd_fRG_lines_points.svg'>
+            <img class='cplot' src='plots/pd_tc.svg'>
             <div class="label pd_defs">
               $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
               $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
@@ -922,26 +943,24 @@
           </aside>
         </section>
 
-        <section data-menu-title='3D UFG: phase diagram'>
+
+        <section data-menu-title='3D UFG: phase diagram (PG)'>
           <div class='res_header'>
-            UFG phase diagram - revisited
+            UFG phase diagram (sketch)
           </div>
           <div class='res_body'>
-            <img class='partial_plot' src='plots/pd_fRG.svg'>
-            <img class='partial_plot fragment' src='plots/pd_fRG_pseudogap.svg' data-fragment-index=1>
+            <img class='partial_plot' src='plots/pd_pseudogap.svg' data-fragment-index=1>
             <div class="label pd_defs">
               $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
               $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
             </div>
           </div>
           <div class="res_footer">
-              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
 
           </aside>
         </section>
-
 
         <section data-menu-title='3D UFG: magnetic susceptibility'>
           <div class='res_header'>
@@ -1004,6 +1023,25 @@
 
         <!-- +++++++++++++++++++++++++++ APPENDIX ++++++++++++++++++++++++++++ !-->
 
+        <section data-menu-title='CL: regulator'>
+          <div class="rig_header">
+            <span class=''>effect of the regulator</span>
+            <div class='refs subtitle_ref'>[Loheac,Drut '17]</div>
+          </div>
+          <div class='rig_body' id='algorithm'>
+            <img src="plots/xi_eos.png" class="partial_plot" style="top: 400px; width: 800px; margin-left:-400px">
+            <div class='label central' style="top: 300px">
+               unregulated runs tend to fail:
+              <span class='emph bold'>$\xi$ stabilizes CL trajectories</span>
+            </div>
+            <div class="label_s central" style="top: 950px">
+              similar approach in QCD: "dynamic stabilization"
+              <span class='refs'>[Attanasio,Jäger '18]</span>
+            </div>
+          <div>
+        </section>
+
+
         <section data-menu-title='3D UFG: specific heat'>
           <div class='res_header'>
             specific heat
@@ -1043,6 +1081,27 @@
 
           </aside>
         </section>
+
+
+        <section data-menu-title='3D UFG: phase diagram'>
+          <div class='res_header'>
+            UFG phase diagram - functional renormalization group (fRG)
+          </div>
+          <div class='res_body'>
+            <img class='partial_plot' src='plots/pd_fRG_pseudogap.svg' data-fragment-index=1>
+            <div class="label pd_defs">
+              $\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$ <br>
+              $h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$
+            </div>
+          </div>
+          <div class="res_footer">
+              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
+          </div>
+          <aside class="notes">
+
+          </aside>
+        </section>
+
 
 
         <!-- +++++++++++++++++++++++++++ END ++++++++++++++++++++++++++++ !-->
