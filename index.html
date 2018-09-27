@@ -43,9 +43,9 @@
               NC State, September 27th, 2018
             </div>
             <div id='current_papers'>
-              [LR, Drut, Braun <span class='emph_it'>in preparation</span>] <br>
+              [LR, Drut, Braun <span class='it'>in preparation</span>] <br>
               [LR, Loheac, Drut, Braun arXiv:1807.04664] <br>
-              [LR, Porter, Drut, Braun <span class='emph_it'>Phys. Rev. D</span> 96, 094506, 2017]<br>
+              [LR, Porter, Drut, Braun <span class='it'>Phys. Rev. D</span> 96, 094506, 2017]<br>
             </div>
             <div id='logobar'>
               <img src='img/hgs_hire_inverted.svg'>
@@ -253,7 +253,7 @@
               $\mathcal{Z} = \int{\mathcal{D}\phi\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}} \equiv \int{\mathcal{D}\phi\ \mathrm e^{-S[\phi]}}$
             </div>
           </div>
-          <div class="footer_refs refs">
+          <div class="footer_refs refs fragment" data-fragment-index=1>
             [lattice methods: Lee '09; Drut,Nicholson '13]
           </div>
         </section>
@@ -291,7 +291,7 @@
               <li>produce a random sample of the auxiliary field $\phi$</li>
               <li>evaluate the integrand with that value</li>
               <li>save result & repeat</li>
-              <li class='fragment' data-fragment-index='2' id='algorithm_avg'>stop after <span class='emph emph_it'>enough samples</span> and compute the average</li>
+              <li class='fragment' data-fragment-index='2' id='algorithm_avg'>stop after <span class='emph it'>enough samples</span> and compute the average</li>
             </ol>
             <p class='label fragment' style="left: 50px; width: 1000px; text-align: center; top: 930px" data-fragment-index=2>
               <span class='emph_alt bold'>statistical uncertainty</span> $\propto 1/\sqrt{\text{# of (uncorrelated) samples}}$
@@ -360,9 +360,9 @@
           <div class="rig_body">
             <p><span class='emph_alt'>stochastic quantization:</span> equilibrium distribution of a <br> $(d+1)$-dimensional random process is identified with <br>the probability measure of our $d$-dimensional path integral</p>
 
-            <p>random walk governed by <span class='emph_alt'>Langevin equation (Brownian motion):<br><br> </span></p>
+            <p><br> random walk governed by <span class='emph_alt'>Langevin equation (Brownian motion):<br><br> </span></p>
 
-            <p class='fade-out fragment label_l central' data-fragment-index=2 style="top: 700px">
+            <p class='fade-out fragment label_l central large' data-fragment-index=2 style="top: 700px">
               $\frac{\partial\phi}{\partial t} = -\frac{\delta S[\phi]}{\delta\phi}\,+\,$ <span>$\eta_t$</span>
             </p>
 
@@ -409,7 +409,7 @@
               <div class='label' data-fragment-index=2 style="top: 240px; width: 900px;">
                 <p>
                   $\Delta\phi_R = -\text{Re}\left[\frac{\delta S[\phi]}{\delta\phi}\right]\Delta t + \eta_t\sqrt{\Delta t}\,$
-                  <span class='fragment emph_red' data-fragment-index=2>$ +\, 2\xi\phi_I\Delta t$</span>
+                  <span class='fragment emph_red' data-fragment-index=2>$ +\, 2\xi\phi_R\Delta t$</span>
                 </p>
                 <p>
                   $\Delta\phi_I = -\text{Im}\left[\frac{\delta S[\phi]}{\delta\phi}\right]\Delta t\,$
@@ -439,8 +439,26 @@
             to avoid large values of phi we have the regulator<br>
             effect: stabilizes the CL trajectories<br>
           </aside>
+        </section>
 
-      </section>
+
+        <section data-menu-title='CL: regulator'>
+          <div class="rig_header">
+            <span class=''>effect of the regulator</span>
+            <div class='refs subtitle_ref'>[Loheac,Drut '17]</div>
+          </div>
+          <div class='rig_body' id='algorithm'>
+            <img src="plots/xi_eos.png" class="partial_plot" style="top: 400px; width: 800px; margin-left:-400px">
+            <div class='label central' style="top: 300px">
+               unregulated runs tend to fail:
+              <span class='emph bold'>$\xi$ stabilizes CL trajectories</span>
+            </div>
+            <div class="label_s central" style="top: 950px">
+              similar approach in QCD: "dynamic stabilization"
+              <span class='refs'>[Attanasio,Jäger '18]</span>
+            </div>
+          <div>
+        </section>
 
         <!-- ++++++++++++ RESULTS ++++++++++++ !-->
 
@@ -909,7 +927,6 @@
             </div>
           </div>
           <div class="res_footer">
-              <p class="refs refs_footer" style="position: absolute; left: 950px">[Boettcher et al. '14]</p>
           </div>
           <aside class="notes">
 
@@ -1005,7 +1022,7 @@
             <p>spin polarized Fermi gases are hard to treat: <br>accessible with the <span class='emph'>complex Langevin </span> method</p>
             <p>complex Langevin <span class='emph'>compares well <br>with other methods</span> wherever possible</p>
             <p>
-              <span class='emph'>EOS, magnetic properties & response </span> accessible <br>for the UFG at $T>0$ and finite polarization <br><span class='emph_alt emph_large'>in ab initio fashion</span>
+              <span class='emph'>EOS, magnetic properties & response </span> accessible <br>for the UFG at $T>0$ and finite polarization <br><span class='emph_alt large bold'>in ab initio fashion</span>
             </p>
           </div>
         </section>
@@ -1016,30 +1033,13 @@
             <p>investigation of  <span class='emph'>pair correlations for the UFG</span></p>
             <p>effect of <span class='emph'>mass imbalance</span> <br>on pairing behavior</p>
             <p>search for <span class='emph'>inhomogeneous phases</span> in 2D/3D</p>
-            <p><span class='emph_alt emph_large'>ab initio phase diagram for<br>mass- and spin-imbalanced Fermi gases</span></p>
+            <p><span class='emph_alt large bold'>ab initio phase diagram for<br>mass- and spin-imbalanced Fermi gases</span></p>
             <p></p>
           </div>
         </section>
 
         <!-- +++++++++++++++++++++++++++ APPENDIX ++++++++++++++++++++++++++++ !-->
 
-        <section data-menu-title='CL: regulator'>
-          <div class="rig_header">
-            <span class=''>effect of the regulator</span>
-            <div class='refs subtitle_ref'>[Loheac,Drut '17]</div>
-          </div>
-          <div class='rig_body' id='algorithm'>
-            <img src="plots/xi_eos.png" class="partial_plot" style="top: 400px; width: 800px; margin-left:-400px">
-            <div class='label central' style="top: 300px">
-               unregulated runs tend to fail:
-              <span class='emph bold'>$\xi$ stabilizes CL trajectories</span>
-            </div>
-            <div class="label_s central" style="top: 950px">
-              similar approach in QCD: "dynamic stabilization"
-              <span class='refs'>[Attanasio,Jäger '18]</span>
-            </div>
-          <div>
-        </section>
 
 
         <section data-menu-title='3D UFG: specific heat'>
