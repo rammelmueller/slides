@@ -12,7 +12,7 @@
 
 /* ----------------------------------------------------------------------*/
 /*  GENERAL SETTINGS  */
-@media only screen and (max-height: 800) {
+@media only screen and (max-height: 800px) {
   body{
      transform: scale(0.75);
   }
