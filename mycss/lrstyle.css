@@ -12,6 +12,11 @@
 
 /* ----------------------------------------------------------------------*/
 /*  GENERAL SETTINGS  */
+@media only screen and (max-height: 800) {
+  body{
+     transform: scale(0.75);
+  }
+}
 .slides{
   margin-top: 0 !important;
 }
@@ -20,8 +25,8 @@
   width : 1364px !important;
   height: 1024px !important;
 
-  /* border-style: dashed; */
-  /* border-width: 2px; */
+  border-style: dashed;
+  border-width: 2px;
 }
 
 /* colors & fonts: regular style*/
