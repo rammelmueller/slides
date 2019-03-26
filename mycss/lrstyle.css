@@ -12,11 +12,11 @@
 
 /* ----------------------------------------------------------------------*/
 /*  GENERAL SETTINGS  */
-@media only screen and (max-height: 800px) {
+/* @media only screen and (max-height: 800px) {
   .reveal section{
      transform: scale(0.75) !important;
   }
-}
+} */
 .slides{
   margin-top: 0 !important;
 }
