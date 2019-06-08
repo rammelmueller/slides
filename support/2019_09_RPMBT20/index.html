@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>rammelmueller slides</title>
+
+    <link rel="stylesheet" href="../../css/reveal.css">
+    <link rel="stylesheet" href="../../css/theme/white.css">
+    <link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="mycss/lrstyle.css">
+    <link rel="stylesheet" href="mycss/styles.css">
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Title & agenda!-->
+        <section data-menu-title='Titleslide'>
+          <div class='flexer'>
+            <h2 id='title'>The title of my <br><span class='emph'>awesome</span> presentation </h2>
+            <div id='author'>
+              <p>
+                <span class='large'>Lukas Rammelmüller, TU Darmstadt
+              </p>
+              <p class='regular'>
+                place <br> time
+              </p>
+            </div>
+            <div id='current_papers'>
+              [LR, et. al <span class='it'>in preparation</span>]
+            </div>
+            <div id='logobar'>
+              <img src='../_support/hgs_hire_inverted.svg'>
+              <img src='../_support/csc_inverted.png'>
+              <img src='../_support/HICforFAIR.png'>
+              <img src='../_support/tud_logo.png'>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLEXIBLE LAYOUT !-->
+        <section>
+          <div class='flexer'>
+            <div class='flex_header'>
+              <h2 >title of a catchy slide</h2>
+            </div>
+            <div class="flex_body">
+              <p>content?</p>
+              <p>maybe more content..</p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- RIGID LAYOUT !-->
+        <section>
+          <div class='rig_header'>
+            some content slide
+          </div>
+          <div class='rig_body'>
+            <p>and this one we fill from the top?</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+
+    <script src="../../lib/js/head.min.js"></script>
+    <script src="../../js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        margin: 0,
+        minScale: 1,
+        maxScale: 1,
+        width : 1364,
+        height : 1024,
+        pdf : true,
+        fragments: true,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+        dependencies: [
+          { src: '../../plugin/markdown/marked.js' },
+          { src: '../../plugin/markdown/markdown.js' },
+          { src: '../../plugin/notes/notes.js', async: true },
+          { src: '../../plugin/math/math.js', async: true },
+          { src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../node_modules/reveal.js-menu/menu.js' }
+        ],
+
+        menu: {
+          side: 'left',
+          openButton: true,
+          numbers: true,
+          markers: true,
+          themes: false
+        }
+      });
+
+      Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+
+    </script>
+  </body>
+</html>
