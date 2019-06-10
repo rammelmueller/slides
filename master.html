@@ -181,27 +181,33 @@
 
         <!-- Agenda -->
 
-        <section data-menu-title='key questions' class='inverted' data-background-color='#404040'>
+        <section data-menu-title='agenda' class='inverted' data-background-color='#404040'>
           <div class='flexer'>
             <div class='flex_header large' style="margin-bottom: 100px">
               <span class='emph huge'>agenda</span><br>
             </div>
             <div class="flex_body large">
-              <div>
-                <span class='bold'>part I</span><br>
-                quick intro to <span class='emph'>stochastic quantization & CL</span><br>
-                (what is it & how can it help us for fermions?)
+              <div style="line-height: 30pt">
+                <p class='bold' style='margin-bottom:-50px !important'>part I</p><br>
+                <span class='medium'>
+                  quick intro to <span class='emph'>stochastic quantization & CL</span><br>
+                  (what is it & how can it help us for fermions?)
+                </span>
               </div>
-              <div style='margin-top: 80px'>
-                <span class='bold'>part II</span><br>
-                <span class='emph'>unitary fermions with finite polarization</span><br>
-                (equations of state & thermodynamic response)
+              <div style='margin-top: 80px; line-height: 30pt'>
+                <p class='bold' style='margin-bottom:-50px !important'>part II</p><br>
+                <span class="medium">
+                  <span class='emph'>unitary fermions with finite polarization</span><br>
+                  (equations of state & thermodynamic response)
+                </span>
               </div>
 
-              <div style='margin-top: 80px'>
-                <span class='bold'>part III (preliminary)</span><br>
-                <span class='emph'>correlation functions & pairing</span> at finite polarization <br>
-                (one-dimensional systems)
+              <div style='margin-top: 80px; line-height: 30pt'>
+                <p class='bold' style='margin-bottom:-50px !important'>part III</p><br>
+                <span class="medium">
+                  <span class='emph'>correlation functions & pairing</span> at finite polarization <br>
+                  (one-dimensional systems, preliminary)
+                </span>
               </div>
               <!-- <span class='emph caps huge'>key questions</span><br>
                 how can we construct an efficient method <br>that can deal with those systems?<br><br>
@@ -417,25 +423,24 @@
                   $\Delta\phi^{(n)} = - \frac{\delta S[\phi]}{\delta \phi}\bigg|_{\phi^{(n)}}\Delta t_{L} + \sqrt{2\Delta t_{L}}\eta$
                 </p>
               </div>
-              <div class="fragment fade-in label central" style='top: 620px' data-fragment-index=2>
+              <div class="fragment fade-in label central" style='top: 600px' data-fragment-index=2>
                 <p class='eqsize'>
                   $\Delta\phi^{(n)}_R = - \text{Re}\left[\frac{\delta S[\phi]}{\delta \phi}\right]_{\phi^{(n)}}\Delta t_{L} + \sqrt{2\Delta t_{L}}\eta$
                 </p>
                 <p class='emph_alt eqsize'>
                   $\Delta\phi^{(n)}_I = - \text{Im}\left[\frac{\delta S[\phi]}{\delta \phi}\right]_{\phi^{(n)}}\Delta t_{L}$
                 </p>
-                <p class="emph_alt bold" style="margin-top: 70px !important">
-                  complex action $\rightarrow$ complex Langevin equation
-                  <br>
-                  <span class='ref_style'>
+                <div class="emph_alt bold" style="margin-top: 50px !important">
+                  <p>complex action $\rightarrow$ complex Langevin equation</p>
+                  <p class='ref_style'>
                     [<a target='blank' href="https://doi.org/10.1016/0370-2693(83)90525-7">Parisi '83</a>;
                     <a target='blank' href="https://doi.org/10.1103/PhysRevA.29.2036">Klauder '84</a>;
                     <a target='blank' href="https://doi.org/10.1103/PhysRevC.63.034319">Koonin,Adami '01</a>;
                     <a target='blank' href="https://doi.org/10.1103/PhysRevLett.102.131601">Aarts '08</a>;
                     <a target='blank' href="https://doi.org/10.1103/PhysRevD.96.094506">LR,Porter,Drut,Braun '17</a>;
                     <a target='blank' href="https://doi.org/10.1103/PhysRevLett.121.173001">LR,Loheac,Drut,Braun '18</a>]
-                  </span>
-                </p>
+                  </p>
+                </div>
             </div>
             <img src="img/semidefinite_bubble.svg" class="label fragment" data-fragment-index=1 style="width: 800px; top: 300px; left: 500px">
 
@@ -470,16 +475,16 @@
           <p class='label small central' style="top: 270px">
             $$
               \int\mathcal{D}\phi\ P[\phi]O[\phi]
-              \to
+              \stackrel{?}{=}
               \int\mathcal{D}\phi_{\rm R}\mathcal{D}\phi_{\rm I}\ P[\phi_{\rm R}+{\rm i}\phi_{\rm I}]O[\phi_{\rm R}+{\rm i}\phi_{\rm I}]
             $$
           </p>
           <p class='label small central' style="top: 410px">
-            <span class=''>guaranteed convergence</span> if PDF decays <br> fast enough in imaginary direction and $S[\phi]$ is holomorphic
+            <span class=''>guaranteed convergence</span> if PDF decays <br> fast enough and $S[\phi]$ is holomorphic
           </p>
           <span class='refs label central' style="top: 520px">[
-            Aarts,Seiler,Stamatescu '09;
-            Aarts,James,Seiler,Stamatescu '11
+            <a href="https://doi.org/10.1103/PhysRevD.81.054508" target='blank'>Aarts,Seiler,Stamatescu '10</a>;
+            <a href="https://doi.org/10.1140/epjc/s10052-011-1756-5" target='blank'>Aarts,James,Seiler,Stamatescu '11</a>
           ]</span>
 
           <p class="fragment central label" style="top: 530px" data-fragment-index=1>
@@ -492,9 +497,8 @@
             - could lead to ergodicity issues (bottlenecks)<br>
           </p>
 
-          <span class='fragment refs label central' style="left: 80px; width: 600px; top: 940px" data-fragment-index=1>[
-              Mollgaard,Splittdorff '13;
-              Aarts,Seiler,Sexty,Stamatescu '17
+          <span class='fragment refs label central' style="left: 80px; width: 600px; top: 900px" data-fragment-index=1>[
+              <a href="https://doi.org/10.1007/JHEP05(2017)044" target='blank'>Aarts,Seiler,Sexty,Stamatescu '17</a>
           ]</span>
 
           <p class='fragment label small' style="top: 710px; left: 720px; width: 600px" data-fragment-index=1>
@@ -504,7 +508,7 @@
           </p>
 
           <span class='fragment refs label central' style="left: 720px; width: 600px; top: 900px" data-fragment-index=1>[
-              Scherzer,Seiler,Sexty,Stamatescu '18
+              <a href="https://doi.org/10.1103/PhysRevD.99.014512" target='blank'>Scherzer,Seiler,Sexty,Stamatescu '19</a>
           ]</span>
 
           <aside class="notes">
@@ -584,7 +588,8 @@
               [balanced $T_c$: <a href="https://doi.org/10.1126/science.1214987" target='blank'>Ku,Sommer,Cheuck,Zwierlein '12</a>]
             </div>
             <div class="refs" style="top: 900px; left: 785px">
-              [fRG: <a href="https://doi.org/10.1103/PhysRevA.91.013610" target='blank'>Boettcher et. al '15</a>]
+              [fRG: <a href="https://doi.org/10.1103/PhysRevA.91.013610" target='blank'>Boettcher et. al '15</a>]<br>
+              [zero-temperature PD: <a href='https://doi.org/10.1103/PhysRevA.79.043622' target='blank'>Bausmerth,Recati,Stringari '09</a>]
             </div>
           </div>
         </section>
@@ -1181,39 +1186,53 @@
 
         <section data-menu-title='appendix'>
           <div class="flexer large">
-            <p class='huge bold'>the team</p>
+            <p class='huge bold'>team CL</p>
             <div class="team">
-              <div>
-                <img src="collaborators/circle_jb.svg" alt="">
-                <span class='bold small'>Jens Braun</span>
+              <div class='team' style="width: 420px; margin-right: 50px">
+                <div>
+                  <p class='bold small'>Jens Braun</p>
+                  <img src="collaborators/circle_jb.svg" alt="">
+                </div>
+
+                <div>
+                  <p class='bold small'>Florian Ehmann</p>
+                  <img src="collaborators/circle_fe.svg" alt="">
+                </div>
+
+                <div>
+                  <img src="collaborators/circle_lr.svg" alt="">
+                  <p class='bold small'>LR</p>
+                </div>
               </div>
 
-              <div style='margin-right: 50px'>
-                <img src="collaborators/circle_fe.svg" alt="">
-                <span class='bold small'>Florian Ehmann</span>
+              <div class='team' style="width: 550px">
+                <div>
+                  <p class='bold small'>Joaquin Drut</p>
+                  <img src="collaborators/circle_jed.svg" alt="">
+                </div>
+
+                <div>
+                  <p class='bold small'>Andrew Loheac</p>
+                  <img src="collaborators/circle_acl.svg" alt="">
+                </div>
+
+                <div>
+                  <img src="collaborators/circle_jrm.svg" alt="">
+                  <p class='bold small'>Josh McKenney</p>
+                </div>
+
+                <div>
+                  <img src="collaborators/circle_cb.svg" alt="">
+                  <p class='bold small'>Casey Berger</p>
+                </div>
               </div>
 
-              <div>
-                <img src="collaborators/circle_jed.svg" alt="">
-                <span class='bold small'>Joaquin Drut</span>
-              </div>
 
-              <div>
-                <img src="collaborators/circle_acl.svg" alt="">
-                <span class='bold small'>Andrew Loheac</span>
-              </div>
+              <img src="img/model_brace_kin.svg" class="label" style="top: 840px; left: 160px; width: 450px; transform: rotate(180deg);">
+              <p class='label small blue bold' style="top: 900px; left: 160px; width: 420px">TU Darmstadt</p>
 
-              <div>
-                <img src="collaborators/circle_cb.svg" alt="">
-                <span class='bold small'>Casey Berger</span>
-              </div>
-
-
-              <img src="img/model_brace_kin.svg" class="label" style="top: 720px; left: 160px; width: 420px; transform: rotate(180deg);">
-              <p class='label small blue bold' style="top: 750px; left: 160px; width: 420px">TU Darmstadt</p>
-
-              <img src="img/model_brace_pot.svg" class="label" style="top: 705px; left: 600px; width: 650px;">
-              <p class='label small red bold' style="top: 750px; left: 600px; width: 650px">UNC Chapel Hill</p>
+              <img src="img/model_brace_pot.svg" class="label" style="top: 835px; left: 670px; width: 470px;">
+              <p class='label small red bold' style="top: 900px; left: 600px; width: 650px">UNC Chapel Hill</p>
 
             </div>
           </div>

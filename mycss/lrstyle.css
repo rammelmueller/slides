@@ -311,6 +311,7 @@ section .footer_ref{
 .reveal section .team{
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
 }
 
 .reveal section .team div{
@@ -318,4 +319,9 @@ section .footer_ref{
 }
 .reveal section .team img{
   width: 150px;
+  margin: 20px 0 10px 0;
+}
+
+.reveal section .team p{
+  margin: 0 !important;
 }
