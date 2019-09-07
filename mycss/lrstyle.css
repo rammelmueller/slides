@@ -11,7 +11,6 @@
 */
 
 /* ----------------------------------------------------------------------*/
-/*  GENERAL SETTINGS  */
 .slides{
   margin-top: 0 !important;
 }
@@ -20,19 +19,28 @@
   width : 1364px !important;
   height: 1024px !important;
 
-  /* border-style: dashed; */
-  /* border-width: 2px; */
+  /* border-style: dashed;
+  border-width: 2px; */
+
+  font-family: "Roboto" !important;
 }
 
 /* colors & fonts: regular style*/
 .emph {
-  color: #d34f21;
+  color: #a42604;
+  font-weight: bold !important;
 }
 .emph_alt {
   color: #187795;
 }
 .red{
   color: #a42604;
+}
+.blue{
+  color: #187795;
+}
+.orange{
+  color: #d34f21;
 }
 .bold{
   font-weight: bold !important;
@@ -78,6 +86,13 @@
   color: #a42604;
 }
 
+.example_slide{
+  color: #fff;
+}
+.example_slide .emph{
+  filter: invert(100%);
+}
+
 
 /* positioning */
 .ctr_header{
@@ -118,7 +133,7 @@ section .label{
 .reveal ol li{
   list-style-type: lower-roman;
 }
-.reveal section img {
+.reveal section img, .reveal section video {
     border: none;
     box-shadow: none;
     background:none;
@@ -135,7 +150,8 @@ section .label{
   display: flex !important;
   flex-direction: column;
   justify-content: center;
-}
+}￼
+
 .reveal section .flex_header{
   margin-bottom: 50px;
   width: 100%;
@@ -169,26 +185,68 @@ section .label{
 /* ----------------------------------------------------------------------*/
 /* title slide */
 #title{
-  margin-bottom: 100px;
+  font-family: "Roboto";
+  font-weight: 1000;
+  font-size: 60px;
+  text-align: left;
 }
+
+#titlesep{
+  position: absolute;
+  left: 150px;
+  top: 770px;
+  width: 1050px;
+  height: 2px;
+  background-color: #000 !important;
+  border-radius: 1cm;
+  border: 0;
+}
+
 #author{
-  margin-bottom: 70px;
+  position: absolute;
+  left: 150px;
+  top: 780px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #187795;
+}
+#author_info{
+  position: absolute;
+  left: 150px;
+  top: 830px;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  color: #898989;
 }
 #current_papers{</span>
   font-size: 24px;
-  color: #187795;
-  font-weight: bold;
+  /* color: #187795; */
+  /* color: #FE9920; */
+  /* font-weight: bold; */
 }
+
 #logobar {
-  margin-top: 100px;
-  width: 100%;
+  position: absolute;
+  top: 900px;
+  left: 135px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  width: 1100px;
+
+  border-radius: 5mm;
+  opacity: 1;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #logobar img{
-  margin: 0 10px 0 10px;
-  height: 80px;
+  margin: 0px 10px 10px 0px;
+  height: 70px;
 }
 /* ----------------------------------------------------------------------*/
 
@@ -206,7 +264,12 @@ section .label{
   font-weight: bold;
 }
 
-.reveal section .refs a:hover, .reveal section .ref_style a:hover{
+.reveal section .emph_ref a{
+  color: #5d9fb0 !important;
+  font-weight: bold;
+}
+
+.reveal section .refs a:hover, .reveal section .ref_style a:hover, .reveal section .emph_ref a:hover{
   color: #d34f21 !important;
 }
 
@@ -248,3 +311,22 @@ section .footer_ref{
 }
 
 /* ----------------------------------------------------------------------*/
+
+
+.reveal section .team{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.reveal section .team div{
+  width: 200px;
+}
+.reveal section .team img{
+  width: 150px;
+  margin: 20px 0 10px 0;
+}
+
+.reveal section .team p{
+  margin: 0 !important;
+}
