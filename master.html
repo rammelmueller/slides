@@ -128,11 +128,6 @@
 
         <section data-menu-title='intro: imbalanced UFG'>
           <img class='label fade-out' style='top:100px; left:100px' width='1024px' src='img/pairs_ufg_polarized.svg' data-fragment-index=1>
-          <!-- <img class='label fade-out' style='top:110px; left:1150px' width='160px' src='img/scale_ufg.svg' data-fragment-index=1> -->
-<!--
-          <img class='fragment label current-visible' style='top:100px; left:100px' width='1024px' src='img/pairs_ufg_massimbalance.svg' data-fragment-index=1>
-          <img class='fragment label current-visible' style='top:60px; left:1150px' width='160px' src='img/scale_ufg.svg' data-fragment-index=1> -->
-
           <div class="refs central" style="top: 950px;">
               [reviews:
                 <a target='blank' href="https://doi.org/10.1088/0034-4811/112401">Chevy,Mora '10</a>;
@@ -156,7 +151,7 @@
               <div style="line-height: 30pt">
                 <p class='bold' style='margin-bottom:-50px !important'>part I</p><br>
                 <span class='medium'>
-                  quick recap on <span class='emph'>stochastic quantization & CL</span><br>
+                  quick reminder on <span class='emph'>stochastic quantization & CL</span><br>
                   (what is it & how can it help us for fermions?)
                 </span>
               </div>
@@ -170,7 +165,6 @@
             </div>
           </div>
         </section>
-
 
         <section data-menu-title='model: contact interaction'>
           <div class='rig_header'>
@@ -326,13 +320,13 @@
                   (Markov chain)
                 </p>
 
-                <p class='bold central fragment' style="top: 720px;" data-fragment-index=1>
+                <p class='bold central' style="top: 720px;" data-fragment-index=1>
                   statistical evaluation
                 </p>
-                <p class='central small fragment' style="top: 790px" data-fragment-index=1>
+                <p class='central small' style="top: 790px" data-fragment-index=1>
                   $$ \langle \hat{\mathcal{O}}\rangle = \frac{1}{N}\sum_{i=1}^N \mathcal{O}[\phi_i]$$
                 </p>
-                <p class='central small fragment' style="top: 890px" data-fragment-index=1>
+                <p class='central small' style="top: 890px" data-fragment-index=1>
                   $ \sigma\ \propto\ \left(\sqrt{\text{# of (uncorrelated) samples}}\right)^{-1} $
                 </p>
                 <!-- <p class='label central' style='top: 720px'>
@@ -362,7 +356,6 @@
             </div>
           </div>
         </section>
-
 
         <section data-menu-title='complex action'>
           <div class="rig_header">
@@ -518,48 +511,22 @@
             </div>
           </div>
           <div class="rig_body">
-            <img class="label" src='img/3d.svg' style="width: 600px; top: 320px; left: 200px">
-            <div class='label eqsize' style="width: 600px; top: 400px; left: 700px">
+            <!-- <img class="label" src='img/3d.svg' style="width: 600px; top: 320px; left: 200px"> -->
+            <img class='plot' src='plots/pd_fRG.svg' style="top: 420px; left: 80px; margin:0; width: 620px">
+            <img class='fragment plot' src='plots/pd_fRG_lines.svg' style="top: 420px; left: 80px; margin:0; width: 620px" data-fragment-index=1>
+            <div class='label eqsize' style="width: 600px; top: 450px; left: 700px">
               $$\mathcal{Z} =  \text{Tr}\left[e^{-\beta(\hat{H} - \mu_\uparrow \hat{N}_\uparrow - \mu_\downarrow \hat{N}_\downarrow)} \right]$$
               $$ = \text{Tr} \left[e^{-\beta(\hat{H} - \mu \hat{N} - h \hat{M} )}\right]$$
               <br>
               $$\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2}$$
               $$h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$$
             </div>
-            <p class='label central emph bold' style='top: 900px'>computationally challenging (but feasible)</p>
+          </div>
+          <div class="refs" style="top: 900px; left: 140px">
+            [fRG phase diagram: <a href="https://doi.org/10.1103/PhysRevA.91.013610" target='blank'>Boettcher et. al '15</a>]<br>
           </div>
         </section>
 
-        <section data-menu-title='3D UFG phase diagram'>
-          <div class='rig_header'>
-            exploring the phase diagram
-          </div>
-          <div class="rig_body">
-
-            <p class='label small' style='top: 290px; left: 135px; width: 520px; text-align: center'>
-              $$p = \frac{n_\uparrow - n_\downarrow}{n_\uparrow + n_\downarrow}$$
-            </p>
-            <img class='plot' src='plots/pd_exp.svg' style="top: 400px; left: 50px; margin:0; width: 620px">
-
-            <p class='label small' style='top: 290px; left: 785px; width: 520px; text-align: center'>
-              $$\mu = \frac{\mu_\uparrow + \mu_\downarrow}{2} \qquad h = \frac{\mu_\uparrow - \mu_\downarrow}{2}$$
-            </p>
-            <img class='plot' src='plots/pd_fRG.svg' style="top: 400px; left: 700px; margin:0; width: 620px">
-
-            <img class='fragment plot' src='plots/pd_exp.svg' style="-webkit-filter: grayscale(1); top: 400px; left: 50px; margin:0; width: 620px" data-fragment-index=1>
-            <img class='fragment plot' src='plots/pd_fRG_lines.svg' style="top: 400px; left: 700px; margin:0; width: 620px" data-fragment-index=1>
-
-            <div class="refs" style="top: 900px; left: 140px">
-              [experiment: <a href="https://doi.org/10.1038/nature06473" target='blank'>Shin,Schunck,Schirotzek,Ketterle '08</a>]<br>
-              [zero-temperature $p_c$: <a href="https://doi.org/10.1103/PhysRevLett.97.200403" target='blank'>Lobo,Recati,Giorgini,Stringari '06</a>]<br>
-              [balanced $T_c$: <a href="https://doi.org/10.1126/science.1214987" target='blank'>Ku,Sommer,Cheuck,Zwierlein '12</a>]
-            </div>
-            <div class="refs" style="top: 900px; left: 785px">
-              [fRG: <a href="https://doi.org/10.1103/PhysRevA.91.013610" target='blank'>Boettcher et. al '15</a>]<br>
-              [zero-temperature PD: <a href='https://doi.org/10.1103/PhysRevA.79.043622' target='blank'>Bausmerth,Recati,Stringari '09</a>]
-            </div>
-          </div>
-        </section>
 
         <section data-menu-title='3D UFG: density EOS'>
           <div class='rig_header'>
@@ -755,22 +722,6 @@
             $$\chi = \left(\frac{\partial m}{\partial h}\right)_{T,V,\mu}$$
           </p>
 
-          <aside class="notes">
-          </aside>
-        </section>
-
-
-        <section data-menu-title='3D UFG: crosscheck'>
-          <div class='rig_header'>
-            Maxwell relations: consistency check
-            <div class="refs subtitle_ref">[<a href="https://doi.org/10.1103/PhysRevLett.121.173001" target='blank'>LR, Loheac, Drut, Braun '18</a>]</div>
-          </div>
-          <div class='rig_body'>
-            <p class='medium'>
-              <span style='color:#cc5101'>$\left(\frac{\partial n }{\partial (\beta h)}\right)_{\beta\mu}$</span> $\overset{!}{=}\ $ <span style='color:#114B5F'>$\left(\frac{\partial m }{\partial (\beta \mu)}\right)_{\beta h}$</span>
-            </p>
-            <img class='plot' style="width: 1200px; margin-left: -600px; top: 415px" src='plots/UFG_maxwell.svg'>
-          </div>
           <aside class="notes">
           </aside>
         </section>
@@ -1163,6 +1114,20 @@
           </aside>
         </section>
 
+        <section data-menu-title='3D UFG: crosscheck'>
+          <div class='rig_header'>
+            Maxwell relations: consistency check
+            <div class="refs subtitle_ref">[<a href="https://doi.org/10.1103/PhysRevLett.121.173001" target='blank'>LR, Loheac, Drut, Braun '18</a>]</div>
+          </div>
+          <div class='rig_body'>
+            <p class='medium'>
+              <span style='color:#cc5101'>$\left(\frac{\partial n }{\partial (\beta h)}\right)_{\beta\mu}$</span> $\overset{!}{=}\ $ <span style='color:#114B5F'>$\left(\frac{\partial m }{\partial (\beta \mu)}\right)_{\beta h}$</span>
+            </p>
+            <img class='plot' style="width: 1200px; margin-left: -600px; top: 415px" src='plots/UFG_maxwell.svg'>
+          </div>
+          <aside class="notes">
+          </aside>
+        </section>
 
         <section data-menu-title='1D: comparison to worldline methods'>
           <div class='rig_header'>
@@ -1219,7 +1184,7 @@
     </div>
 
 
-    <script src="lhead.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
       Reveal.initialize({
