@@ -22,10 +22,14 @@
 
         <!-- Title & agenda!-->
         <section data-menu-title='SQ & imbalanced Fermi gases'>
-            <img src="img/ufg_title.svg" width="40%" class='label'
-              style="top: 350px; left: 30%">
             <p id='title' class='label central' style="top: 130px">
               <span>spin-polarized</span> fermions at unitarity: <br>a <span>complex Langevin</span> study
+            </p>
+            <img src="img/ufg_title.svg" width="38%" class='label'style="top: 410px; left: 30%">
+            <p class='label central refs' style='top: 320px'>
+              <!-- [LR, Drut, Braun <span class='it'>in preparation</span>] <br> -->
+              [Berger, Loheac, LR, Ehmann, Braun, Drut <span class='it'>arXiv:1907.10183</span>] <br>
+              [LR, Loheac, Drut, Braun <span class='it'>Phys. Rev. Lett.</span> 121, 173001, 2018] <br>
             </p>
             <!-- <hr id='titlesep'> -->
             <p id=author>
@@ -33,9 +37,6 @@
             </p>
             <p id='author_info'>20th International Conference on Recent Progress in Many Body Theories  - September 10, 2019</p>
             <!-- <div id='current_papers' class='small'>
-              [LR, Drut, Braun <span class='it'>in preparation</span>] <br>
-              [Berger, Loheac, LR, Ehmann, Braun, Drut <span class='it'>in preparation</span>] <br>
-              [LR, Loheac, Drut, Braun <span class='it'>Phys. Rev. Lett.</span> 121, 173001, 2018] <br>
               [LR, Porter, Drut, Braun <span class='it'>Phys. Rev. D</span> 96, 094506, 2017]<br>
             </div> -->
 
@@ -343,7 +344,7 @@
         </section>
 
 
-        <section data-menu-title='recap: SQ' class='inverted' data-background-color='#404040'>
+        <section data-menu-title='SQ for fermions' class='inverted' data-background-color='#404040'>
           <div class='flexer'>
             <div class='huge emph'>
               how can stochastic quantization <br>
@@ -351,15 +352,25 @@
             </div>
             <div style='margin-top: 100px'>
               <span class='huge'>
-                $\mathcal{Z} = \int{\!\mathcal{D}\phi\ \det M_{\phi}^{\uparrow}\,\det M_{\phi}^{\downarrow}}$
+                $\mathcal{Z} = \int{\!\mathcal{D}\phi\,\det M_{\phi}^{\uparrow}\det M_{\phi}^{\downarrow}} = \int\!\mathcal{D}\phi\ \mathrm{e}^{-S[\phi]}$
               </span>
             </div>
+            <div class="fragment label medium special_red" data-fragment-index=1 style="top: 850px; left: 400px">
+              probability measure <span class='emph_red bold'>not positive (semi-)definite</span> <br>if any of these conditions applies:<br><br>
+            </div>
+            <div class="fragment label medium special_red" data-fragment-index=1 style="top: 800px; left: 1200px">
+              <span>$N_{\uparrow} \neq N_{\downarrow}$</span> <br>
+              <span>$\mu_{\uparrow} \neq \mu_{\downarrow}$</span><br>
+              <span>$m_\uparrow \neq m_\downarrow$</span><br>
+              <span>$g > 0$</span><br>
+            </div>
+            <img src="img/det_circle.svg" class='fragment label' style="width:620px; top: 550px; left: 370px" data-fragment-index=1>
           </div>
         </section>
 
         <section data-menu-title='complex action'>
           <div class="rig_header">
-              the path integral <span class='fragment red' data-fragment-index=1>& complex actions</span>
+              the path integral <span class='red' data-fragment-index=1>& complex actions</span>
           </div>
           <div class="rig_body">
             <p class='eqsize'>
@@ -369,12 +380,7 @@
               <p class='eqsize'>
                 $ \phi^{(n+1)} = \phi^{(n)} + \Delta\phi^{(n)}$
               </p>
-              <div class="fragment fade-out label central" style='top: 620px' data-fragment-index=2>
-                <p class='eqsize'>
-                  $\Delta\phi^{(n)} = - \frac{\delta S[\phi]}{\delta \phi}\bigg|_{\phi^{(n)}}\Delta t_{L} + \sqrt{2\Delta t_{L}}\eta$
-                </p>
-              </div>
-              <div class="fragment fade-in label central" style='top: 600px' data-fragment-index=2>
+              <div class="fade-in label central" style='top: 600px' data-fragment-index=2>
                 <p class='eqsize'>
                   $\Delta\phi^{(n)}_R = - \text{Re}\left[\frac{\delta S[\phi]}{\delta \phi}\right]_{\phi^{(n)}}\Delta t_{L} + \sqrt{2\Delta t_{L}}\eta$
                 </p>
@@ -393,17 +399,6 @@
                     <a target='blank' href="https://arxiv.org/pdf/1907.10183.pdf">Berger et al. '19</a>]
                   </p>
                 </div>
-            </div>
-            <img src="img/semidefinite_bubble.svg" class="label fragment" data-fragment-index=1 style="width: 800px; top: 300px; left: 500px">
-
-            <div class="fragment label medium red" data-fragment-index=1 style="top: 510px; left: 1000px">
-              <small>probability measure <span class='emph_red bold'>not <br>positive (semi-)definite</span> if <br>any of these conditions applies:<br></small><br>
-            </div>
-            <div class="fragment label small red" data-fragment-index=1 style="top: 600px; left: 1100px">
-              <span>$N_{\uparrow} \neq N_{\downarrow}$</span> <br>
-              <span>$\mu_{\uparrow} \neq \mu_{\downarrow}$</span><br>
-              <span>$m_\uparrow \neq m_\downarrow$</span><br>
-              <span>$g > 0$</span><br>
             </div>
           </div>
           <aside class="notes">
@@ -428,7 +423,7 @@
             $$
               \int\mathcal{D}\phi\ P[\phi]O[\phi]
               \stackrel{?}{=}
-              \int\mathcal{D}\phi_{\rm R}\mathcal{D}\phi_{\rm I}\ P[\phi_{\rm R}+{\rm i}\phi_{\rm I}]O[\phi_{\rm R}+{\rm i}\phi_{\rm I}]
+              \int\mathcal{D}\phi_{\rm R}\mathcal{D}\phi_{\rm I}\ P[\phi_{\rm R},\phi_{\rm I}]O[\phi_{\rm R}+{\rm i}\phi_{\rm I}]
             $$
           </p>
           <p class='label small central' style="top: 410px">
@@ -446,7 +441,7 @@
           <p class='fragment label small' style="top: 710px; left: 80px; width: 600px" data-fragment-index=1>
             <span class='emph medium'>non-analyticities in the action</span><br><br>
             - zeros in measure ($\det M = 0$)<br>
-            - could lead to ergodicity issues (bottlenecks)<br>ndom process
+            - could lead to ergodicity issues (bottlenecks)<br>
           </p>
 
           <span class='fragment refs label central' style="left: 80px; width: 600px; top: 900px" data-fragment-index=1>[
@@ -493,7 +488,7 @@
               <div style='margin-top:80px'>
                 recent review:
                 <span class='emph_ref'>
-                  <a href='https://arxiv.org/pdf/1907.10183.pdf'>[Berger,LR,Loheac,Ehmann,Braun,Drut '19]</a>
+                  <a href='https://arxiv.org/pdf/1907.10183.pdf'>[Berger et al. arXiv:1907.10183]</a>
                 </span>
               </div>
           </div>
@@ -570,11 +565,11 @@
               <span class='emph small'>CL results: <br>finite lattice $V = 11^3$ </span>
             </div>
 
-            <img class='plot fragment' src='plots/UFG_density_balanced_pt.svg' data-fragment-index=3>
-            <div class="label fragment small" data-fragment-index=3 style="top: 740px; left: 780px; color: #898989">
+            <img class='plot fragment' src='plots/UFG_density_balanced_pt.svg' data-fragment-index=2>
+            <div class="label fragment small" data-fragment-index=2 style="top: 740px; left: 780px; color: #898989">
               $T_C \sim 0.17\,T_F$
             </div>
-            <div class='fragment label small' data-fragment-index=3 style='width: 300px; top: 600px; left: 1050px;'>
+            <div class='fragment label small' data-fragment-index=2 style='width: 300px; top: 600px; left: 1050px;'>
               <span>low temperatures: <br>$\lambda_T$ increases<br> ($\lambda_T \ll V^{1/3}$ must be fulfilled)</small></span>
             </div>
 
@@ -766,10 +761,10 @@
           <div class='rig_body'>
             <img class='plot' style='top: 230px;' src='plots/UFG_compressibility_polarized.svg'>
 
-            <p class='label fragment medium' style="top: 400px; left: 50px; width: 300px;" data-fragment-index=1>
+            <p class='label medium' style="top: 400px; left: 50px; width: 300px;" data-fragment-index=1>
               <span class='emph'>weak dependence of the critical temperature on polarization indicated</span>
             </p>
-            <p class='label fragment medium' style="top: 600px; left: 1050px; width: 300px;" data-fragment-index=1>
+            <p class='label medium' style="top: 600px; left: 1050px; width: 300px;" data-fragment-index=1>
               challenging to extract precise $T_C$
             </p>
           </div>
@@ -808,8 +803,8 @@
             </p>
             <img class='plot' style="width: 1000px; top: 420px; margin-left: -500px" src='plots/UFG_chi.svg'>
             <div class="label central medium" style="top: 860px">
-              <p class='fragment' style='margin-bottom: 10px !important' data-fragment-index=1>Pauli susceptibility field independent at low field and temperature</p>
-              <p class='fragment emph bold' style='margin-top: 0 !important' data-fragment-index=1>UFG: dependence on $\beta h$ very similar to FG, but rescaled</p>
+              <p class='' style='margin-bottom: 10px !important' data-fragment-index=1>Pauli susceptibility field independent at low field and temperature</p>
+              <p class='emph bold' style='margin-top: 0 !important' data-fragment-index=1>UFG: dependence on $\beta h$ very similar to FG, but rescaled</p>
             </div>
           </div>
           <aside class="notes">
@@ -850,22 +845,22 @@
           <div class='rig_body'>
             <img class='plot' src='plots/UFG_susceptibility.svg'>
 
-            <p class='label fragment medium' style='width: 300px; left: 1050px; top: 500px' data-fragment-index=1>
+            <p class='label medium' style='width: 300px; left: 1050px; top: 500px' data-fragment-index=1>
               high temperature: Curie's law $\chi \propto T^{-1}$
             </p>
-            <p class='label fragment medium' style='width: 310px; left: 1050px; top: 700px' data-fragment-index=1>
+            <p class='label medium' style='width: 310px; left: 1050px; top: 700px' data-fragment-index=1>
               theory & experiment agree at high temperatures
             </p>
 
-            <p class='label fragment medium' style='width: 500px; left: 50px; top: 820px' data-fragment-index=2>
+            <p class='label medium' style='width: 500px; left: 50px; top: 820px' data-fragment-index=2>
               Pseudogap:<br>  suppression of $\chi$ at $T > T_C$<br>
               <span class='ref_style'>[recent review: <a href="https://arxiv.org/abs/1807.03913" target='blank'>Jensen et al. '18</a>]</span>
             </p>
-            <p class='label fragment emph bold medium' style='width: 250px; left: 50px; top: 400px' data-fragment-index=2>
+            <p class='label emph bold medium' style='width: 250px; left: 50px; top: 400px' data-fragment-index=2>
               low temperature: discrepancy between experiment and theory
             </p>
 
-            <p class='label fragment emph medium' style='width: 700px; left: 600px; top: 900px' data-fragment-index=3>
+            <p class='label fragment emph medium' style='width: 700px; left: 600px; top: 900px' data-fragment-index=1>
               CL: pseudogap possible <br> $T^*$ and $T_C$ seem to be very close
             </p>
           </div>
@@ -907,7 +902,7 @@
 
           </div>
         </section>
-
+<!-- 
         <section data-menu-title='stay tuned!' class='inverted' data-background-color="#404040">
           <div class="flexer medium tuned">
             <p class='label central huge bold' style='top: 100px'>stay tuned!</p>
@@ -927,7 +922,7 @@
             <img style='top: 810px; left: 950px; width: 300px' src="img/tuned_mib.svg" style='margin-top: -50px'>
 
           </div>
-        </section>
+        </section> -->
 
 
         <!-- +++++++++++++++++++++++++++ COLLABORATORS ++++++++++++++++++++++++++++ !-->
