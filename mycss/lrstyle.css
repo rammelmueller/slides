@@ -16,11 +16,14 @@
 }
 
 .reveal section{
-  width : 1364px !important;
-  height: 1024px !important;
+  width : 1920px !important;
+  height: 1080px !important;
+  padding: 0% 0% 0% 0% !important;
 
-  /* border-style: dashed;
-  border-width: 2px; */
+  margin: 0 !important;
+
+  /* border-style: dashed; */
+  /* border-width: 2px; */
 
   font-family: "Roboto" !important;
 }
@@ -72,8 +75,8 @@
 .caps{
     text-transform: uppercase;
 }
-.dense{
-  margin: 0 0 0 0;
+.left{
+  text-align: left;
 }
 
 /* colors & fonts: inverted style */
@@ -97,18 +100,22 @@
 }
 
 
-/* positioning */
-.ctr_header{
-  width: 100%;
-  text-align: center !important;
-  margin-left: -8% !important;
+section .lefthalf{
+  width: 38%;
+  left: 12%;
 }
-.ctr{
-  width: 100%;
+section .righthalf{
+  left: 50%;
+  width: 38%;
+}
+
+/* positioning */
+section .rig_central{
   text-align: center !important;
+  width: 88%;
+  left: 0;
 }
 section .central{
-  position: absolute;
   text-align: center !important;
   width: 100%;
   left: 0;
@@ -127,11 +134,9 @@ section .label{
   margin-bottom: 30px !important;
 }
 
-.reveal li{
-  margin-bottom: 20px;
-}
-.reveal ul li{
+.reveal section ul li{
   list-style-type: square;
+  margin-bottom: 50px !important;
 }
 .reveal ol li{
   list-style-type: lower-roman;
@@ -172,7 +177,8 @@ section .label{
   font-weight: bold;
   text-align: left;
   width: 100%;
-  padding: 8% 0% 0% 8%;
+  padding: 6% 0% 0% 12%;
+  margin-bottom: 40px;
   height: 12% !important;
   z-index: 100;
 }
@@ -180,7 +186,7 @@ section .label{
   text-align: center;
   width: 100%;
   height: 75%;
-  padding: 3% 0 0 0%;
+  padding: 1% 0 0 12%;
 }
 /* ----------------------------------------------------------------------*/
 
@@ -191,54 +197,36 @@ section .label{
   font-family: "Roboto";
   font-weight: 1000;
   font-size: 60px;
-  text-align: left;
-}
-
-#titlesep{
-  position: absolute;
-  left: 150px;
-  top: 770px;
-  width: 1050px;
-  height: 2px;
-  background-color: #000 !important;
-  border-radius: 1cm;
-  border: 0;
 }
 
 #author{
   position: absolute;
-  left: 150px;
-  top: 780px;
+  left: 20%;
+  bottom: 15%;
   font-size: 36px;
   font-weight: bold;
   color: #187795;
 }
 #author_info{
   position: absolute;
-  left: 150px;
-  top: 830px;
+  left: 20%;
+  bottom: 13%;
   font-weight: bold;
   font-size: 20px;
   font-style: italic;
   color: #898989;
 }
-#current_papers{</span>
-  font-size: 24px;
-  /* color: #187795; */
-  /* color: #FE9920; */
-  /* font-weight: bold; */
-}
 
 #logobar {
   position: absolute;
-  top: 900px;
-  left: 135px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  width: 1100px;
+  bottom: 5%;
+  left: 20%;
+  width: 60%;
 
-  border-radius: 5mm;
-  opacity: 1;
+  /* opacity: 0.8; */
+  /* filter: grayscale(100%); */
+
+  /* border-radius: 5mm; */
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -248,7 +236,7 @@ section .label{
   flex-wrap: wrap;
 }
 #logobar img{
-  margin: 0px 10px 10px 0px;
+  margin: 0px 0px 0 0px;
   height: 70px;
 }
 /* ----------------------------------------------------------------------*/
@@ -256,10 +244,9 @@ section .label{
 
 /* ----------------------------------------------------------------------*/
 /* refs */
- .reveal section .refs{
-   position: absolute;
-   text-align: left;
- }
+.reveal section .refs{
+  margin: 0 !important;
+}
 
 .reveal section .refs a, .reveal section .refs, .reveal section .ref_style, .reveal section .ref_style a{
   font-size: 20px !important;
@@ -277,7 +264,7 @@ section .label{
 }
 
 section .subtitle_ref{
-    margin-left: 3%;
+    padding-left: 50px;
 }
 
 section .footer_ref{
@@ -302,12 +289,19 @@ section .footer_ref{
 }
 /* ----------------------------------------------------------------------*/
 
+.reveal section .listbox{
+  text-align: left;
+  padding-left: 120px;
+}
+.reveal section .listbox div{
+  margin: 0 0 50px 0;
+}
+
 
 /* ----------------------------------------------------------------------*/
 /* plots */
 .reveal section .plot{
   position: absolute;
-  top: 300px;
   left: 50%;
   width: 750px;
   margin-left: -375px;
@@ -332,4 +326,10 @@ section .footer_ref{
 
 .reveal section .team p{
   margin: 0 !important;
+}
+
+
+.reveal section .bullet{
+  width: 35px;
+  margin: 0 30px 0 -75px !important;
 }
