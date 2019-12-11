@@ -16,23 +16,60 @@
 }
 
 .reveal section{
-  width : 1364px !important;
-  height: 1024px !important;
+  width : 1920px !important;
+  height: 1080px !important;
+  padding: 0% 0% 0% 0% !important;
 
-  /* border-style: dashed;
-  border-width: 2px; */
+  margin: 0 !important;
 
-  font-family: "Roboto" !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
-/* colors & fonts: regular style*/
-.emph {
+
+.reveal .slide-number{
+  font-size: 18pt !important;
+  color: #555 !important;
+  font-weight: bold;
+  font-family: 'Roboto';
+  height: 30;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  /* border: 2pt gray; */
+  border: 0pt;
+  border-style: dashed;
+  border-radius: 5px;
+  background: #fff0;
+}
+
+
+/* -------------------------------- */
+/* color scheme */
+.red{
   color: #a42604;
-  font-weight: bold !important;
 }
-.emph_alt {
+.blue{
   color: #187795;
 }
+.gray{
+  color:#666
+}
+/* -------------------------------- */
+
+.bold{
+  font-weight: bold !important;
+}
+.italic{
+  font-style: italic !important;
+}
+
+.roboto{
+  font-family: "Roboto", sans-serif !important;
+}
+
+.caps{
+  text-transform: uppercase;
+}/* COLOR SCHEME */
 .red{
   color: #a42604;
 }
@@ -42,81 +79,46 @@
 .orange{
   color: #d34f21;
 }
-.bold{
-  font-weight: bold !important;
-}
-.it{
-  font-style: italic !important;
-}
-.huge{
-  font-size: 72px !important;
-}
-.large{
-  font-size: 52px !important;
-}
-.medium{
-  font-size: 36px !important;
-}
-.eqsize{
-  font-size: 32px !important;
-}
-.small{
-  font-size: 28px !important;
-}
-.tiny{
-  font-size: 20px !important;
-}
-.caps{
-    text-transform: uppercase;
-}
-.dense{
-  margin: 0 0 0 0;
+.gray{
+  color:#666
 }
 
-/* colors & fonts: inverted style */
-.inverted {
- color: #ffffff !important;
+.huuuge{
+  font-size: 60pt !important;
+}
+
+.huge{
+  font-size: 48pt !important;
+}
+
+.large{
+  font-size: 40pt !important;
+}
+
+.s32{
+  font-size: 32pt !important;
+}
+
+.medium{
+  font-size: 24pt;
+}
+
+.small{
+  font-size: 20pt;
+}
+
+.tiny{
+  font-size: 16pt;
 }
 
 .inverted .emph{
   color: #FE9920;
   font-weight: bold !important;
 }
-.inverted .emph_alt{
-  color: #a42604;
-}
 
-.example_slide{
-  color: #fff;
-}
-.example_slide .emph{
-  filter: invert(100%);
-}
-
-
-/* positioning */
-.ctr_header{
-  width: 100%;
-  text-align: center !important;
-  margin-left: -8% !important;
-}
-.ctr{
-  width: 100%;
-  text-align: center !important;
-}
-section .central{
-  position: absolute;
-  text-align: center !important;
-  width: 100%;
-  left: 0;
-}
 section .label{
   position: absolute;
 }
-.clr {
-  clear: both !important;
-}
-
 
 .reveal section p {
   display: block;
@@ -124,11 +126,9 @@ section .label{
   margin-bottom: 30px !important;
 }
 
-.reveal li{
-  margin-bottom: 20px;
-}
-.reveal ul li{
+.reveal section ul li{
   list-style-type: square;
+  margin-bottom: 50px !important;
 }
 .reveal ol li{
   list-style-type: lower-roman;
@@ -138,195 +138,193 @@ section .label{
     box-shadow: none;
     background:none;
 }
-/* ----------------------------------------------------------------------*/
 
-
-
-/* ----------------------------------------------------------------------*/
-/* FLEX SLIDE */
-.reveal section .flexer{
-  height: 100%;
-  width: 100%;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-}￼
-
-.reveal section .flex_header{
-  margin-bottom: 50px;
-  width: 100%;
-}
-.reveal section .flex_body{
-  width: 100%;
-}
-/* ----------------------------------------------------------------------*/
-
-
-/* ----------------------------------------------------------------------*/
-/* RIGID SLIDES */
-.reveal section .rig_header{
-  font-size: 64px;
-  font-weight: bold;
+.reveal section .header{
+  margin: 0 0 4% 0;
+  padding: 6% 0 0 12%;
+  width: 85%;
+  font-size: 50pt !important;
   text-align: left;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.reveal section .two_container{
   width: 100%;
-  padding: 8% 0% 0% 8%;
-  height: 12% !important;
-  z-index: 100;
-}
-.reveal section .rig_body{
   text-align: center;
-  width: 100%;
-  height: 75%;
-  padding: 3% 0 0 0%;
-}
-/* ----------------------------------------------------------------------*/
-
-
-/* ----------------------------------------------------------------------*/
-/* title slide */
-#title{
-  font-family: "Roboto";
-  font-weight: 1000;
-  font-size: 60px;
-  text-align: left;
-}
-
-#titlesep{
   position: absolute;
-  left: 150px;
-  top: 770px;
-  width: 1050px;
-  height: 2px;
-  background-color: #000 !important;
-  border-radius: 1cm;
-  border: 0;
-}
-
-#author{
-  position: absolute;
-  left: 150px;
-  top: 780px;
-  font-size: 36px;
-  font-weight: bold;
-  color: #187795;
-}
-#author_info{
-  position: absolute;
-  left: 150px;
-  top: 830px;
-  font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
-  color: #898989;
-}
-#current_papers{</span>
-  font-size: 24px;
-  /* color: #187795; */
-  /* color: #FE9920; */
-  /* font-weight: bold; */
-}
-
-#logobar {
-  position: absolute;
-  top: 900px;
-  left: 135px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  width: 1100px;
-
-  border-radius: 5mm;
-  opacity: 1;
-  background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-#logobar img{
-  margin: 0px 10px 10px 0px;
-  height: 70px;
-}
-/* ----------------------------------------------------------------------*/
-
-
-/* ----------------------------------------------------------------------*/
-/* refs */
- .reveal section .refs{
-   position: absolute;
-   text-align: left;
- }
-
-.reveal section .refs a, .reveal section .refs, .reveal section .ref_style, .reveal section .ref_style a{
-  font-size: 20px !important;
-  color: #5d9fb0 !important;
-  font-weight: bold;
-}
-
-.reveal section .emph_ref a{
-  color: #5d9fb0 !important;
-  font-weight: bold;
-}
-
-.reveal section .refs a:hover, .reveal section .ref_style a:hover, .reveal section .emph_ref a:hover{
-  color: #d34f21 !important;
-}
-
-section .subtitle_ref{
-    margin-left: 3%;
-}
-
-section .footer_ref{
-  top: 950px;
-  margin-left: 950px;
-}
-/* ----------------------------------------------------------------------*/
-
-
-/* ----------------------------------------------------------------------*/
-/* floating picutre box */
-.reveal section .fbox{
-  float: left;
-  margin: 0 20px 0 0;
-  width: 300px;
-}
-
-.reveal section .fbox p{
-  margin: 20px 0 0px 0 !important;
-  width: 300px;
-  text-align: center;
-}
-/* ----------------------------------------------------------------------*/
-
-
-/* ----------------------------------------------------------------------*/
-/* plots */
-.reveal section .plot{
-  position: absolute;
-  top: 300px;
-  left: 50%;
-  width: 750px;
-  margin-left: -375px;
-}
-
-/* ----------------------------------------------------------------------*/
-
-
-.reveal section .team{
+  top: 28%;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
 
-.reveal section .team div{
-  width: 200px;
+.wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
 }
-.reveal section .team img{
-  width: 150px;
-  margin: 20px 0 10px 0;
+.hwrapper{
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.reveal section .team p{
+
+/* ----------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------------*/
+/* refs */
+.reveal section .refs{
   margin: 0 !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  color: #5d9fb0 !important;
+}
+
+.reveal section .refs a:hover{
+  color: #d34f21 !important;
+}
+
+section .subtitle_ref{
+  padding-left: 50px;
+}
+
+/* ----------------------------------------------------------------------*/
+
+.reveal section .bullet{
+  width: 35px;
+  margin: 0 30px 0 -75px !important;
+}
+.reveal section .smallbullet{
+  width: 35px;
+  /* margin: 0; */
+  margin: 0 0 0 -40px !important;
+}
+
+/* .reveal section lr-bullet{
+  display: block;
+  text-align: left;
+  padding: 0 0 0 40px;
+  margin-bottom: 30px;
+} */
+
+lr-bullet{
+  display: block;
+  text-align: left;
+  padding: 0 0 0 0 !important;
+  margin: 0 0 30px 50px;
+  position: relative;
+}
+
+
+lr-bullet:before {
+  /* content: "\f04b"; */
+  content: "\f054";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  left: 0;
+  margin: 0 15px 0 -50px;
+  /* top: 12px; */
+  font-size: inherit;
+}
+
+lr-bullet.small:before{
+  top: 3px;
+  margin-left: -30px;
+}
+lr-bullet.medium:before{
+  top: 3px;
+  margin-left: -30px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* SPECIALS */
+
+/* Particles */
+.reveal section .particle{
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin: 0;
+  position: absolute;
+  background-image: url('../img/spin.svg');
+  background-size: cover;
+}
+
+.reveal section .up{
+  background-image: url('../img/spin_up.svg');
+}
+.reveal section .down{
+  background-image: url('../img/spin_down.svg');
+  transform: rotate(180deg);
+}
+
+
+/* Phase Sketches. */
+.reveal section .phasesketch{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+}
+
+.reveal section .project{
+  width: 430px;
+  /* float: left; */
+  height: 350px;
+  background-color: #eeeeee;
+  border-radius: 15px;
+  /* background-color: #342342; */
+  border: dashed;
+  border-color: #aaaaaa;
+  border-width: 3pt;
+  margin: 0 20px 20px 0;
+}
+
+
+.reveal section .project .refs{
+  font-size: 22px !important;
+}
+
+.reveal section .project_header{
+  text-align: left;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 24pt;
+  margin: 15px 0 20px 25px !important;
+}
+.reveal section .project img{
+  margin: 0 !important;
+}
+
+.reveal section .project lr-bullet{
+  margin: 0 0 15px 25px;
+  width: 320px;
+}
+
+
+.reveal .slides section .fragment.semi-fade-out {
+	opacity: 1;
+	visibility: inherit;
+}
+.reveal .slides section .fragment.semi-fade-out.visible{
+    -webkit-filter: grayscale(1);
+}
+
+.reveal .slides section .fragment.highlight{
+	opacity: 1;
+	visibility: inherit;
+}
+.reveal .slides section .fragment.highlight.visible{
+  color: #d34f21;
+  border-color:  #d34f21;;
+  background-color: #d34f2133;
 }
