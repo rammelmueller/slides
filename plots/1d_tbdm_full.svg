@@ -15,7 +15,7 @@
    viewBox="0 0 424.8 230.4"
    width="424.8pt"
    id="svg40298"
-   sodipodi:docname="1d_tbdm.svg"
+   sodipodi:docname="1d_tbdm_full.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata40302">
@@ -9510,7 +9510,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="upper"
-     style="display:none;stroke-linecap:butt;stroke-linejoin:round">
+     style="display:inline;stroke-linecap:butt;stroke-linejoin:round">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_41" />
@@ -18572,7 +18572,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="labels"
-     style="display:inline;stroke-linecap:butt;stroke-linejoin:round">
+     style="display:none;stroke-linecap:butt;stroke-linejoin:round">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="g56878">

@@ -137,6 +137,11 @@ section .label{
   position: absolute;
 }
 
+/* .central{
+  width: 100%;
+  text-align: center;
+} */
+
 .reveal section p {
   display: block;
   margin-top: 30px !important;
@@ -196,12 +201,25 @@ section .label{
 
 /* ----------------------------------------------------------------------*/
 /* refs */
+.reveal section .refs_inv{
+  margin: 0 !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  color: #c7c7c7 !important;
+}
+.reveal section .inverted .refs{
+  margin: 0 !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  color: #c7c7c7 !important;
+}
 .reveal section .refs{
   margin: 0 !important;
   font-weight: bold !important;
   font-size: 24px !important;
   color: #5d9fb0 !important;
 }
+
 
 .reveal section .refs a:hover{
   color: #d34f21 !important;
@@ -251,6 +269,7 @@ lr-bullet:before {
   margin: 0 15px 0 -50px;
   /* top: 12px; */
   font-size: inherit;
+  top: 2px;
 }
 
 lr-bullet.small:before{

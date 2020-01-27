@@ -31,20 +31,6 @@
     <div class="reveal">
       <div class="slides">
 
-
-<!--
-        <section data-menu-title='1D'>
-          <div class='header'>
-            spin-polarized 1D fermions
-            <div class="refs subtitle_ref">
-              [Guan '13]
-            </div>
-          </div>
-          <div class="">
-          </div>
-        </section> -->
-
-
         <section data-menu-title='Cold Quantum Coffee' style="font-family: 'Roboto Slab' !important">
           <div class='wrapper'>
             <p class='bold roboto' style='font-size: 48pt'>Exploring imbalanced Fermi gases <br> with stochastic quantization </p>
@@ -59,7 +45,7 @@
           </div>
         </section>
 
-        <section data-menu-title='why Fermi gases?'  class='inverted' data-background-color="#187795">
+        <section data-menu-title='agenda'  class='inverted' data-background-color="#187795">
           <div class="wrapper huge thin" style='height: 100% !important'>
             <div class='bold roboto' style='margin-bottom: 100px; font-size: 80pt'>
               the menu
@@ -105,7 +91,7 @@
         <section data-menu-title='cold & dilute fermions' class=''>
           <div class="header">
             cold & dilute fermions
-            <p class='refs subtitle'>[reviews: Giorgini,Pitaevskii,Stringari '08; Ketterle,Zwierlein '08]</p>
+            <p class='refs subtitle_ref'>[reviews: Giorgini,Pitaevskii,Stringari '08; Ketterle,Zwierlein '08]</p>
           </div>
 
           <img src="img/particles_fg.svg" class='label fragment fade-out' style="left: 300px; width: 700px" data-fragment-index=1>
@@ -129,7 +115,7 @@
         <section data-menu-title='BCS-BEC crossover' class=''>
           <div class="header">
             the BCS-BEC crossover
-            <p class='refs subtitle'>[reviews: Giorgini,Pitaevskii,Stringari; Zwerger '12]</p>
+            <p class='refs subtitle_ref'>[reviews: Giorgini,Pitaevskii,Stringari '08; Zwerger '12]</p>
           </div>
           <div class="label fragment fade-out" style="top: 400px; width: 100%; text-align: center" data-fragment-index=1>
             <img src="img/bcs_bec.svg" style="width: 1400px;">
@@ -165,12 +151,10 @@
         </section>
 
 
-        <section data-menu-title='ultracold atoms' class=''>
+        <section data-menu-title='imbalanced fermions' class=''>
           <div class="header" style="margin-bottom: 50px">
             imbalanced Fermi gases
-            <!-- <div class="refs subtitle_ref">
-              [reviews: Bloch,Dalibard,Zerger '08]
-            </div> -->
+            <div class="refs subtitle_ref" style="">[Chevy,Mora '10; Radzihovsky,Sheehy '10; Gubbels,Stoof '13]</div>
           </div>
           <div class="hwrapper" style="width: 100%">
             <div style="width: 700px;">
@@ -203,7 +187,7 @@
 
         <!-- ================================== TECHNICAL SECTION ================================== -->
 
-        <section data-menu-title='Path integral'>
+        <section data-menu-title='path integral'>
           <div class="header">
             model & computational challenge
           </div>
@@ -245,7 +229,6 @@
         <section data-menu-title='MC: quick intro'>
           <div class="header" data-fragment-index=1>
             Monte Carlo integration in a nutshell
-            <div class="refs subtitle_ref" style="">[]</div>
           </div>
 
           <p class='label fade-out' style='top: 260px; width: 100%' data-fragment-index=2>
@@ -312,7 +295,7 @@
         </section>
 
 
-        <section data-menu-title='Why?'  class='inverted' data-background-color="#187795">
+        <section data-menu-title='why?'  class='inverted' data-background-color="#187795">
           <div class="header">
             <div style='font-size: 150pt; ' class="roboto bold">why?</div>
           </div>
@@ -364,7 +347,7 @@
 
           <!-- actual SQ section -->
           <div class="fragment label fade-in" style="top: 480px; width: 100%" data-fragment-index=1>
-            <div class="fragment fade-out" data-fragment-index=2>
+            <div class="fragment fade-out" data-fragment-index=3>
 
               <div class='large thin'>
                 <span class='red bold caps'>key idea:</span><br>
@@ -373,27 +356,34 @@
                 distribution of a <span class='red bold'> d+1-dimensional random process</span>
               </div>
 
-              <div class='large' style="margin-top: 83px">
-                $$\frac{\partial\phi}{\partial t_L} = -\frac{\delta S[\phi]}{\delta\phi}\,+\,\eta$$
-              </div>
 
-              <div class='label' style="top: 350px; left:1240px; width: 200px; transform: rotate(8deg)">
-                <img src='img/noise_arrow.svg'>
-              </div>
-              <div class='label blue' style="top:360px; left: 1270px; width: 600px">
-                <span class='thin large'>noise term</span>
-                <div class='' style='margin-top: 10px'>
-                  $\langle \eta \rangle = 0$ <br>
-                  $\langle\eta_t\eta_{t'}\rangle = 2\delta(t-t')$
+              <div class="fragment fade-out" data-fragment-index=2>
+                <div class='large' style="margin-top: 83px">
+                  $$\frac{\partial\phi}{\partial t_L} = -\frac{\delta S[\phi]}{\delta\phi}\,+\,\eta$$
+                </div>
+                <div class='label' style="top: 350px; left:1240px; width: 200px; transform: rotate(8deg)">
+                  <img src='img/noise_arrow.svg'>
+                </div>
+                <div class='label blue' style="top:360px; left: 1270px; width: 600px">
+                  <span class='thin large'>noise term</span>
+                  <div class='' style='margin-top: 10px'>
+                    $\langle \eta \rangle = 0$ <br>
+                    $\langle\eta_t\eta_{t'}\rangle = 2\delta(t-t')$
+                  </div>
+                </div>
+
+                <div class='label' style="top: 420px; left:540px">
+                  <img src='img/time_arrow.svg' width="230px">
+                </div>
+                <div class="label red thin" style="top: 430px; left:140px; width: 500px;">
+                  <span class=''>fictitious Langevin time <br> (not physical)  </span>
                 </div>
               </div>
 
-              <div class='label' style="top: 420px; left:540px">
-                <img src='img/time_arrow.svg' width="230px">
+              <div class="fragment fade-in label" data-fragment-index=2 style='top: 250px; width: 100%; text-align: center'>
+                $$ \phi^{(n+1)} = \phi^{(n)} - \frac{\delta S[\phi]}{\delta \phi}\Delta t_{L} + \sqrt{2\Delta t_{L}}{\eta}$$
               </div>
-              <div class="label red thin" style="top: 430px; left:140px; width: 500px;">
-                <span class=''>fictitious Langevin time <br> (not physical)  </span>
-              </div>
+
             </div>
           </div>
 
@@ -410,7 +400,7 @@
             </div>
           </div> -->
 
-          <div class="fragment label" style="top: 520px; width: 100%" data-fragment-index=2>
+          <div class="fragment label" style="top: 520px; width: 100%" data-fragment-index=3>
 
             <div class="" style='text-align: center'>
               <span class="blue bold large">
@@ -423,13 +413,15 @@
             </div>
 
             <div class='medium' style='margin: 100px 0 50px 0 '>
-              $$\frac{\partial\phi_{\mathrm{R}}}{\partial t_L} = -\mathrm{Re}\left[\frac{\delta S[\phi]}{\delta\phi}\right]\,+\,\eta_{\rm R}$$
+                $$ \phi_R^{(n+1)} = \phi_R^{(n)} - \mathrm{Re}\left[\frac{\delta S[\phi]}{\delta \phi}\right]\Delta t_{L} + \sqrt{2\Delta t_{L}}{\eta}$$
               <span class='blue'>
-              $$\frac{\partial\phi_{\mathrm{I}}}{\partial t_L} = -\mathrm{Im}\left[\frac{\delta S[\phi]}{\delta\phi}\right]\,+\,\eta_{\rm I}$$
+                $$ \phi_I^{(n+1)} = \phi_I^{(n)} - \mathrm{Im}\left[\frac{\delta S[\phi]}{\delta \phi}\right]\Delta t_{L}``$$
               </span>
             </div>
           </div>
         </section>
+
+
 
 
         <section data-menu-title='one does not simply..'>
@@ -482,7 +474,7 @@
                 <div style="margin-top: 15px">
                   - convergence to wrong limits possible <br>
                   - behavior must be monitored <br>
-                  <span class='refs' style="">[Scherzer,Seiler,Sexty,Stamatescu '19]</span>
+                  <span class='refs' style="">[Scherzer,Seiler,Sexty,Stamatescu '19; '20]</span>
                 </div>
               </div>
           </div>
@@ -490,8 +482,7 @@
 
 
 
-
-        <section data-menu-title='recap' class='inverted' data-background-color="#187795">
+        <section data-menu-title='recap: MC & CL' class='inverted' data-background-color="#187795">
           <div class="wrapper large roboto">
             <p class="bold" style="font-size: 60pt; margin-bottom: 100px !important">take home:<br> the sign problem & CL</p>
             <p class='thin huge'>
@@ -519,9 +510,9 @@
             <p class="" style='width: 88%; text-align: center'>
               $a_S \gg n^{-1/3} \gg r_0$
             </p>
-            <div style="padding-left:40px; margin: 70px 0 100px 0!important" class='medium'>
+            <div style="padding-left:40px; margin: 70px 0 100px 0!important" class='thin'>
               <lr-bullet>
-                <span class='red bold'>universal behavior:</span> physical properties insensitive to microscopic details of the interaction
+                <span class='red bold'>universal behavior:</span> physical properties insensitive to <br>microscopic details of the interaction
               </lr-bullet>
               <!-- <lr-bullet>
                 density & temperature are the <span class='red bold'>only dimensionful</span> scales in the system
@@ -548,7 +539,7 @@
             </div>
           </div>
 
-          <div style="width: 1600px; margin: 80px auto";>
+          <div style="width: 1600px; margin: -30px auto !important";>
             <img src="img/feshbach_scattering.svg" style='width: 320px; margin-right: 20px'>
             <img src="img/feshbach_bec.svg" style='width: 320px; margin-right: 20px; -webkit-filter: grayscale(1); opacity: 0.5'>
             <img src="img/feshbach_ufg.svg" style='width: 320px; margin-right: 20px'>
@@ -556,7 +547,7 @@
           </div>
         </section>
 
-        <section data-menu-title='Phenomenology'>
+        <section data-menu-title='phenomenology'>
           <div class="header" style="margin-bottom: 10px">
             the spin-polarized UFG
             <div class="refs subtitle_ref" style="">[Chevy,Mora '10; Radzihovsky,Sheehy '10; Gubbels,Stoof '13]</div>
@@ -604,7 +595,7 @@
         </section>
 
 
-        <section data-menu-title='Phase diagram: grand canonical'>
+        <section data-menu-title='phase diagram: grand canonical'>
           <div class="header" style="">
             the grand canonical description
           </div>
@@ -736,7 +727,7 @@
           </div>
         </section>
 
-        <section data-menu-title='Thermodynamics'>
+        <section data-menu-title='thermodynamics'>
           <div class="header">
             more thermodynamics
             <div class="refs subtitle_ref" style="">[Ho '04; Pathria,Beale '12]</div>
@@ -781,7 +772,7 @@
         </section>
 
 
-        <section data-menu-title='Pseudogap'>
+        <section data-menu-title='pseudogap'>
           <div class="header">
             pairing above the critical temperature
             <div class="refs subtitle_ref" style="">[pseudogap reviews: Chen,Wang '14; Mueller '17; Jensen,Gilbreth,Alhassid '19]</div>
@@ -846,7 +837,7 @@
         </section>
 
 
-        <section data-menu-title='Susceptibility (polarized)'>
+        <section data-menu-title='susceptibility (polarized)'>
           <div class="header">
             spin susceptibility (polarized)
             <div class="refs subtitle_ref" style="">[LR,Drut,Braun <span class='italic'>in preparation</span>]</div>
@@ -907,6 +898,36 @@
         <!-- ================================== 1D section ================================== -->
 
 
+        <section data-menu-title='1D' class='inverted' data-background-color="#187795">
+          <div class='header'>
+            spin-polarized 1D fermions
+            <div class="refs_inv subtitle_ref">
+              [Feiguin,Heidrich-Meisner,Orso,Zerger '12]
+            </div>
+          </div>
+          <div class="thin large" style='margin: 150px 0 0 14%'>
+            <lr-bullet>
+              (some) exact solutions available via <span class='bold yellow'>Bethe ansatz</span>
+              <div class="refs_inv">
+                [Guan,Batchelor,Lee '13]
+              </div>
+            </lr-bullet>
+            <lr-bullet style="margin: 50px 0 50px 50px">
+              <span class='bold yellow'>FFLO type pairing</span> stable in a wide parameter range
+              <div class="refs_inv">
+                [Lüscher,Noack,Läuchli '08]
+              </div>
+            </lr-bullet>
+            <lr-bullet>
+              no true long-range order in 1D, <span class='bold'>polynomial decay <br>of correlation functions:</span><br>
+              <span class=''>$$ |C(r)| \propto  {r^{-\Delta}}\qquad\qquad\qquad$$</span>
+            </lr-bullet>
+          </div>
+          <!-- <img src="plots/luescher_exponents.png" class='label' style="right: 100px; top: 250px; width: 580px"> -->
+        </section>
+
+
+
         <section data-menu-title='FFLO pairing'>
           <div class="header">
             pairing (schematically in 2D)
@@ -921,8 +942,17 @@
             <div class="refs subtitle_ref">[LR, Drut, Braun <span class='ref_prep'> in preparation</span>]</div>
           </div>
           <div class='hwrapper'>
-            <p class='label central medium' style="top: 250px">
-              $\rho_{pair}(|x - x'|) =
+            <p class='label central medium fragment fade-out' style="top: 250px" data-fragment-index=1>
+              $n{\uparrow\downarrow}(k,k') =
+                            \langle
+                            \hat{\psi}_{\uparrow}^{\dagger}(k) \,
+                            \hat{\psi}_{\downarrow}^{\dagger}(k) \,
+                            \hat{\psi}_{\downarrow}(k') \,
+                            \hat{\psi}_{\uparrow}(k')
+                            \rangle$
+            </p>
+            <p class='label central medium fragment fade-in' style="top: 250px" data-fragment-index=1>
+              $\rho_{\uparrow\downarrow}(|x - x'|) =
                             \langle
                             \hat{\psi}_{\uparrow}^{\dagger}(x) \,
                             \hat{\psi}_{\downarrow}^{\dagger}(x) \,
@@ -931,19 +961,22 @@
                             \rangle$
             </p>
 
-            <p class="label central " style="top: 330px">
+            <p class="label central fade-out fragment" style="top: 330px" data-fragment-index=1>
               <img src="plots/1d_tbdm.svg" style="width: 1100px">
             </p>
-            <p class='label' style="top: 430px; width: 250px; left: 150px">
+            <p class="label central fade-in fragment" style="top: 330px" data-fragment-index=1>
+              <img src="plots/1d_tbdm_full.svg" style="width: 1100px">
+            </p>
+            <p class='label' style="top: 700px; width: 250px; right: 150px">
               <span class=''>$p = \frac{N_\uparrow-N_\downarrow}{N_\uparrow+N_\downarrow}$</span>
             </p>
             <p class='label thin' style="left: 130px; top: 660px">
               ~ likelihood to find <br>a pair with <br> momentum $k$
             </p>
-            <p class='label thin' style="right: 130px; top: 380px">
-              spatially <br> fluctuating <br> order parameter
+            <p class='label thin fragment' style="right: 100px; top: 380px" data-fragment-index=1>
+              spatially <br> fluctuating <br> "order parameter"
             </p>
-            <p class='label central large thin' style="top: 930px" data-fragment-index=1>
+            <p class='label central large thin' style="top: 930px">
               off-center peak: hallmark of <span class="red bold">FFLO type pairing</span>
             </p>
           </div>
@@ -999,13 +1032,117 @@
         </section>
 
 
+        <section data-menu-title='1D: mass-imbalance'>
+          <div class='header'>
+            the effect of mass-imbalance
+            <div class="fragment refs subtitle_ref" data-fragment-index=1>
+              [LR,Drut,Braun in preparation]
+            </div>
+          </div>
+          <div class="thin" style='margin: 50px 0 0 14%'>
+            <div class="label fragment fade-out" style="top: 300px; left: 14%" data-fragment-index=1>
+              <lr-bullet>
+                <span class='bold red'>not</span> integrable via Bethe ansatz
+              </lr-bullet>
+              <lr-bullet>
+                mass-imbalance parameter: $\kappa = \frac{m_\uparrow}{m_\downarrow}$
+              </lr-bullet>
+            </div>
+            <div class="label fragment fade-in medium" style="top: 340px; width: 100%; left:0; text-align: center" data-fragment-index=1>
+              $n{\uparrow\downarrow}(k,k') =
+                            \langle
+                            \hat{\psi}_{\uparrow}^{\dagger}(k) \,
+                            \hat{\psi}_{\downarrow}^{\dagger}(k) \,
+                            \hat{\psi}_{\downarrow}(k') \,
+                            \hat{\psi}_{\uparrow}(k')
+                            \rangle$
+            </div>
+
+            <div class="fragment fade-out hwrapper label" data-fragment-index=1
+              style="width: 100%; top: 540px; left: 0%">
+              <div style="width: 700px">
+                <img src="img/mib_hmaj.svg" style="width: 500px">
+                <div class='large thin'style='margin-top: 37px'>heavy majority</div>
+              </div>
+              <div style="width: 700px">
+                <img src="img/mib_hmin.svg" style="width: 500px">
+                <div class='large thin' style='margin-top: 37px'>heavy minority</div>
+              </div>
+            </div>
+
+
+            <div class="fragment fade-in hwrapper label" data-fragment-index=1
+              style="width: 100%; top: 470px; left: 0%">
+              <div style="width: 700px">
+                <img src="plots/n2k_mass_hmaj.svg" style="width: 600px">
+                <div class='large thin'>heavy majority</div>
+              </div>
+              <div style="width: 700px">
+                <img src="plots/n2k_mass_hmin.svg" style="width: 600px">
+                <div class='large thin'>heavy minority</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section data-menu-title='1DMIB: shot noise'>
+          <div class='header'>
+            shot noise for mass-imbalanced systems
+            <div class="refs subtitle_ref">
+              [LR,Drut,Braun in preparation]
+            </div>
+          </div>
+          <div class='hwrapper'>
+            <div style="width: 1100px; position: relative">
+              <div class="fragment fade-out label" data-fragment-index=1 style='top: 0; left: 0'>
+                <img src="plots/mass_shot_bare.svg" style="width: 1100px">
+              </div>
+              <div class="fragment fade-in label" data-fragment-index=1 style='top: 0'>
+                <img src="plots/mass_shot_full.svg" style="width: 1100px">
+              </div>
+            </div>
+            <!-- <img src="plots/1d_shotnoise_legend.svg" style="width: 1100px"> -->
+            <div style="width: 600px; margin-left: 50px; text-align: left">
+              <div class='medium' style='margin: 50px 0 100px 0'>
+                $n_{\uparrow\downarrow}(k, k') =
+                \langle
+                \hat{\psi}_{k\uparrow}^{\dagger} \,
+                \hat{\psi}_{k\uparrow}
+                \hat{\psi}_{k'\downarrow}^{\dagger} \,
+                \hat{\psi}_{k'\downarrow} \,
+                \rangle
+                $<br>$
+                \qquad\qquad\qquad\qquad -
+                \langle
+                \hat{\psi}_{k\uparrow}^{\dagger} \,
+                \hat{\psi}_{k\uparrow}
+                \rangle
+                \langle
+                \hat{\psi}_{k'\downarrow}^{\dagger} \,
+                \hat{\psi}_{k'\downarrow} \,
+                \rangle $
+              </div>
+              <div class='fragment thin large' style="margin: 100px 0 0 0 " data-fragment-index=1>
+                mass-imbalance <span class='bold red'>does not destroy FFLO ordering</span>
+              </div>
+              <div class='fragment thin large' style="margin: 120px 0 0 0 " data-fragment-index=1>
+                occurrence of <span class='bold red'>additional peaks</span> with $|k_{cm}| = |q|$
+              </div>
+              <!-- <div class='fragment' style="margin-top: -15px" data-fragment-index=1>
+                <span class="medium blue bold">negative correlations: particle-hole</span>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
         <!-- ================================== BACKMATTER ================================== -->
 
 
         <section data-menu-title='recap' class='inverted' data-background-color="#187795">
-          <div class="wrapper large roboto">
-            <p class="emph" style="font-size: 80pt; margin-bottom: 100px">recap</p>
-            <p class='bold'>
+          <div class="wrapper">
+            <p class="bold roboto" style="font-size: 80pt; margin-bottom: 100px">recap</p>
+            <p class='thin large'>
               <span class='huge'>
                 complex Langevin is a valuable tool
                 <br>to study ultracold Fermi gases <br>
@@ -1019,10 +1156,20 @@
         </section>
 
         <section data-menu-title='outlook' class='inverted' data-background-color="#187795">
-          <div class="wrapper large">
+          <div class="wrapper large thin">
             <div class="bold" style="font-size: 80pt; margin-bottom: 100px">
               stay tuned!
             </div>
+            <p>
+              extension of shot-noise anlalysis to <span class='yellow'>2D/3D Fermi gases</span> <br>
+              (observable in experiment?)
+            </p>
+            <p>
+              thermodynamics of <span class='yellow'>mass-imbalanced unitary Fermions</span> <br>(possible FFLO stabilization?)
+            </p>
+            <p>
+              attack FFLO type pairing with <span class='yellow'>continuous-space methods</span> <br>(diagrammatic MC?)
+            </p>
         </section>
 
         <section data-menu-title='team CL'>
